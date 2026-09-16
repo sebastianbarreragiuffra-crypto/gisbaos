@@ -455,6 +455,8 @@ body.home-page::before { display: none; }
 
 .hero-product { position: relative; width: 100%; min-width: 0; margin-top: 0; }
 .product-shot-clip { position: relative; display: block; overflow: hidden; padding: 10px; border: 1px solid rgba(93,66,255,.13); border-radius: 26px; background: linear-gradient(135deg, #f4f1ff, #fbfaff); box-shadow: 0 30px 70px rgba(48,35,111,.16); }
+.dashboard-image { display: block; width: 100%; height: auto; border-radius: 18px; image-rendering: auto; backface-visibility: hidden; }
+.product-shot-clip .dashboard-ui { display: none; }
 .dashboard-ui { aspect-ratio: 3 / 2; display: grid; grid-template-columns: 132px minmax(0, 1fr); overflow: hidden; border: 1px solid #e3e6f2; border-radius: 20px; color: #080d2b; background: rgba(255,255,255,.92); box-shadow: 0 16px 45px rgba(65,54,132,.09); font-size: 10px; line-height: 1.25; }
 .dashboard-ui * { box-sizing: border-box; }
 .dash-sidebar { display: flex; flex-direction: column; min-width: 0; padding: 16px 10px 10px; border-right: 1px solid #e6e8f2; background: rgba(255,255,255,.78); }
