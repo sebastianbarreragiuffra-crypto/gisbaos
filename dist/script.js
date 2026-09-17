@@ -3,7 +3,7 @@ const menuButton = document.querySelector('[data-menu-button]');
 const menu = document.querySelector('[data-menu]');
 
 const redirectLegacyServicesLink = () => {
-  const routes = { '#servicios': 'servicios.html', '#campaignos': 'campaignos.html', '#metodo': 'como-trabajamos.html', '#preguntas': 'preguntas.html' };
+  const routes = { '#servicios': 'servicios.html', '#metodo': 'como-trabajamos.html', '#preguntas': 'preguntas.html' };
   const destination = routes[window.location.hash];
   if (destination && !window.location.pathname.endsWith('/' + destination)) {
     window.location.replace(destination);
