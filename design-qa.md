@@ -10,7 +10,7 @@
 
 ## Full-view comparison evidence
 
-The implementation preserves the source composition: centered navigation, 34/66 hero grid, three-line headline, paired CTAs, three compact benefits, large dashboard image, pale violet orb, and the connected-operation strip. The dashboard source is 1586 × 992 and is rendered below its native width at both the 1440 and 1920 layouts.
+The implementation preserves the source composition: centered navigation, 34/66 hero grid, three-line headline, paired CTAs, three compact benefits, large dashboard image, pale violet orb, and the connected-operation strip. The final dashboard source is 997 × 662 and preserves the exact content and proportions supplied by the user.
 
 ## Focused comparison evidence
 
@@ -34,6 +34,12 @@ Typography, spacing, palette, copy, image crop, control order, and dashboard pro
 - Post-fix evidence: `comparison-v2-side-by-side.png`.
 - No actionable P0, P1, or P2 mismatch remains.
 - P3: Small raster differences remain inside the supplied logo and dashboard asset when compared with the compressed reference screenshot.
+
+### Iteration 3
+
+- Replaced the earlier wide dashboard with the exact 997 × 662 final asset supplied by the user.
+- Removed the synthetic client-logo overlays because the final image already contains the correct M, X, and V marks.
+- The image keeps its original aspect ratio and is never stretched independently on either axis.
 
 ## Responsive behavior
 
