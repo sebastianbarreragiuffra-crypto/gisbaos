@@ -2,3 +2,5 @@ tmp/
 .sites-runtime/
 .agents/
 .cursor/
+outputs/
+Claude outputs/

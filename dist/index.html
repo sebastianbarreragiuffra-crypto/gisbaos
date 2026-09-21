@@ -11,17 +11,23 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=33">
   <script src="script.js?v=3" defer></script>
 </head>
 <body class="home-page">
+  <svg class="shape-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="gisba-frame-shape" clipPathUnits="objectBoundingBox">
+        <path d="M .045 0 H .955 Q 1 0 1 .06 V .82 Q 1 .88 .94 .88 H .75 C .71 .88 .69 .9 .665 .935 L .635 .977 Q .615 1 .565 1 H .045 Q 0 1 0 .94 V .06 Q 0 0 .045 0 Z"/>
+      </clipPath>
+    </defs>
+  </svg>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header" data-header>
     <div class="container nav-shell">
-      <a class="brand" href="#inicio" aria-label="GISBA, ir al inicio">
-        <img src="assets/gisba-logo.png" width="44" height="44" alt="">
-        <span>GISBA</span>
+      <a class="brand brand-banner-link" href="#inicio" aria-label="GISBA OS, ir al inicio">
+        <img class="header-brand-banner" src="assets/gisba-os-brand-banner-v5.png" width="2172" height="724" alt="GISBA OS">
       </a>
 
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-principal" data-menu-button>
@@ -30,9 +36,10 @@
       </button>
 
       <nav id="nav-principal" class="main-nav" aria-label="Navegación principal" data-menu>
-        <a href="#campaignos">Producto</a>
+        <a href="servicios.html#campaignos">Producto</a>
         <a href="servicios.html">Soluciones</a>
         <a href="como-trabajamos.html">Cómo trabajamos</a>
+        <a href="nosotros.html">Nosotros</a>
         <a href="preguntas.html">Preguntas</a>
         <a class="nav-login" href="#contacto">Contacto</a>
         <a class="button button-small button-solid" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
@@ -50,7 +57,7 @@
           <p class="hero-lead">GISBA OS centraliza campañas, conversaciones, oportunidades y resultados de todos tus clientes. La IA detecta qué cuenta necesita atención y ayuda a tu equipo a decidir qué hacer después.</p>
           <div class="hero-actions">
             <a class="button button-solid" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
-            <a class="button button-ghost" href="#campaignos"><span class="play-icon" aria-hidden="true">▶</span> Ver cómo funciona</a>
+            <a class="button button-ghost" href="#automatizacion"><span class="play-icon" aria-hidden="true">▶</span> Ver cómo funciona</a>
           </div>
 
           <div class="hero-benefits" aria-label="Beneficios principales">
@@ -146,9 +153,72 @@
       </div>
     </section>
 
-    <section id="marca-gisba-os" class="brand-banner" aria-label="GISBA OS Marketing Operating System">
-      <div class="container brand-banner-inner reveal">
-        <img src="assets/gisba-os-brand-banner.png" width="2174" height="723" alt="GISBA OS, Marketing Operating System" loading="lazy" decoding="async">
+    <section id="integraciones" class="integration-marquee" aria-label="Plataformas que GISBA conecta">
+      <div class="integration-marquee-window">
+        <div class="integration-track">
+          <ul class="integration-list">
+            <li><img src="assets/icons/meta.svg" width="32" height="32" alt=""><span>Meta Ads</span></li>
+            <li><img src="assets/icons/google-ads.svg" width="32" height="32" alt=""><span>Google Ads</span></li>
+            <li><img src="assets/icons/tiktok.svg" width="32" height="32" alt=""><span>TikTok Ads</span></li>
+            <li><img src="assets/icons/linkedin.svg" width="32" height="32" alt=""><span>LinkedIn Ads</span></li>
+            <li><img src="assets/icons/instagram.svg" width="32" height="32" alt=""><span>Instagram</span></li>
+            <li><img src="assets/icons/whatsapp.svg" width="32" height="32" alt=""><span>WhatsApp</span></li>
+            <li><img src="assets/icons/google-analytics.svg" width="32" height="32" alt=""><span>Google Analytics</span></li>
+            <li><img src="assets/icons/hubspot.svg" width="32" height="32" alt=""><span>HubSpot</span></li>
+            <li><img src="assets/icons/pipedrive.svg" width="32" height="32" alt=""><span>Pipedrive</span></li>
+            <li><img src="assets/icons/gmail.svg" width="32" height="32" alt=""><span>Gmail</span></li>
+            <li><img src="assets/icons/google-calendar.svg" width="32" height="32" alt=""><span>Google Calendar</span></li>
+            <li><img src="assets/icons/slack.svg" width="32" height="32" alt=""><span>Slack</span></li>
+          </ul>
+          <ul class="integration-list" aria-hidden="true">
+            <li><img src="assets/icons/meta.svg" width="32" height="32" alt=""><span>Meta Ads</span></li>
+            <li><img src="assets/icons/google-ads.svg" width="32" height="32" alt=""><span>Google Ads</span></li>
+            <li><img src="assets/icons/tiktok.svg" width="32" height="32" alt=""><span>TikTok Ads</span></li>
+            <li><img src="assets/icons/linkedin.svg" width="32" height="32" alt=""><span>LinkedIn Ads</span></li>
+            <li><img src="assets/icons/instagram.svg" width="32" height="32" alt=""><span>Instagram</span></li>
+            <li><img src="assets/icons/whatsapp.svg" width="32" height="32" alt=""><span>WhatsApp</span></li>
+            <li><img src="assets/icons/google-analytics.svg" width="32" height="32" alt=""><span>Google Analytics</span></li>
+            <li><img src="assets/icons/hubspot.svg" width="32" height="32" alt=""><span>HubSpot</span></li>
+            <li><img src="assets/icons/pipedrive.svg" width="32" height="32" alt=""><span>Pipedrive</span></li>
+            <li><img src="assets/icons/gmail.svg" width="32" height="32" alt=""><span>Gmail</span></li>
+            <li><img src="assets/icons/google-calendar.svg" width="32" height="32" alt=""><span>Google Calendar</span></li>
+            <li><img src="assets/icons/slack.svg" width="32" height="32" alt=""><span>Slack</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gisba-pillars" aria-labelledby="pillars-title">
+      <div class="container">
+        <div class="gisba-pillars-heading reveal">
+          <p class="eyebrow"><span></span> La forma GISBA</p>
+          <h2 id="pillars-title">Tres principios para una operación que sí escala.</h2>
+          <p>Unimos estrategia, tecnología y ejecución para reducir fricción y convertir datos en decisiones.</p>
+          <a class="button button-solid" href="como-trabajamos.html">Cómo trabajamos <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="gisba-pillars-grid">
+          <article class="gisba-pillar-card reveal">
+            <span class="gisba-pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17 10 11l4 4 6-8"/><path d="M15 7h5v5"/></svg></span>
+            <small>01</small>
+            <h3>Controla</h3>
+            <p>Centraliza todos tus clientes, campañas y prioridades en un solo lugar. Detecta alertas, cuentas que necesitan atención y oportunidades antes de que se conviertan en problemas.</p>
+          </article>
+
+          <article class="gisba-pillar-card reveal">
+            <span class="gisba-pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7h8M8 12h8M8 17h8"/><circle cx="5" cy="7" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="17" r="1"/></svg></span>
+            <small>02</small>
+            <h3>Automatiza</h3>
+            <p>Conecta conversaciones, cotizaciones y seguimientos de tus clientes en un mismo flujo. Automatiza tareas repetitivas con WhatsApp, IA y reglas para reducir trabajo manual.</p>
+          </article>
+
+          <article class="gisba-pillar-card reveal">
+            <span class="gisba-pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.1 5.2 5.6.4-4.3 3.6 1.4 5.5-4.8-3-4.8 3 1.4-5.5-4.3-3.6 5.6-.4L12 3Z"/></svg></span>
+            <small>03</small>
+            <h3>Demuestra</h3>
+            <p>Conecta cada campaña con las oportunidades y resultados que genera. Entiende qué ocurre después de cada lead y demuestra con mayor claridad el valor que entrega tu agencia.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -215,63 +285,132 @@
       </div>
     </section>
 
-    <section class="section pathways" aria-labelledby="pathways-title">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow"><span></span> Dos caminos, una misma visión</p>
-          <h2 id="pathways-title">Elige cómo quieres avanzar.</h2>
-          <p>GISBA puede acompañar la ejecución de tu marketing o entregar la tecnología para que tu equipo y tus clientes operen con mayor claridad.</p>
-        </div>
-        <div class="path-grid">
-          <article class="path-card path-agency reveal">
-            <span class="card-number">01</span>
-            <div class="path-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M7 34 19 22l7 7 15-16"/><path d="M30 13h11v11"/></svg>
-            </div>
-            <p class="card-label">Para empresas</p>
-            <h3>Agencia de marketing digital</h3>
-            <p>Estrategia, campañas y aprendizaje continuo para convertir inversión en oportunidades que el negocio pueda atender y medir.</p>
-            <ul>
-              <li>Estrategia de adquisición</li>
-              <li>Gestión de campañas</li>
-              <li>Análisis orientado a negocio</li>
-            </ul>
-            <a href="servicios.html">Explorar servicios <span aria-hidden="true">→</span></a>
-          </article>
+    <section id="experiencia-cliente" class="section client-experience" aria-labelledby="client-experience-title">
+      <div class="container client-experience-shell">
+        <div class="client-experience-copy reveal">
+          <p class="eyebrow"><span></span> También mejora la experiencia de tu cliente</p>
+          <h2 id="client-experience-title">Tu agencia trabaja mejor.<br><span>Tu cliente también lo siente.</span></h2>
+          <p class="client-experience-intro">GISBA OS no solo ordena la operación de tu agencia. También le da a cada cliente una experiencia más clara, profesional y conectada con sus oportunidades, cotizaciones y resultados.</p>
 
-          <article id="campaignos" class="path-card path-product reveal">
-            <span class="card-number">02</span>
-            <div class="path-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M9 9h30v30H9z"/><path d="M16 31V21m8 10V16m8 15v-7"/></svg>
-            </div>
-            <p class="card-label">Para agencias y equipos</p>
-            <h3>CampaignOS</h3>
-            <p>Una capa de inteligencia que reúne campañas, conversaciones y resultados para mostrar qué ocurre y qué necesita atención.</p>
-            <ul>
-              <li>Lectura multicanal</li>
-              <li>AI Analyst con contexto</li>
-              <li>Seguimiento hasta revenue</li>
-            </ul>
-            <a href="#contacto">Solicitar una demo <span aria-hidden="true">→</span></a>
-          </article>
+          <div class="client-experience-benefits" aria-label="Beneficios para tus clientes">
+            <article>
+              <span class="benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M3 16s5-8 13-8 13 8 13 8-5 8-13 8S3 16 3 16Z"/><circle cx="16" cy="16" r="3.5"/></svg>
+              </span>
+              <p><strong>Más claridad</strong><small>Tu cliente entiende qué está pasando sin pedir reportes constantemente.</small></p>
+            </article>
+            <article>
+              <span class="benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><circle cx="12" cy="11" r="5"/><path d="M3.5 27c.5-6 3.5-9 8.5-9s8 3 8.5 9M21 8.5a4 4 0 0 1 0 7.5M22 19c4 .5 6 3 6.5 7"/></svg>
+              </span>
+              <p><strong>Más participación</strong><small>Puede revisar oportunidades, responder conversaciones y seguir el avance comercial.</small></p>
+            </article>
+            <article>
+              <span class="benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M7 26V18M16 26V11M25 26V5"/></svg>
+              </span>
+              <p><strong>Más confianza</strong><small>Tu agencia demuestra con claridad qué pasó desde la campaña hasta el resultado.</small></p>
+            </article>
+          </div>
+
+          <div class="client-experience-actions">
+            <a class="button button-solid" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
+            <a class="client-platform-link" href="servicios.html#campaignos">Ver plataforma</a>
+          </div>
+          <p class="client-experience-note">Más clientes. Mejores resultados. A largo plazo.</p>
+        </div>
+
+        <div class="client-experience-visual reveal" aria-label="Vista del portal de clientes de GISBA OS">
+          <div class="client-visual-glow" aria-hidden="true"></div>
+          <div class="client-dashboard-frame">
+            <img src="assets/gisba-client-experience.png" width="1586" height="992" alt="Portal de cliente de GISBA OS con oportunidades, conversaciones, cotizaciones y resultados" loading="lazy" decoding="async">
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section connection" aria-labelledby="connection-title">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="eyebrow"><span></span> Una historia completa</p>
-          <h2 id="connection-title">Cada señal tiene un siguiente paso.</h2>
-          <p>La estrategia no termina cuando llega el lead. GISBA diseña el recorrido para que marketing y operación puedan aprender del resultado real.</p>
+    <section id="operacion-real" class="section real-operations" aria-labelledby="real-operations-title">
+      <div class="container real-operations-headline" aria-hidden="true">Más clientes. Mejores resultados. <span></span></div>
+      <div class="container real-operations-grid">
+        <div class="real-operations-copy reveal">
+          <p class="eyebrow"><span></span> Operación real</p>
+          <h2 id="real-operations-title">Construido para operar<br><em>con clientes reales.</em></h2>
+          <p class="real-operations-intro">Centraliza la operación de todos tus clientes en un solo lugar, sin mezclar cuentas, perder trazabilidad ni depender de procesos manuales.</p>
+
+          <div class="real-operations-benefits">
+            <article>
+              <span aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="11" cy="11" r="5"/><circle cx="22" cy="12" r="4"/><path d="M2 28c.5-7 3.5-10 9-10s8.5 3 9 10M18 20c5 0 8 2.5 9 8"/></svg></span>
+              <p><strong>Cada cliente, separado.</strong><small>Campañas, conversaciones, oportunidades, reportes y resultados organizados por cuenta.</small></p>
+            </article>
+            <article>
+              <span aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m12 3 2 4h4l2-4 4 2-1 5 3 3 4-1 1 5-4 2v4l3 3-3 4-5-2-3 2-1 5h-5l-1-5-3-2-5 2-3-4 3-3v-4l-4-2 1-5 4 1 3-3-1-5 4-2 2 4h4"/><circle cx="16" cy="17" r="5"/></svg></span>
+              <p><strong>Tu equipo mantiene el control.</strong><small>Roles, responsables, prioridades y acciones visibles para saber qué está pasando y quién debe actuar.</small></p>
+            </article>
+            <article>
+              <span aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M13 19 9 23a6 6 0 0 1-8-8l5-5a6 6 0 0 1 8 0M19 13l4-4a6 6 0 0 1 8 8l-5 5a6 6 0 0 1-8 0M10 22l12-12"/></svg></span>
+              <p><strong>Todo queda conectado.</strong><small>Desde la campaña que genera la oportunidad hasta el seguimiento y el resultado que vuelve a la agencia.</small></p>
+            </article>
+          </div>
         </div>
-        <ol class="journey reveal">
-          <li><span>01</span><strong>Campaña</strong><small>La oportunidad nace</small></li>
-          <li><span>02</span><strong>Conversación</strong><small>El equipo responde</small></li>
-          <li><span>03</span><strong>Cotización</strong><small>Se define la propuesta</small></li>
-          <li><span>04</span><strong>Venta</strong><small>Se registra el resultado</small></li>
-          <li><span>05</span><strong>Aprendizaje</strong><small>La estrategia mejora</small></li>
-        </ol>
+
+        <div class="real-operations-visual reveal" aria-label="Panel de control operativo de GISBA">
+          <div class="real-operations-dashboard">
+            <img src="assets/gisba-real-operations.png" width="1672" height="941" alt="Panel GISBA de control operativo con clientes, campañas, oportunidades, actividad y próximas acciones" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="container real-operations-strip reveal" aria-label="Capacidades de la operación GISBA">
+        <h3>Diseñado para crecer<br>con tu agencia</h3>
+        <article><span aria-hidden="true">♟</span><p><strong>Multi-cliente</strong><small>Gestiona múltiples cuentas sin mezclar información.</small></p></article>
+        <article><span aria-hidden="true">◆</span><p><strong>Roles y permisos</strong><small>Controla qué ve y hace cada miembro del equipo.</small></p></article>
+        <article><span aria-hidden="true">◷</span><p><strong>Historial de actividad</strong><small>Todo queda registrado y trazable.</small></p></article>
+        <article><span aria-hidden="true">✣</span><p><strong>Integraciones</strong><small>Conecta tus herramientas favoritas.</small></p></article>
+        <article><span aria-hidden="true">ϟ</span><p><strong>Automatizaciones</strong><small>Menos trabajo manual, más resultados.</small></p></article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer closing-footer">
+    <section id="cierre-gisba" class="closing-cta" aria-labelledby="closing-title">
+      <div class="container closing-cta-grid">
+        <div class="closing-copy reveal">
+          <p class="eyebrow"><span></span> Tu marketing no debería terminar en el lead</p>
+          <h2 id="closing-title">Marketing que no<br><em>termina en el lead.</em></h2>
+          <p>GISBA OS conecta lo que tu agencia genera con lo que ocurre después: conversaciones, oportunidades, seguimiento y resultados.</p>
+          <div class="closing-actions">
+            <a class="button button-solid" href="index.html#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
+            <a class="closing-demo-link" href="index.html#automatizacion"><span aria-hidden="true">▶</span> Ver cómo funciona</a>
+          </div>
+          <ul class="closing-proof" aria-label="Condiciones de la demostración">
+            <li><span aria-hidden="true">✓</span> Demo adaptada<br>a tu agencia</li>
+            <li><span aria-hidden="true">✓</span> Sin compromiso</li>
+            <li><span aria-hidden="true">✓</span> Conoce el flujo<br>completo de GISBA</li>
+          </ul>
+        </div>
+
+        <div class="closing-live-panel reveal" aria-label="Actividad reciente conectada por GISBA OS">
+          <div class="closing-panel-head"><h3>Ahora en GISBA</h3><span><i></i> Actualizándose en tiempo real</span></div>
+          <div class="closing-events">
+            <article>
+              <span class="closing-event-icon whatsapp" aria-hidden="true">◔</span>
+              <p><strong>Cliente aceptó presupuesto<br>por WhatsApp</strong><small>Nova Studio · hace 5 min</small></p>
+              <b aria-hidden="true">›</b>
+            </article>
+            <article>
+              <span class="closing-event-icon warning" aria-hidden="true">△</span>
+              <p><strong>3 oportunidades necesitan<br>seguimiento</strong><small>Varios clientes · hace 18 min</small></p>
+              <b aria-hidden="true">›</b>
+            </article>
+            <article>
+              <span class="closing-event-icon report" aria-hidden="true">▥</span>
+              <p><strong>Reporte mensual listo para cliente</strong><small>Inmobiliaria Sur · hace 1 h</small></p>
+              <b aria-hidden="true">›</b>
+            </article>
+          </div>
+          <p class="closing-result"><span aria-hidden="true">ϟ</span> Todo vuelve a tu agencia como resultado.</p>
+        </div>
       </div>
     </section>
 
@@ -302,17 +441,18 @@
         </form>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="#inicio"><img src="assets/gisba-logo.png" width="44" height="44" alt=""><span>GISBA</span></a>
-        <p>Marketing, datos y decisiones conectadas.</p>
+    <div class="container closing-footer-bottom">
+      <div class="closing-brand">
+        <a class="closing-brand-lockup" href="index.html" aria-label="GISBA OS, ir al inicio"><img src="assets/gisba-os-brand-banner-v5.png" width="2172" height="724" alt="GISBA OS"></a>
+        <p>El sistema operativo para agencias que quieren escalar con más control.</p>
       </div>
-        <div><span class="footer-label">Explorar</span><a href="servicios.html">Servicios</a><a href="#campaignos">CampaignOS</a><a href="como-trabajamos.html">Método</a></div>
-      <div><span class="footer-label">Comenzar</span><a href="#contacto">Agendar conversación</a><a href="#contacto">Solicitar demo</a></div>
-      <p class="copyright">© <span data-year></span> GISBA. Todos los derechos reservados.</p>
+      <nav class="closing-links" aria-label="Enlaces del pie de página">
+        <div><strong>Producto</strong><a href="index.html#automatizacion">Cómo funciona</a><a href="servicios.html#campaignos">Para agencias</a><a href="index.html#experiencia-cliente">Experiencia del cliente</a><a href="index.html#contacto">Solicitar demo</a></div>
+        <div><strong>Empresa</strong><a href="servicios.html">Servicios</a><a href="como-trabajamos.html">Cómo trabajamos</a><a href="nosotros.html">Nosotros</a><a href="index.html#contacto">Contacto</a></div>
+        <div><strong>Recursos</strong><a href="preguntas.html">Preguntas</a><a href="servicios.html">Marketing B2B</a><a href="servicios.html#campaignos">CampaignOS</a><a href="index.html#contacto">Agenda una demo</a></div>
+      </nav>
+      <p class="closing-copyright">© <span data-year></span> GISBA OS. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
