@@ -7,10 +7,12 @@
 
 ## Tipografía oficial
 
-- Usa **Inter** como única familia tipográfica principal en todas las páginas públicas de GISBA OS y CampaignOS.
-- La fuente debe cargarse desde `dist/assets/fonts/`; no dependas de que esté instalada en el computador ni de servicios externos.
-- Conserva los pesos 400, 500, 600, 700 y 800. `"Segoe UI", Arial, sans-serif` se permite únicamente como respaldo técnico.
-- No reemplaces Inter ni mezcles otra familia en títulos, navegación, botones o cuerpo sin una instrucción explícita del usuario.
+- Usa **Manrope + Inter** en todas las páginas públicas de GISBA OS y CampaignOS.
+- Usa **Manrope 500–600** en títulos y encabezados de marketing (`h1`–`h6`).
+- Usa **Inter 400–600** en cuerpo, navegación, botones, formularios, tarjetas e interfaces de producto o dashboards.
+- Ambas fuentes deben cargarse desde `dist/assets/fonts/`; no dependas de que estén instaladas en el computador ni de servicios externos.
+- `"Segoe UI", Arial, sans-serif` se permite únicamente como respaldo técnico.
+- No reemplaces ni mezcles otras familias sin una instrucción explícita del usuario.
 - Cuando cambie el CSS global, actualiza la versión de `styles.css` en todas las páginas HTML para evitar estilos antiguos almacenados en caché.
 
 ## Layout y assets
