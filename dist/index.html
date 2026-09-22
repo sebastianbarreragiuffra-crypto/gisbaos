@@ -407,26 +407,46 @@
           </ul>
         </div>
 
-        <div class="closing-live-panel reveal" aria-label="Actividad reciente conectada por GISBA OS">
-          <div class="closing-panel-head"><h3>Ahora en GISBA</h3><span><i></i> Actualizándose en tiempo real</span></div>
-          <div class="closing-events">
-            <article>
-              <span class="closing-event-icon whatsapp" aria-hidden="true">◔</span>
-              <p><strong>Cliente aceptó presupuesto<br>por WhatsApp</strong><small>Nova Studio · hace 5 min</small></p>
-              <b aria-hidden="true">›</b>
-            </article>
-            <article>
-              <span class="closing-event-icon warning" aria-hidden="true">△</span>
-              <p><strong>3 oportunidades necesitan<br>seguimiento</strong><small>Varios clientes · hace 18 min</small></p>
-              <b aria-hidden="true">›</b>
-            </article>
-            <article>
-              <span class="closing-event-icon report" aria-hidden="true">▥</span>
-              <p><strong>Reporte mensual listo para cliente</strong><small>Inmobiliaria Sur · hace 1 h</small></p>
-              <b aria-hidden="true">›</b>
-            </article>
+        <div class="closing-live-panel reveal" aria-label="Flujo de aprobación de presupuesto entre una agencia y su cliente">
+          <div class="closing-panel-head">
+            <h3>Aprobaciones de presupuesto en tiempo real</h3>
+            <span><i></i> Actualizándose en tiempo real</span>
           </div>
-          <p class="closing-result"><span aria-hidden="true">ϟ</span> Todo vuelve a tu agencia como resultado.</p>
+
+          <ol class="approval-flow" aria-label="Proceso de aprobación">
+            <li><b>1</b><span>Agencia solicita</span></li>
+            <li><b>2</b><span>Cliente aprueba o rechaza</span></li>
+            <li><b>3</b><span>Agencia recibe la decisión</span></li>
+          </ol>
+
+          <article class="approval-card">
+            <header class="approval-card-head">
+              <span class="approval-whatsapp-icon" aria-hidden="true">⌕</span>
+              <h4>Aumento de presupuesto</h4>
+            </header>
+
+            <div class="approval-card-body">
+              <div class="approval-conversation">
+                <div class="approval-contact">
+                  <span aria-hidden="true">C</span>
+                  <p><strong>Camila · Cliente</strong><small>en línea</small></p>
+                </div>
+                <div class="approval-chat">
+                  <small>Mensaje de tu agencia</small>
+                  <p class="approval-request">Hola, Camila. Detectamos una oportunidad para escalar la campaña. ¿Apruebas aumentar el presupuesto mensual de $350.000 a $500.000?<time>11:24</time></p>
+                  <p class="approval-reply">Sí, aprobemos <time>11:26 <span aria-hidden="true">✓✓</span></time></p>
+                </div>
+              </div>
+
+              <dl class="approval-summary">
+                <div><dt>Cambio solicitado</dt><dd>$350.000 <span aria-hidden="true">→</span> $500.000</dd></div>
+                <div><dt>Respuesta del cliente</dt><dd class="approval-status"><span aria-hidden="true">✓</span> Aprobado</dd></div>
+                <div><dt>Estado</dt><dd>Decisión recibida</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <p class="closing-result"><span aria-hidden="true">ϟ</span> Tu agencia recibe la decisión y puede actuar de inmediato.</p>
         </div>
       </div>
     </section>
