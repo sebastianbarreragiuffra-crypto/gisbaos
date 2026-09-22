@@ -11,8 +11,8 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=33">
-  <script src="script.js?v=3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=37">
+  <script src="script.js?v=4" defer></script>
 </head>
 <body class="home-page">
   <svg class="shape-defs" aria-hidden="true" focusable="false">
@@ -320,10 +320,26 @@
           <p class="client-experience-note">Más clientes. Mejores resultados. A largo plazo.</p>
         </div>
 
-        <div class="client-experience-visual reveal" aria-label="Vista del portal de clientes de GISBA OS">
+        <div class="client-experience-visual reveal" aria-label="Recorrido conectado del cliente en GISBA OS">
           <div class="client-visual-glow" aria-hidden="true"></div>
-          <div class="client-dashboard-frame">
-            <img src="assets/gisba-client-experience.png" width="1586" height="992" alt="Portal de cliente de GISBA OS con oportunidades, conversaciones, cotizaciones y resultados" loading="lazy" decoding="async">
+          <div class="client-product-story" data-product-story>
+            <div class="client-story-tabs" role="tablist" aria-label="Vistas de la experiencia del cliente">
+              <button class="active" type="button" role="tab" aria-selected="true" data-story-tab="0"><span>01</span><strong>Entender</strong><small>Impacto comercial</small></button>
+              <button type="button" role="tab" aria-selected="false" data-story-tab="1"><span>02</span><strong>Actuar</strong><small>Conversaciones</small></button>
+              <button type="button" role="tab" aria-selected="false" data-story-tab="2"><span>03</span><strong>Demostrar</strong><small>Resultado verificable</small></button>
+            </div>
+            <div class="client-story-stage" aria-live="polite">
+              <figure class="active" data-story-panel="0" aria-hidden="false">
+                <img src="assets/mockup-dashboard-cliente-v2.png" width="1440" height="960" alt="Dashboard del cliente que conecta campañas, leads, oportunidades y visitas" loading="lazy" decoding="async">
+              </figure>
+              <figure data-story-panel="1" aria-hidden="true">
+                <img src="assets/mockup-conversaciones-v3.png" width="1440" height="960" alt="Historia unificada de un lead entre Instagram, formulario y WhatsApp" loading="lazy" decoding="async">
+              </figure>
+              <figure data-story-panel="2" aria-hidden="true">
+                <img src="assets/mockup-reporte-agencia-v3.png" width="1440" height="960" alt="Reporte de la agencia que muestra el recorrido verificable de una oportunidad" loading="lazy" decoding="async">
+              </figure>
+            </div>
+            <div class="client-story-progress" aria-hidden="true"><span></span></div>
           </div>
         </div>
       </div>
@@ -374,6 +390,7 @@
 
   <footer class="site-footer closing-footer">
     <section id="cierre-gisba" class="closing-cta" aria-labelledby="closing-title">
+      <img class="closing-reference-image" src="assets/marketing-no-termina-en-el-lead.png" width="1440" height="960" alt="Marketing que no termina en el lead. GISBA OS conecta conversaciones, oportunidades, seguimiento y resultados.">
       <div class="container closing-cta-grid">
         <div class="closing-copy reveal">
           <p class="eyebrow"><span></span> Tu marketing no debería terminar en el lead</p>
