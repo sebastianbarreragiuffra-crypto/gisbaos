@@ -1802,7 +1802,7 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   .motion-hero-shell { width: min(calc(100% - 28px), 520px); }
 }
 
-/* Vista oficial del portal del cliente: captura completa, sin recortes */
+/* Vista oficial del portal del cliente: asset completo en desktop y foco de producto en mobile. */
 .client-experience.client-experience-image {
   padding: 88px 0;
   background: linear-gradient(180deg,#fff 0%,#f8f7ff 48%,#fff 100%);
@@ -1817,7 +1817,19 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   max-width: 1340px;
 }
 
-.client-experience-image-shell a {
+.client-experience-mobile-copy {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.client-experience-product-link {
   display: block;
   overflow: hidden;
   border: 1px solid rgba(91,55,255,.14);
@@ -1826,8 +1838,12 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   box-shadow: 0 32px 75px rgba(50,34,126,.14);
 }
 
-.client-experience-image-shell img {
+.client-experience-product-window,
+.client-experience-product-window img {
   display: block;
+}
+
+.client-experience-product-window img {
   width: 100%;
   max-width: 1448px;
   height: auto;
@@ -1836,9 +1852,43 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 }
 
 @media (max-width: 780px) {
-  .client-experience.client-experience-image { padding: 54px 0; }
-  .client-experience-image-shell { width: min(calc(100% - 24px),1340px); }
-  .client-experience-image-shell a { border-radius: 16px; box-shadow: 0 20px 50px rgba(50,34,126,.12); }
+  .client-experience.client-experience-image { padding: 64px 0 56px; }
+  .client-experience-image-shell { width: min(calc(100% - 28px),680px); }
+  .client-experience-mobile-copy {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0 0 32px;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  .client-experience-mobile-copy .eyebrow { margin: 0 0 14px; color: #4d24ff; }
+  .client-experience-mobile-copy h2 {
+    margin: 0;
+    color: #090b26;
+    font-size: clamp(2.15rem,10.4vw,3.15rem);
+    line-height: 1.03;
+    letter-spacing: -.055em;
+  }
+  .client-experience-mobile-copy h2 em { color: #5c32f8; font-style: normal; }
+  .client-experience-mobile-copy > p:last-child { margin: 18px 0 0; color: #5d6a91; font-size: .96rem; line-height: 1.55; }
+  .client-experience-product-link { border-radius: 18px; box-shadow: 0 20px 50px rgba(50,34,126,.12); }
+  .client-experience-product-window { position: relative; height: clamp(360px,65vw,500px); overflow: hidden; background: #f8f7ff; }
+  .client-experience-product-window img {
+    width: clamp(900px,146vw,1120px);
+    max-width: none;
+    transform: translate(-16.5%,-29%);
+  }
+  .back-to-top {
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom,0px));
+    width: 42px;
+    height: 42px;
+    box-shadow: 0 10px 26px rgba(35,25,93,.14);
+  }
+  .back-to-top svg { width: 19px; }
 }
 
 /* Landing 2026: jerarquia, producto y estados de integracion */
@@ -2174,6 +2224,9 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   .nav-login { padding: 13px; color: #15162e; }
   .motion-hero-copy-overlay { display: none; }
   .integrations-status,.gisba-pulse,.decision-flow,.whatsapp-coordination,.landing-faq { padding: 68px 0; }
+  .decision-flow { padding-bottom: 32px; }
+  .client-experience.client-experience-image { padding-top: 32px; padding-bottom: 32px; }
+  .landing-faq { padding-top: 36px; }
   .integrations-status-heading h2,.pulse-copy h2,.decision-flow-heading h2,.landing-faq h2 { font-size: clamp(2rem,10.2vw,2.85rem); }
   .integration-status-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .integration-status-grid article { grid-template-columns: 34px minmax(0,1fr); gap: 10px; min-height: 96px; padding: 14px; }
