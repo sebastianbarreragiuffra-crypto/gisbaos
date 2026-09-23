@@ -9,15 +9,17 @@
   <meta property="og:title" content="GISBA OS | Sistema operativo para agencias de marketing">
   <meta property="og:description" content="Centraliza clientes, campañas y decisiones. GISBA detecta qué necesita atención y recomienda el siguiente paso.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/gisba-dashboard-final.webp">
+  <meta property="og:image" content="https://gisba-marketing-chile.sebastianbarreragiuf.chatgpt.site/assets/gisba-hero-motion.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="511">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GISBA OS | Sistema operativo para agencias de marketing">
   <meta name="twitter:description" content="Más control, menos trabajo operativo y resultados que tu agencia puede demostrar.">
-  <meta name="twitter:image" content="assets/gisba-dashboard-final.webp">
+  <meta name="twitter:image" content="https://gisba-marketing-chile.sebastianbarreragiuf.chatgpt.site/assets/gisba-hero-motion.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GISBA OS","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Sistema operativo para agencias de marketing que conecta clientes, campañas, decisiones y resultados."}</script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=63">
-  <link rel="stylesheet" href="whatsapp-section.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=64">
+  <link rel="stylesheet" href="whatsapp-section.css?v=2">
   <script src="script.js?v=18" defer></script>
 </head>
 <body class="home-page">
@@ -45,7 +47,7 @@
         <a href="servicios.html#campaignos">Producto</a>
         <a href="servicios.html">Soluciones</a>
         <a href="como-trabajamos.html">Cómo funciona</a>
-        <a href="index.html#precios">Precios</a>
+        <a href="index.html#contacto">Contacto</a>
         <a href="nosotros.html">Nosotros</a>
         <span class="nav-login" aria-label="Iniciar sesión">Iniciar sesión</span>
         <a class="button button-small button-solid" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
@@ -107,7 +109,7 @@
                 <span class="motion-focus-icon" aria-hidden="true">↘</span>
                 <div><small>CAMPAÑA META ADS · KOZAN DIGITAL</small><strong>El rendimiento cayó 18% en los últimos 7 días.</strong><p>Conviene revisar presupuesto y segmentación antes de continuar.</p></div>
               </div>
-              <button type="button" tabindex="-1">Revisar campaña <span aria-hidden="true">→</span></button>
+              <span class="motion-state-action" aria-hidden="true">Revisar campaña <span>→</span></span>
             </article>
 
             <article class="motion-state motion-state-3">
@@ -191,9 +193,9 @@
             <div><dt>Confianza</dt><dd><span aria-hidden="true">●●●●○</span> Alta</dd></div>
             <div><dt>Cliente</dt><dd>Virel Estrategia</dd></div>
           </dl>
-          <div class="pulse-actions">
-            <button type="button">Revisar recomendación</button>
-            <button class="pulse-assign" type="button">Asignar <span aria-hidden="true">→</span></button>
+          <div class="pulse-actions" aria-hidden="true">
+            <span class="pulse-demo-action">Revisar recomendación</span>
+            <span class="pulse-demo-action pulse-assign">Asignar <span>→</span></span>
           </div>
           <p class="pulse-control-note"><span aria-hidden="true">ⓘ</span> GISBA recomienda. Tu equipo decide antes de ejecutar cualquier cambio.</p>
         </div>
@@ -309,28 +311,11 @@
 
   <footer class="site-footer closing-footer">
     <section id="cierre-gisba" class="section whatsapp-coordination whatsapp-approved" aria-labelledby="closing-title">
-      <div class="container whatsapp-approved-grid">
-        <div class="whatsapp-approved-copy reveal">
-          <p class="eyebrow"><span></span> Coordinación por WhatsApp</p>
-          <h2 id="closing-title">Coordina decisiones de marketing <em>sin salir de WhatsApp.</em></h2>
-          <p class="whatsapp-approved-lead">GISBA conecta a tu agencia con sus clientes para gestionar recomendaciones, aprobaciones y solicitudes, registrando cada decisión en la plataforma.</p>
-          <a class="button button-solid whatsapp-approved-cta" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
-
-          <div class="whatsapp-approved-relation" aria-label="Agencia de marketing, GISBA OS y cliente de la agencia">
-            <strong>Agencia de marketing</strong>
-            <span aria-hidden="true">→</span>
-            <strong>GISBA OS</strong>
-            <span aria-hidden="true">→</span>
-            <strong>Cliente de la agencia</strong>
-          </div>
-
-          <p class="whatsapp-approved-note"><span aria-hidden="true">ⓘ</span> No es un canal de atención para compradores finales.</p>
-        </div>
-
-        <figure class="whatsapp-approved-visual reveal" aria-label="Coordinación entre una agencia y su cliente por WhatsApp, con la aprobación registrada y una tarea creada en GISBA OS">
-          <div class="whatsapp-approved-viewport">
-            <img src="assets/gisba-coordinacion-whatsapp.jpg" width="1280" height="720" alt="Smartphone con una conversación de aprobación entre Agencia Demo y Constructora Andes junto a la interfaz GISBA con aprobación registrada, tarea creada y pendiente de ejecución" loading="lazy" decoding="async">
-          </div>
+      <div class="container whatsapp-approved-shell reveal">
+        <h2 id="closing-title" class="sr-only">Coordina marketing con tus clientes desde WhatsApp.</h2>
+        <figure class="whatsapp-approved-visual" aria-label="Coordinación entre una agencia de marketing y su cliente por WhatsApp, con la aprobación registrada y una tarea creada en GISBA OS">
+          <img src="assets/gisba-coordinacion-whatsapp.jpg" width="1280" height="720" alt="Coordina marketing con tus clientes desde WhatsApp: smartphone con una conversación entre Agencia Demo y Constructora Andes, laptop con GISBA OS y el flujo Agencia de marketing, GISBA OS y Cliente de la agencia" loading="eager" decoding="async">
+          <a class="whatsapp-approved-cta-hotspot" href="#contacto"><span class="sr-only">Agenda una demo</span></a>
         </figure>
       </div>
     </section>
@@ -400,6 +385,7 @@
             <label><span class="field-label">Comentarios adicionales <small class="optional-label">(opcional)</small></span><textarea name="mensaje" rows="4" placeholder="Cuéntanos cualquier detalle que debamos conocer"></textarea></label>
           <button class="button button-solid" type="submit">Agenda una demo <span aria-hidden="true">→</span></button>
           <p class="form-note">La primera conversación es para entender tu escenario y definir si podemos ayudarte.</p>
+          <p class="form-direct-contact">Si tu aplicación de correo no se abre, escribe directamente a <a href="mailto:contacto@gisbaos.cl">contacto@gisbaos.cl</a>.</p>
           <div class="form-result" role="status" aria-live="polite" data-form-result hidden></div>
         </form>
       </div>
@@ -413,7 +399,7 @@
       <nav class="closing-links" aria-label="Enlaces del pie de página">
         <div><strong>Producto</strong><a href="index.html#gisba-pulse">GISBA Pulse</a><a href="index.html#como-funciona">Cómo funciona</a><a href="index.html#experiencia-cliente">Portal del cliente</a><a href="index.html#contacto">Agenda una demo</a></div>
         <div><strong>Empresa</strong><a href="servicios.html">Servicios</a><a href="como-trabajamos.html">Cómo trabajamos</a><a href="nosotros.html">Nosotros</a><a href="index.html#contacto">Contacto</a></div>
-        <div><strong>Recursos</strong><a href="index.html#faq">Preguntas frecuentes</a><a href="preguntas.html">Todas las preguntas</a><a href="servicios.html#campaignos">GISBA OS</a><a href="index.html#precios">Precios</a></div>
+        <div><strong>Recursos</strong><a href="index.html#faq">Preguntas frecuentes</a><a href="preguntas.html">Todas las preguntas</a><a href="servicios.html#campaignos">GISBA OS</a><a href="index.html#integraciones">Integraciones</a></div>
       </nav>
       <p class="closing-copyright">© <span data-year></span> GISBA OS. Todos los derechos reservados.</p>
     </div>

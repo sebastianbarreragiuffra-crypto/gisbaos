@@ -835,7 +835,7 @@ body.home-page::before { display: none; }
 .dashboard-business-switch { position: relative; isolation: isolate; display: inline-flex; align-items: center; gap: 4px; padding: 4px; border: 1px solid #e3e5f0; border-radius: 999px; background: #f2f4f8; box-shadow: 0 8px 22px rgba(42,38,90,.07); }
 .dashboard-business-switch::before { content: ""; position: absolute; z-index: -1; top: 4px; bottom: 4px; left: 4px; width: calc((100% - 12px) / 2); border-radius: 999px; background: linear-gradient(135deg, #4d24ff, #6638ff); box-shadow: 0 6px 15px rgba(79,36,255,.22); transform: translateX(0); transition: transform .42s cubic-bezier(.2,.8,.2,1); }
 .dashboard-business-switch[data-active-index="1"]::before { transform: translateX(calc(100% + 4px)); }
-.dashboard-business-switch button { position: relative; z-index: 1; min-width: 150px; padding: 9px 18px; border: 0; border-radius: 999px; color: #11152f; background: transparent; font: 600 .82rem/1 Inter, "Segoe UI", Arial, sans-serif; cursor: pointer; transition: color .28s ease, transform .2s ease; }
+.dashboard-business-switch button { position: relative; z-index: 1; min-width: 150px; min-height: 44px; padding: 9px 18px; border: 0; border-radius: 999px; color: #11152f; background: transparent; font: 600 .82rem/1 Inter, "Segoe UI", Arial, sans-serif; cursor: pointer; transition: color .28s ease, transform .2s ease; }
 .dashboard-business-switch button:hover { transform: translateY(-1px); }
 .dashboard-business-switch button:focus-visible { outline: 3px solid rgba(79,36,255,.25); outline-offset: 2px; }
 .dashboard-business-switch .is-active { color: #fff; }
@@ -1088,7 +1088,7 @@ body.home-page::before { display: none; }
   .dashboard-mobile-tour strong { color: #11142e; font-size: .76rem; }
   .dashboard-mobile-tour small { margin-top: 2px; color: #657091; font-size: .66rem; line-height: 1.35; }
   .client-dashboard-preview-frame figcaption { display: block; padding: 11px 14px; border-top: 1px solid rgba(93,66,255,.12); text-align: center; }
-  .client-dashboard-preview-frame figcaption a { color: #4f27ff; font-size: .8rem; font-weight: 700; text-decoration: none; }
+  .client-dashboard-preview-frame figcaption a { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding-inline: 12px; color: #4f27ff; font-size: .8rem; font-weight: 700; text-decoration: none; }
   .brand-banner-inner { min-height: 220px; padding-block: 12px; }
   .brand-banner img { width: 125%; max-width: none; }
   .gisba-pillars { padding: 72px 0 58px; }
@@ -1694,9 +1694,12 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 .motion-focus-card strong { margin-top: 3%; font-size: clamp(6px,.77vw,11px); line-height: 1.22; }
 .motion-focus-card p { margin-top: 3%; color: #6d7695; font-size: clamp(5px,.56vw,8px); line-height: 1.25; }
 
-.motion-state button {
+.motion-state-action {
   align-self: flex-end;
   min-height: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding: 2.5% 4.2%;
   border: 0;
   border-radius: 5px;
@@ -2052,8 +2055,11 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 .pulse-meta dd { margin: 5px 0 0; color: #202544; font-size: .76rem; font-weight: 700; }
 .pulse-meta dd span { color: #6540f7; letter-spacing: .06em; }
 .pulse-actions { gap: 10px; margin-top: 18px; }
-.pulse-actions button {
+.pulse-demo-action {
   min-height: 43px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 18px;
   border: 0;
   border-radius: 11px;
@@ -2063,6 +2069,8 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 }
 .pulse-actions .pulse-assign { color: #3822a8; border: 1px solid #d8d0ff; background: #fff; }
 .pulse-control-note { margin: 14px 0 0; color: #707895; font-size: .72rem; line-height: 1.45; }
+.form-direct-contact { margin: 12px 0 0; color: #aaa5bd; font-size: .78rem; line-height: 1.5; }
+.form-direct-contact a { color: #d8ccff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
 .dashboard-business-heading h2 {
   margin: 8px 0 10px;
@@ -2230,7 +2238,7 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   .pulse-priority { font-size: .64rem; }
   .pulse-meta { grid-template-columns: 1fr; }
   .pulse-actions { display: grid; grid-template-columns: 1fr 1fr; }
-  .pulse-actions button { padding-inline: 10px; }
+  .pulse-demo-action { padding-inline: 10px; }
   .dashboard-business-heading h2 { font-size: clamp(2rem,10.3vw,2.8rem); }
   .decision-flow-heading { margin-bottom: 32px; }
   .decision-flow-steps { grid-template-columns: 1fr; }
@@ -2243,6 +2251,8 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 }
 
 @media (max-width: 480px) {
-  .integration-status-grid { grid-template-columns: 1fr; }
+  .integration-status-grid article { min-height: 106px; padding: 12px 10px; }
+  .integration-status-grid strong { font-size: .8rem; }
+  .integration-status-grid small { padding: 5px 6px; font-size: .58rem; }
   .pulse-actions { grid-template-columns: 1fr; }
 }
