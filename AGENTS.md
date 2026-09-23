@@ -79,3 +79,11 @@
 
 - Antes de cambiar un visual aprobado, detente e informa: **Sección**, **Asset actual**, **Asset propuesto**, **Motivo del cambio**, **Qué mejoraría** y **Qué se perdería**.
 - Espera la aprobación explícita del usuario antes de realizar el reemplazo.
+
+## Publicación y baseline
+
+- GitHub y Sites son publicaciones independientes. Un `git push` no actualiza automáticamente la web pública.
+- Cuando el usuario solicite publicar, empaqueta y despliega en Sites el `dist/` correspondiente al commit aprobado; excluye archivos locales no relacionados.
+- No declares Git local, GitHub y Sites sincronizados hasta verificar el SHA local/remoto, la versión desplegada y el DOM real de la URL pública.
+- Después del despliegue, comprueba por red los assets y versiones CSS esperados, ausencia de contenido obsoleto, consola limpia, cero overflow y capturas públicas en los viewports pedidos.
+- El baseline pre-motion debe quedar publicado y verificado antes de comenzar cualquier motion. No implementes motion sin una instrucción explícita posterior.

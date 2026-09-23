@@ -1880,7 +1880,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 .integrations-status-heading h2,
 .pulse-copy h2,
 .decision-flow-heading h2,
-.whatsapp-copy h2,
 .landing-faq h2 {
   margin: 14px 0 14px;
   color: #090b26;
@@ -1892,7 +1891,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 }
 .integrations-status-heading > p:last-child,
 .pulse-copy > p,
-.whatsapp-copy > p,
 .landing-faq .faq-intro > p:last-child {
   margin: 0;
   color: #657092;
@@ -1944,8 +1942,7 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   gap: clamp(58px,7vw,104px);
 }
 .pulse-copy h2 em,
-.decision-flow-heading h2 em,
-.whatsapp-copy h2 em {
+.decision-flow-heading h2 em {
   color: #5a2cff;
   font-style: normal;
 }
@@ -2141,58 +2138,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
     radial-gradient(circle at 82% 50%,rgba(94,45,255,.14),transparent 30%),
     linear-gradient(180deg,#faf9ff,#fff);
 }
-.whatsapp-grid {
-  display: grid;
-  grid-template-columns: minmax(0,.82fr) minmax(560px,1.18fr);
-  align-items: center;
-  gap: clamp(58px,7vw,105px);
-}
-.whatsapp-copy { max-width: 590px; }
-.whatsapp-scope {
-  display: flex;
-  gap: 10px;
-  margin-top: 24px !important;
-  padding: 14px 16px;
-  border: 1px solid #ddd6ff;
-  border-radius: 14px;
-  color: #313756 !important;
-  background: #f5f2ff;
-  font-size: .8rem !important;
-  line-height: 1.45 !important;
-}
-.whatsapp-scope span { color: #5e32ff; }
-.whatsapp-flow {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  gap: 9px;
-  padding: 34px 38px 48px;
-  filter: drop-shadow(0 28px 45px rgba(50,34,126,.14));
-  clip-path: url(#gisba-frame-shape);
-}
-.whatsapp-flow::before {
-  position: absolute;
-  z-index: -2;
-  inset: 0;
-  content: "";
-  background: #d9d2ff;
-  clip-path: inherit;
-}
-.whatsapp-flow::after {
-  position: absolute;
-  z-index: -1;
-  inset: 1px;
-  content: "";
-  background: #fff;
-  clip-path: inherit;
-}
-.whatsapp-flow article { display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 14px; padding: 13px 15px; border: 1px solid #e8e4f5; border-radius: 16px; background: #faf9ff; }
-.whatsapp-flow article > span { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 13px; color: #fff; background: linear-gradient(135deg,#4a22ff,#773eff); font-size: .74rem; font-weight: 800; }
-.whatsapp-flow article > div { display: grid; gap: 4px; }
-.whatsapp-flow strong { color: #11142f; font-size: .95rem; }
-.whatsapp-flow small { color: #68718f; line-height: 1.45; }
-.whatsapp-flow > i { color: #6940ff; font-style: normal; font-weight: 800; text-align: center; line-height: 1; }
-
 .landing-faq {
   padding: 104px 0;
   color: #151833;
@@ -2214,13 +2159,13 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   .brand-banner-link { width: 190px; }
   .brand img.header-brand-banner { width: 224px; height: auto; }
   .nav-login { display: none; }
-  .pulse-grid,.whatsapp-grid { grid-template-columns: minmax(0,.8fr) minmax(520px,1.2fr); gap: 42px; }
+  .pulse-grid { grid-template-columns: minmax(0,.8fr) minmax(520px,1.2fr); gap: 42px; }
 }
 
 @media (max-width: 1040px) {
   .integration-status-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
-  .pulse-grid,.whatsapp-grid { grid-template-columns: 1fr; }
-  .pulse-copy,.whatsapp-copy { max-width: 700px; }
+  .pulse-grid { grid-template-columns: 1fr; }
+  .pulse-copy { max-width: 700px; }
   .decision-flow-steps { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .decision-flow-steps li:nth-child(2)::after { display: none; }
 }
@@ -2229,11 +2174,11 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   .nav-login { padding: 13px; color: #15162e; }
   .motion-hero-copy-overlay { display: none; }
   .integrations-status,.gisba-pulse,.decision-flow,.whatsapp-coordination,.landing-faq { padding: 68px 0; }
-  .integrations-status-heading h2,.pulse-copy h2,.decision-flow-heading h2,.whatsapp-copy h2,.landing-faq h2 { font-size: clamp(2rem,10.2vw,2.85rem); }
+  .integrations-status-heading h2,.pulse-copy h2,.decision-flow-heading h2,.landing-faq h2 { font-size: clamp(2rem,10.2vw,2.85rem); }
   .integration-status-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .integration-status-grid article { grid-template-columns: 34px minmax(0,1fr); gap: 10px; min-height: 96px; padding: 14px; }
   .integration-status-grid article small { grid-column: 2; justify-self: start; }
-  .pulse-panel,.whatsapp-flow { padding: 24px 20px 38px; }
+  .pulse-panel { padding: 24px 20px 38px; }
   .pulse-panel-head { align-items: flex-start; }
   .pulse-priority { font-size: .64rem; }
   .pulse-meta { grid-template-columns: 1fr; }
@@ -2244,7 +2189,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   .decision-flow-steps { grid-template-columns: 1fr; }
   .decision-flow-steps li { min-height: 0; }
   .decision-flow-steps li:not(:last-child)::after { top: auto; right: 50%; bottom: -24px; transform: translateX(50%) rotate(90deg); }
-  .whatsapp-flow article { grid-template-columns: 44px 1fr; padding: 12px; }
   .landing-faq .faq-intro { position: static; }
   #inicio,#integraciones,#gisba-pulse,#dashboard-cliente,#forma-gisba,#como-funciona,
   #experiencia-cliente,#cierre-gisba,#faq,#contacto,#precios { scroll-margin-top: 76px; }

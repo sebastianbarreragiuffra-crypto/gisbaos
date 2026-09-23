@@ -1,0 +1,14 @@
+---
+description: Sincroniza de forma verificable GitHub y la publicación de GISBA en Sites
+alwaysApply: true
+---
+
+# Publicación de GISBA OS
+
+- GitHub y Sites son publicaciones independientes; `git push` no despliega la web pública.
+- Publica en Sites únicamente el `dist/` del commit aprobado y excluye archivos locales no relacionados.
+- Después de cada publicación solicitada, confirma la versión de Sites y que el despliegue terminó correctamente.
+- Verifica la URL pública por red: DOM real, assets y versiones CSS esperados, ausencia de contenido obsoleto, consola limpia y cero overflow.
+- Genera capturas públicas en los viewports pedidos antes de afirmar que la publicación coincide con Git.
+- No declares sincronización hasta comprobar que `HEAD`, `origin/main` y la versión pública representan el mismo estado.
+- No comiences motion hasta que el baseline pre-motion haya sido publicado, verificado y cerrado por el usuario.

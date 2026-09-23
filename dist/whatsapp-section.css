@@ -43,8 +43,8 @@
 }
 
 @media (max-width: 780px) {
-  .whatsapp-approved {
-    padding: 54px 0;
+  body.home-page #cierre-gisba.whatsapp-approved {
+    padding: 72px 0;
   }
 
   .whatsapp-approved-visual {
@@ -59,8 +59,8 @@
 }
 
 @media (max-width: 430px) {
-  .whatsapp-approved {
-    padding: 46px 0;
+  body.home-page #cierre-gisba.whatsapp-approved {
+    padding: 68px 0;
   }
 
   .whatsapp-approved-visual {
