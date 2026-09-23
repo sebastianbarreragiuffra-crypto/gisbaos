@@ -1,6 +1,7 @@
 const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('[data-menu-button]');
 const menu = document.querySelector('[data-menu]');
+const navDropdowns = document.querySelectorAll('[data-nav-dropdown]');
 
 const redirectLegacyServicesLink = () => {
   const routes = { '#servicios': 'servicios.html', '#metodo': 'como-trabajamos.html', '#preguntas': 'preguntas.html' };
@@ -30,12 +31,54 @@ menuButton?.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isOpen));
   menu?.classList.toggle('open', !isOpen);
+  if (isOpen) {
+    navDropdowns.forEach((dropdown) => {
+      dropdown.classList.remove('open');
+      dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+
+navDropdowns.forEach((dropdown) => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  toggle?.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const willOpen = !dropdown.classList.contains('open');
+    navDropdowns.forEach((other) => {
+      other.classList.remove('open');
+      other.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+    });
+    dropdown.classList.toggle('open', willOpen);
+    toggle.setAttribute('aria-expanded', String(willOpen));
+  });
+});
+
+document.addEventListener('click', (event) => {
+  if ([...navDropdowns].some((dropdown) => dropdown.contains(event.target))) return;
+  navDropdowns.forEach((dropdown) => {
+    dropdown.classList.remove('open');
+    dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  navDropdowns.forEach((dropdown) => {
+    dropdown.classList.remove('open');
+    const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.focus();
+  });
 });
 
 menu?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     menu.classList.remove('open');
     menuButton?.setAttribute('aria-expanded', 'false');
+    navDropdowns.forEach((dropdown) => {
+      dropdown.classList.remove('open');
+      dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+    });
   });
 });
 
@@ -108,6 +151,7 @@ if (productStory) {
   const tabs = [...productStory.querySelectorAll('[data-story-tab]')];
   const panels = [...productStory.querySelectorAll('[data-story-panel]')];
   const progress = productStory.querySelector('.client-story-progress span');
+  const storyStage = productStory.querySelector('.client-story-stage');
   const interval = 6000;
   let activeIndex = 0;
   let timer;
@@ -126,12 +170,14 @@ if (productStory) {
       const isActive = tabIndex === index;
       tab.classList.toggle('active', isActive);
       tab.setAttribute('aria-selected', String(isActive));
+      tab.tabIndex = isActive ? 0 : -1;
     });
     panels.forEach((panel, panelIndex) => {
       const isActive = panelIndex === index;
       panel.classList.toggle('active', isActive);
       panel.setAttribute('aria-hidden', String(!isActive));
     });
+    storyStage?.classList.toggle('is-wide', index === 2);
     restartProgress();
     if (restartTimer && !paused) scheduleNext();
   };
@@ -152,7 +198,20 @@ if (productStory) {
     else scheduleNext();
   };
 
-  tabs.forEach((tab, index) => tab.addEventListener('click', () => showStory(index)));
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => showStory(index));
+    tab.addEventListener('keydown', (event) => {
+      let nextIndex = index;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') nextIndex = 0;
+      else if (event.key === 'End') nextIndex = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      showStory(nextIndex);
+      tabs[nextIndex].focus();
+    });
+  });
   productStory.addEventListener('mouseenter', () => setPaused(true));
   productStory.addEventListener('mouseleave', () => setPaused(false));
   productStory.addEventListener('focusin', () => setPaused(true));

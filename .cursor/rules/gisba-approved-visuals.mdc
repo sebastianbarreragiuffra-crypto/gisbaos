@@ -1,0 +1,41 @@
+---
+description: Protege mockups, assets y secciones visuales aprobadas de GISBA
+alwaysApply: true
+---
+
+# Visuales aprobados
+
+## Regla general
+
+- Antes de modificar, eliminar, ocultar, recortar, sustituir o reconstruir un visual aprobado, solicita aprobación explícita.
+- Sustituir incluye: reemplazar `<img>` por HTML/CSS; usar `display:none`, `visibility:hidden` o equivalentes; volver a una versión anterior; cambiar la composición; usar otro mockup sin avisar; o quitarlo de la landing aunque el archivo siga en `dist/assets/`.
+- Un asset guardado pero ausente de la ubicación aprobada no está conservado.
+- Al cambiar contenido, conserva assets y composición.
+
+## Registro aprobado
+
+- Hero: `dist/assets/gisba-hero-motion.jpg`. Mantén su dashboard y composición; agrega motion sin reemplazarlo.
+- E-commerce: `dist/assets/gisba-client-dashboard-urban-store.webp`.
+- Lead Generation: `dist/assets/gisba-client-dashboard-lead-generation.webp`.
+- Portal del Cliente: `dist/assets/gisba-portal-cliente-v3.png`.
+- Los dashboards conservan imagen, proporciones, nitidez y composición. Hotspots, tabs y microinteracciones deben ser externas al asset.
+
+## Portal del Cliente
+
+- Es para el cliente de la agencia, no para sus compradores o leads.
+- Navegación: `Resumen · Campañas · Aprobaciones · Mensajes · Reportes`; muestra `Resumen` seleccionado y conserva `Mensajes` visible.
+- Prioriza resultados, aprobación pendiente y coordinación reciente.
+- Prohíbe versiones antiguas, inbox CRM, oportunidades, cotizaciones, pipeline y conversaciones de compradores finales.
+- No uses «Equipo GISBA» ni «Ejecutivo GISBA». Relación: **Agencia ↔ GISBA ↔ Cliente de la agencia**.
+
+## WhatsApp
+
+- Mantén esta sección separada del Portal.
+- Flujo: **GISBA detecta → agencia/automatización comunica → cliente responde → GISBA registra → equipo continúa**.
+- El Portal muestra el resultado organizado; WhatsApp explica la coordinación. No dupliques un inbox o conversación completa.
+
+## Versiones y reemplazos
+
+- No recuperes assets, copy o composiciones antiguas sólo porque existan en `dist/assets/` o Git.
+- Si hay varias versiones, identifica y usa sólo la aprobada.
+- Antes de reemplazar, detente e informa: **Sección**, **Asset actual**, **Asset propuesto**, **Motivo**, **Qué mejoraría** y **Qué se perdería**. Espera aprobación explícita.
