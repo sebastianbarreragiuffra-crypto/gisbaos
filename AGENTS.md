@@ -60,6 +60,12 @@
 
 ### WhatsApp
 
+- Visual aprobado: `dist/assets/gisba-coordinacion-whatsapp.jpg`.
+- Conserva el teléfono, la conversación Agencia ↔ Cliente y la interfaz GISBA con aprobación registrada, tarea creada y pendiente de ejecución.
+- No lo sustituyas por cuatro cards, diagramas abstractos ni un nuevo mockup sin autorización.
+- El copy puede mantenerse como HTML fuera del asset.
+- Se puede añadir motion posteriormente sin reemplazar la composición visual.
+- Cualquier cambio, ocultamiento o sustitución requiere aprobación explícita.
 - Mantén la sección separada del Portal del Cliente.
 - Flujo aprobado: **GISBA detecta → agencia/automatización comunica → cliente responde → GISBA registra → equipo continúa**.
 - No uses WhatsApp como inbox principal del Portal ni dupliques allí una conversación completa. El Portal muestra el resultado organizado; WhatsApp explica cómo ocurre la coordinación.

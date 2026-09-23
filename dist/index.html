@@ -17,6 +17,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GISBA OS","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Sistema operativo para agencias de marketing que conecta clientes, campañas, decisiones y resultados."}</script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css?v=63">
+  <link rel="stylesheet" href="whatsapp-section.css?v=1">
   <script src="script.js?v=18" defer></script>
 </head>
 <body class="home-page">
@@ -307,23 +308,30 @@
   </main>
 
   <footer class="site-footer closing-footer">
-    <section id="cierre-gisba" class="section whatsapp-coordination" aria-labelledby="closing-title">
-      <div class="container whatsapp-grid">
-        <div class="whatsapp-copy reveal">
+    <section id="cierre-gisba" class="section whatsapp-coordination whatsapp-approved" aria-labelledby="closing-title">
+      <div class="container whatsapp-approved-grid">
+        <div class="whatsapp-approved-copy reveal">
           <p class="eyebrow"><span></span> Coordinación por WhatsApp</p>
           <h2 id="closing-title">Coordina decisiones de marketing <em>sin salir de WhatsApp.</em></h2>
-          <p>GISBA conecta a la agencia con su cliente para solicitar decisiones, registrar respuestas y mantener al equipo en movimiento sin perder contexto.</p>
-          <p class="whatsapp-scope"><span aria-hidden="true">ⓘ</span> Es coordinación de marketing entre agencia y cliente. No es atención a compradores finales.</p>
+          <p class="whatsapp-approved-lead">GISBA conecta a tu agencia con sus clientes para gestionar recomendaciones, aprobaciones y solicitudes, registrando cada decisión en la plataforma.</p>
+          <a class="button button-solid whatsapp-approved-cta" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
+
+          <div class="whatsapp-approved-relation" aria-label="Agencia de marketing, GISBA OS y cliente de la agencia">
+            <strong>Agencia de marketing</strong>
+            <span aria-hidden="true">→</span>
+            <strong>GISBA OS</strong>
+            <span aria-hidden="true">→</span>
+            <strong>Cliente de la agencia</strong>
+          </div>
+
+          <p class="whatsapp-approved-note"><span aria-hidden="true">ⓘ</span> No es un canal de atención para compradores finales.</p>
         </div>
-        <div class="whatsapp-flow reveal" aria-label="Flujo de coordinación por WhatsApp">
-          <article><span>01</span><div><strong>Agencia propone</strong><small>Comparte una recomendación con contexto.</small></div></article>
-          <i aria-hidden="true">↓</i>
-          <article><span>02</span><div><strong>Cliente responde</strong><small>Aprueba, consulta o solicita un ajuste.</small></div></article>
-          <i aria-hidden="true">↓</i>
-          <article><span>03</span><div><strong>GISBA registra</strong><small>La decisión queda vinculada a la campaña.</small></div></article>
-          <i aria-hidden="true">↓</i>
-          <article><span>04</span><div><strong>Equipo continúa</strong><small>Se crea el siguiente paso con responsable.</small></div></article>
-        </div>
+
+        <figure class="whatsapp-approved-visual reveal" aria-label="Coordinación entre una agencia y su cliente por WhatsApp, con la aprobación registrada y una tarea creada en GISBA OS">
+          <div class="whatsapp-approved-viewport">
+            <img src="assets/gisba-coordinacion-whatsapp.jpg" width="1280" height="720" alt="Smartphone con una conversación de aprobación entre Agencia Demo y Constructora Andes junto a la interfaz GISBA con aprobación registrada, tarea creada y pendiente de ejecución" loading="lazy" decoding="async">
+          </div>
+        </figure>
       </div>
     </section>
 
