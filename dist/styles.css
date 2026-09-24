@@ -2531,3 +2531,36 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .cmp-icon { flex: none; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 10px; color: var(--violet); background: var(--surface-strong); }
 .pricing-table tbody tr:not(.cmp-group):hover > * { background: rgba(138, 92, 255, .05); }
 .pricing-table .cmp-group th { padding-block: 16px; }
+
+/* FAQ con categorias */
+.pfaq { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: start; }
+.pfaq-side h2 { font-size: clamp(1.9rem, 3.2vw, 2.9rem); margin: 0 0 12px; }
+.pfaq-lead { margin: 0 0 24px; color: var(--muted); }
+.pfaq-tabs { display: grid; gap: 8px; margin-bottom: 26px; }
+.pfaq-tab { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 16px; background: #fff; color: var(--text); font: inherit; font-weight: 500; text-align: left; cursor: pointer; transition: background .2s ease, border-color .2s ease, color .2s ease; }
+.pfaq-tab small { min-width: 26px; padding: 2px 8px; border-radius: 999px; text-align: center; font-size: .75rem; font-weight: 600; color: var(--violet); background: var(--surface-strong); }
+.pfaq-tab:hover { border-color: var(--line-strong); }
+.pfaq-tab.is-active { color: #fff; border-color: transparent; background: linear-gradient(135deg, #6e3cff, #a05cff); }
+.pfaq-tab.is-active small { color: #fff; background: rgba(255,255,255,.22); }
+.pfaq-tab:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
+.pfaq-help { position: relative; isolation: isolate; padding: 26px 26px 54px; background: #f3f0ff; clip-path: url(#gisba-frame-shape); filter: drop-shadow(0 16px 26px rgba(45,31,116,.09)); }
+.pfaq-help strong { display: block; margin-bottom: 6px; font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; }
+.pfaq-help p { margin: 0 0 12px; color: var(--muted); font-size: .92rem; }
+.pfaq-help a { color: var(--violet); font-weight: 600; }
+.pfaq-list { display: grid; gap: 12px; }
+.pfaq-item { border: 1px solid var(--line); border-radius: 20px; background: #fff; transition: background .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.pfaq-item[hidden] { display: none; }
+.pfaq-item[open] { border-color: var(--line-strong); background: #f3f0ff; box-shadow: 0 16px 34px rgba(56,41,142,.09); }
+.pfaq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px 26px; list-style: none; cursor: pointer; font-weight: 600; }
+.pfaq-item summary::-webkit-details-marker { display: none; }
+.pfaq-item summary:focus-visible { outline: 2px solid var(--violet); outline-offset: -2px; border-radius: 20px; }
+.pfaq-item p { margin: 0; padding: 0 26px 24px; max-width: 62ch; color: var(--muted); }
+.pfaq-plus { flex: none; position: relative; width: 28px; height: 28px; border-radius: 50%; background: var(--surface-strong); }
+.pfaq-plus::before, .pfaq-plus::after { content: ""; position: absolute; inset: 0; margin: auto; width: 11px; height: 1.6px; border-radius: 2px; background: var(--violet); transition: transform .25s ease; }
+.pfaq-plus::after { transform: rotate(90deg); }
+.pfaq-item[open] .pfaq-plus { background: var(--violet); }
+.pfaq-item[open] .pfaq-plus::before, .pfaq-item[open] .pfaq-plus::after { background: #fff; }
+.pfaq-item[open] .pfaq-plus::after { transform: rotate(45deg); }
+.pfaq-item[open] .pfaq-plus::before { transform: rotate(-45deg); }
+@media (max-width: 900px) { .pfaq { grid-template-columns: 1fr; gap: 32px; } .pfaq-tabs { grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; padding-bottom: 4px; } }
+@media (max-width: 560px) { .pfaq-item summary { padding: 18px 20px; } .pfaq-item p { padding: 0 20px 20px; } }

@@ -13,7 +13,7 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="styles.css?v=79">
+  <link rel="stylesheet" href="styles.css?v=80">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="inner-page">
@@ -151,10 +151,20 @@
       </div>
     </section>
 
-    <section class="pricing-section" aria-labelledby="pfaq-title">
-      <div class="container faq-grid">
-        <div class="faq-intro reveal"><p class="eyebrow"><span></span> Preguntas frecuentes</p><h2 id="pfaq-title">Todo lo que necesitas saber</h2></div>
-        <div class="faq-list reveal"><details><summary>¿Qué cuenta como una cuenta de cliente?<span aria-hidden="true">+</span></summary><p>[Definición por definir: qué se cuenta y cómo se cobra.]</p></details><details><summary>¿GISBA reemplaza mi CRM?<span aria-hidden="true">+</span></summary><p>No. Puede utilizar información comercial conectada para analizar resultados, pero no administra el proceso de ventas.</p></details><details><summary>¿GISBA modifica campañas automáticamente?<span aria-hidden="true">+</span></summary><p>No. GISBA detecta y recomienda; tu equipo decide antes de ejecutar cualquier cambio.</p></details><details><summary>¿Hay contrato mínimo de permanencia?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Cuánto tiempo dura la implementación?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Puedo cambiarme de plan en cualquier momento?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Cuándo se empieza a cobrar?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Hay algún pago inicial de implementación?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Con qué canales y herramientas se integra GISBA?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details></div>
+    <section id="faq" class="pricing-section" aria-labelledby="pfaq-title">
+      <div class="container pfaq">
+        <div class="pfaq-side reveal">
+          <p class="eyebrow"><span></span> Preguntas frecuentes</p>
+          <h2 id="pfaq-title">Todo lo que necesitas saber</h2>
+          <p class="pfaq-lead">Resolvemos las dudas más comunes antes de comenzar.</p>
+          <div class="pfaq-tabs" role="group" aria-label="Categorías de preguntas"><button type="button" class="pfaq-tab is-active" data-faq-tab="precios" data-event="pricing_faq_tab_click" aria-pressed="true"><span>Precios y facturación</span><small>4</small></button><button type="button" class="pfaq-tab" data-faq-tab="implementacion" data-event="pricing_faq_tab_click" aria-pressed="false"><span>Implementación</span><small>3</small></button><button type="button" class="pfaq-tab" data-faq-tab="producto" data-event="pricing_faq_tab_click" aria-pressed="false"><span>Producto y control</span><small>4</small></button></div>
+          <div class="pfaq-help">
+            <strong>¿No encuentras tu respuesta?</strong>
+            <p>Cuéntanos cómo trabaja tu agencia y te orientamos.</p>
+            <a href="index.html#contacto" data-event="pricing_faq_contact_click">Hablar con el equipo <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="pfaq-list reveal"><details class="pfaq-item" data-faq-cat="precios" open><summary>¿Qué cuenta como una cuenta de cliente?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>[Definición por definir: qué se cuenta y cómo se cobra.]</p></details><details class="pfaq-item" data-faq-cat="precios"><summary>¿Hay contrato mínimo de permanencia?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>[Respuesta por definir.]</p></details><details class="pfaq-item" data-faq-cat="precios"><summary>¿Puedo cambiarme de plan en cualquier momento?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>[Respuesta por definir.]</p></details><details class="pfaq-item" data-faq-cat="precios"><summary>¿Cuándo se empieza a cobrar?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>[Respuesta por definir.]</p></details><details class="pfaq-item" data-faq-cat="implementacion"><summary>¿Cuánto tiempo dura la implementación?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>[Respuesta por definir.]</p></details><details class="pfaq-item" data-faq-cat="implementacion"><summary>¿Hay algún pago inicial de implementación?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>[Respuesta por definir.]</p></details><details class="pfaq-item" data-faq-cat="implementacion"><summary>¿Con qué canales y herramientas se integra GISBA?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>[Respuesta por definir.]</p></details><details class="pfaq-item" data-faq-cat="producto"><summary>¿GISBA reemplaza mi CRM?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>No. Puede utilizar información comercial conectada para analizar resultados, pero no administra el proceso de ventas.</p></details><details class="pfaq-item" data-faq-cat="producto"><summary>¿GISBA modifica campañas automáticamente?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>No. GISBA detecta y recomienda; tu equipo decide antes de ejecutar cualquier cambio.</p></details><details class="pfaq-item" data-faq-cat="producto"><summary>¿Qué puede ver mi cliente?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>Solo su información, campañas, resultados, aprobaciones, reportes y coordinación con la agencia.</p></details><details class="pfaq-item" data-faq-cat="producto"><summary>¿Para qué se usa WhatsApp?<span class="pfaq-plus" aria-hidden="true"></span></summary><p>Para coordinar marketing entre agencia y cliente, no para atender compradores finales.</p></details></div>
       </div>
     </section>
 
@@ -208,6 +218,29 @@
       document.querySelectorAll('[data-billing-note]').forEach(function (el) { el.textContent = annual ? 'Facturación anual' : 'Facturación mensual'; });
     });
   });
+})();
+</script>
+<script>
+(function () {
+  var tabs = document.querySelectorAll('[data-faq-tab]');
+  var items = document.querySelectorAll('[data-faq-cat]');
+  if (!tabs.length) return;
+  function show(cat) {
+    tabs.forEach(function (t) { var on = t.dataset.faqTab === cat; t.classList.toggle('is-active', on); t.setAttribute('aria-pressed', on); });
+    var opened = false;
+    items.forEach(function (d) {
+      var on = d.dataset.faqCat === cat;
+      d.hidden = !on;
+      if (on && !opened) { d.open = true; opened = true; } else { d.open = false; }
+    });
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.faqTab); }); });
+  items.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (d.open) items.forEach(function (o) { if (o !== d) o.open = false; });
+    });
+  });
+  show(tabs[0].dataset.faqTab);
 })();
 </script>
 </body></html>
