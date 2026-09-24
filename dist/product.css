@@ -59,7 +59,7 @@
 .pd-shot img { display: block; width: 100%; height: auto; image-rendering: auto; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .pd-grid { grid-template-columns: 1fr; padding-top: 120px; }
   .pd-hero-copy, .pd-orbit, .pd-stage-copy, .pd-stage-visual { grid-column: 1; }
   .pd-hero-copy { grid-row: 1; } .pd-orbit { grid-row: 2; } .pd-stage-copy { grid-row: 3; } .pd-stage-visual { grid-row: 4; }
@@ -142,3 +142,15 @@
 
 @media (max-width: 1100px) { .pp-card { padding-bottom: 168px; } }
 @media (max-width: 720px) { .pp-card { padding-bottom: 160px; } }
+
+/* isotipo central grafito (sin texto) */
+.pd-center img { width: 52%; height: auto; }
+/* escritorio ajustado: nodos con altura consistente, sin subtitulos que se partan */
+@media (min-width: 1181px) and (max-width: 1360px) {
+  .pd-node-text small { display: none; }
+  .pd-node { padding: 12px 16px 12px 12px; }
+  .pd-tabs { gap: 22px; }
+  .pd-node::before { width: 22px; }
+}
+
+@media (min-width: 721px) and (max-width: 900px) { .pd-node-text small { display: none; } }
