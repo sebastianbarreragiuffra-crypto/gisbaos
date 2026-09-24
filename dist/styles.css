@@ -2567,3 +2567,6 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-badges li { display: inline-flex; align-items: center; gap: 8px; }
 .pricing-badges li svg { color: var(--violet); }
 .pricing-tabs a { display: inline-flex; align-items: center; gap: 8px; }
+.pricing-hero { padding-bottom: 8px; }
+#planes.pricing-section { padding-top: 32px; }
+.pricing-badges { margin-bottom: 0; }
