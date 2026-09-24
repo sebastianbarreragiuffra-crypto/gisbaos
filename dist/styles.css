@@ -2580,3 +2580,10 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-head .pricing-definition { margin-top: 18px; }
 .pricing-definition strong { color: var(--text); font-weight: 600; }
 .pricing-head .pricing-currency { margin-top: 6px; }
+
+/* Cierre delgado */
+.pricing-close { padding-top: 24px; }
+.pricing-close-band { display: grid; justify-items: center; gap: 18px; padding: 44px 28px; text-align: center; border-radius: 28px; color: #fff; background: linear-gradient(135deg, #4d24ff, #8a5cff); }
+.pricing-close-band h2 { margin: 0; font-size: clamp(1.6rem, 2.8vw, 2.3rem); }
+.pricing-close-band .button-solid { color: #4d24ff; background: #fff; box-shadow: none; }
+.pricing-close-band ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin: 0; padding: 0; list-style: none; font-size: .9rem; opacity: .92; }
