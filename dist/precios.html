@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="styles.css?v=71">
+  <link rel="stylesheet" href="styles.css?v=72">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="inner-page">
@@ -57,26 +57,26 @@
           <li>[Soporte]</li><li>[Garantía]</li><li>[Implementación y consultoría]</li>
         </ul>
         <div class="pricing-tabs" aria-label="Secciones de precios">
-          <a class="is-active" href="#planes">Planes</a>
-          <a href="#complementos">Complementos</a>
+          <a class="is-active" href="#planes" data-tab="planes" aria-current="true">Planes</a>
+          <a href="#complementos" data-tab="complementos">Complementos</a>
         </div>
       </div>
     </section>
 
-    <section id="planes" class="pricing-section" aria-labelledby="plans-title">
+    <section id="planes" data-tab-panel="planes" class="pricing-section" aria-labelledby="plans-title">
       <div class="container">
         <div class="pricing-head reveal">
           <h2 id="plans-title">Más que una plataforma</h2>
           <p>[Subtítulo por definir.]</p>
-          <div class="pricing-switch" role="group" aria-label="Periodo de facturación"><button type="button" class="is-active" aria-pressed="true">Mensual</button><button type="button" aria-pressed="false">Anual</button></div>
+          <div class="pricing-switch" role="group" aria-label="Periodo de facturación"><button type="button" class="is-active" aria-pressed="true" data-billing="monthly">Mensual</button><button type="button" aria-pressed="false" data-billing="annual">Anual <small>-20%</small></button></div>
         </div>
         <div class="pricing-grid reveal">
           <article class="pricing-card">
             <p class="pricing-plan">Plan</p>
             <h3>[Plan 1]</h3>
             <p class="pricing-label">Precio</p>
-            <p class="pricing-price"><strong>$[--]</strong> <span>USD/mes</span></p>
-            <p class="pricing-note">[Implementación y cuentas incluidas: por definir]</p>
+            <p class="pricing-price"><strong data-monthly="$199" data-annual="$159">$199</strong> <span>USD/mes</span></p>
+            <p class="pricing-note"><span data-billing-note>Facturación mensual</span> · [valores de ejemplo]</p>
             <a class="button button-ghost" href="index.html#contacto">Agenda una demo</a>
             <p class="pricing-label">Funciones base</p>
             <ul><li>[Funciones por definir]</li><li>[Funciones por definir]</li><li>[Usuarios por definir]</li></ul>
@@ -85,8 +85,8 @@
             <p class="pricing-plan">Plan</p>
             <h3>[Plan 2]</h3>
             <p class="pricing-label">Precio</p>
-            <p class="pricing-price"><strong>$[--]</strong> <span>USD/mes</span></p>
-            <p class="pricing-note">[Implementación y cuentas incluidas: por definir]</p>
+            <p class="pricing-price"><strong data-monthly="$399" data-annual="$319">$399</strong> <span>USD/mes</span></p>
+            <p class="pricing-note"><span data-billing-note>Facturación mensual</span> · [valores de ejemplo]</p>
             <a class="button button-solid" href="index.html#contacto">Agenda una demo</a>
             <p class="pricing-label">Funciones base</p>
             <ul><li>Todo lo del Plan 1</li><li>[Funciones por definir]</li><li>[Usuarios por definir]</li></ul>
@@ -96,7 +96,7 @@
             <h3>[Plan 3]</h3>
             <p class="pricing-label">Precio</p>
             <p class="pricing-price"><strong>A medida</strong> <span></span></p>
-            <p class="pricing-note">[Implementación y cuentas incluidas: por definir]</p>
+            <p class="pricing-note"><span data-billing-note>Facturación mensual</span> · [valores de ejemplo]</p>
             <a class="button button-ghost" href="index.html#contacto">Agenda una demo</a>
             <p class="pricing-label">Funciones base</p>
             <ul><li>Todo lo del Plan 2</li><li>[Funciones por definir]</li><li>[Soporte por definir]</li></ul>
@@ -105,7 +105,7 @@
       </div>
     </section>
 
-    <section class="pricing-section" aria-labelledby="compare-title">
+    <section data-tab-panel="planes" class="pricing-section" aria-labelledby="compare-title">
       <div class="container">
         <div class="pricing-head reveal"><h2 id="compare-title">Compara y elige según tus necesidades reales</h2></div>
         <div class="pricing-table-wrap reveal">
@@ -117,10 +117,10 @@
       </div>
     </section>
 
-    <section id="complementos" class="pricing-section" aria-labelledby="addons-title">
+    <section id="complementos" data-tab-panel="complementos" hidden class="pricing-section" aria-labelledby="addons-title">
       <div class="container">
         <div class="pricing-head reveal"><h2 id="addons-title">Adicionales</h2><p>¿Necesitas más potencia? Personaliza tu plan.</p></div>
-        <div class="pricing-addons reveal"><article class="pricing-addon"><h3>[Complemento 1]</h3><p class="pricing-label">Precio</p><p class="pricing-price"><strong>$[--]</strong> <span>USD/mes</span></p></article><article class="pricing-addon"><h3>[Complemento 2]</h3><p class="pricing-label">Precio</p><p class="pricing-price"><strong>$[--]</strong> <span>USD/mes</span></p></article><article class="pricing-addon"><h3>[Complemento 3]</h3><p class="pricing-label">Precio</p><p class="pricing-price"><strong>$[--]</strong> <span>USD/mes</span></p></article><article class="pricing-addon"><h3>[Complemento 4]</h3><p class="pricing-label">Precio</p><p class="pricing-price"><strong>$[--]</strong> <span>USD/mes</span></p></article></div>
+        <div class="pricing-addons reveal"><article class="pricing-addon"><h3>[Complemento 1]</h3><p class="pricing-label">Precio</p><p class="pricing-price"><strong data-monthly="$49" data-annual="$39">$49</strong> <span>USD/mes</span></p></article><article class="pricing-addon"><h3>[Complemento 2]</h3><p class="pricing-label">Precio</p><p class="pricing-price"><strong data-monthly="$129" data-annual="$103">$129</strong> <span>USD/mes</span></p></article><article class="pricing-addon"><h3>[Complemento 3]</h3><p class="pricing-label">Precio</p><p class="pricing-price"><strong data-monthly="$229" data-annual="$183">$229</strong> <span>USD/mes</span></p></article><article class="pricing-addon"><h3>[Complemento 4]</h3><p class="pricing-label">Precio</p><p class="pricing-price"><strong data-monthly="$79" data-annual="$63">$79</strong> <span>USD/mes</span></p></article></div>
       </div>
     </section>
 
@@ -141,46 +141,6 @@
       </div>
     </section>
   </main><footer class="site-footer closing-footer">
-    <section id="cierre-gisba" class="closing-cta" aria-labelledby="closing-title">
-      <div class="container closing-cta-grid">
-        <div class="closing-copy reveal">
-          <p class="eyebrow"><span></span> Tu marketing no debería terminar en el lead</p>
-          <h2 id="closing-title">Marketing que no<br><em>termina en el lead.</em></h2>
-          <p>GISBA OS conecta el performance de cada cuenta con las decisiones, la coordinación y los resultados de tu agencia.</p>
-          <div class="closing-actions">
-            <a class="button button-solid" href="index.html#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
-            <a class="closing-demo-link" href="index.html#como-funciona"><span aria-hidden="true">▶</span> Ver cómo funciona</a>
-          </div>
-          <ul class="closing-proof" aria-label="Condiciones de la demostración">
-            <li><span aria-hidden="true">✓</span> Demo adaptada<br>a tu agencia</li>
-            <li><span aria-hidden="true">✓</span> Sin compromiso</li>
-            <li><span aria-hidden="true">✓</span> Conoce el flujo<br>completo de GISBA</li>
-          </ul>
-        </div>
-
-        <div class="closing-live-panel reveal" aria-label="Actividad reciente conectada por GISBA OS">
-          <div class="closing-panel-head"><h3>Ahora en GISBA</h3><span><i></i> Actualizándose en tiempo real</span></div>
-          <div class="closing-events">
-            <article>
-              <span class="closing-event-icon whatsapp" aria-hidden="true">◔</span>
-              <p><strong>Cliente aprobó ajuste de presupuesto por WhatsApp</strong><small>Nova Studio · hace 5 min</small></p>
-              <b aria-hidden="true">›</b>
-            </article>
-            <article>
-              <span class="closing-event-icon warning" aria-hidden="true">△</span>
-              <p><strong>3 cuentas requieren<br>atención</strong><small>Varios clientes · hace 18 min</small></p>
-              <b aria-hidden="true">›</b>
-            </article>
-            <article>
-              <span class="closing-event-icon report" aria-hidden="true">▥</span>
-              <p><strong>Reporte mensual listo para cliente</strong><small>Inmobiliaria Sur · hace 1 h</small></p>
-              <b aria-hidden="true">›</b>
-            </article>
-          </div>
-          <p class="closing-result"><span aria-hidden="true">ϟ</span> Todo vuelve a tu agencia como resultado.</p>
-        </div>
-      </div>
-    </section>
 
     <div class="container closing-footer-bottom">
       <div class="closing-brand">
@@ -194,4 +154,33 @@
       </nav>
       <p class="closing-copyright">© <span data-year></span> GISBA OS. Todos los derechos reservados.</p>
     </div>
-  </footer></body></html>
+  </footer><script>
+(function () {
+  var tabs = document.querySelectorAll('[data-tab]');
+  var panels = document.querySelectorAll('[data-tab-panel]');
+  function showTab(name) {
+    tabs.forEach(function (t) { var on = t.dataset.tab === name; t.classList.toggle('is-active', on); if (on) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current'); });
+    panels.forEach(function (s) { s.hidden = s.dataset.tabPanel !== name; });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      showTab(t.dataset.tab);
+      var target = document.getElementById(t.dataset.tab);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  if (location.hash === '#complementos') showTab('complementos');
+
+  var buttons = document.querySelectorAll('[data-billing]');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var annual = b.dataset.billing === 'annual';
+      buttons.forEach(function (x) { var on = x === b; x.classList.toggle('is-active', on); x.setAttribute('aria-pressed', on); });
+      document.querySelectorAll('[data-monthly]').forEach(function (el) { el.textContent = annual ? el.dataset.annual : el.dataset.monthly; });
+      document.querySelectorAll('[data-billing-note]').forEach(function (el) { el.textContent = annual ? 'Facturación anual' : 'Facturación mensual'; });
+    });
+  });
+})();
+</script>
+</body></html>

@@ -2473,3 +2473,6 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-cta .button-solid { color: #4d24ff; background: #fff; box-shadow: none; }
 @media (max-width: 980px) { .pricing-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } .pricing-addons { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .pricing-hero { padding-top: 120px; } .pricing-addons { grid-template-columns: 1fr; } .pricing-tabs a { padding: 10px 22px; } }
+.pricing-switch small { margin-left: 4px; font-size: .72rem; font-weight: 600; opacity: .85; }
+[data-tab-panel][hidden] { display: none; }
+.pricing-tabs a { cursor: pointer; }
