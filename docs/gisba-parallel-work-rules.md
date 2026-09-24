@@ -67,3 +67,13 @@ Si Claude detecta cambios ajenos o que `main` cambia durante el trabajo: NO inte
 ## 13. Condición de parada
 
 Si la tarea está commiteada, el QA pasa y el working tree de la rama está limpio: DETENERSE. No abrir nuevos cambios automáticamente.
+
+## 14. Vista previa unica
+
+Para ver siempre lo ultimo integrado sin abrir links distintos, usar un solo comando (sirve `origin/main` en `http://127.0.0.1:4173` y se actualiza solo):
+
+```
+powershell -ExecutionPolicy Bypass -File tools\preview.ps1
+```
+
+Opciones: `-Ref release/v1` (ver el tag aprobado), `-Ref <rama>` (ver una rama), `-Port <n>`, `-Open`. El commit mostrado aparece en la consola y en `/__build.txt`. No modifica el repositorio. Los agentes no levantan otros servidores de vista previa.
