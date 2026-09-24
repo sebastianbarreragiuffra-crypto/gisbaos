@@ -127,7 +127,7 @@ Atributos de tracking ya preparados (sin enviar eventos a ningún proveedor toda
 
 ### Testimonios (Objetivo 2, FINAL WEB FREEZE V1)
 
-- La sección `#testimonios` de `dist/index.html` está **activa como vista previa ilustrativa** para que socios y equipo vean el diseño; sus tres testimonios (NEXA Digital, Bruma Creative Studio, ALTA Agencia Digital) son simulaciones y la sección muestra el aviso «Contenido ilustrativo para visualización del módulo.».
+- La sección `#testimonios` de `dist/index.html` está **desactivada (comentada, fuera del DOM público)**: sus tres testimonios (NEXA Digital, Bruma Creative Studio, ALTA Agencia Digital) son simulaciones. El componente sigue disponible (`.landing-testimonials`/`.testimonial-*` en `styles.css`) para reactivarlo.
 - Nunca publicar nombres, logos o citas ficticias como prueba social real.
 - Antes de publicar como prueba social real: reemplazar los tres testimonios por datos reales (nombre, cargo, agencia, cita verificados) y quitar el aviso ilustrativo, o volver a ocultar la sección envolviéndola en un comentario HTML. No hace falta rediseñar: el componente usa las clases `.landing-testimonials`/`.testimonial-*` de `styles.css`.
 
