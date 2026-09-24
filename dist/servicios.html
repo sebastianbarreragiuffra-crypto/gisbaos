@@ -12,7 +12,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="styles.css?v=89">
-  <link rel="stylesheet" href="product.css?v=1">
+  <link rel="stylesheet" href="product.css?v=5">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="inner-page">
@@ -49,7 +49,8 @@
       <div class="pd-hero-copy">
         <p class="eyebrow"><span></span> Producto</p>
         <h1 id="pd-title">Dos experiencias. Un mismo <em>contexto.</em></h1>
-        <p class="pd-lead">GISBA conecta cómo trabaja tu agencia con cómo participa tu cliente, para lograr mejores resultados de marketing.</p>
+        <p class="pd-lead" data-pd-state="agency">GISBA conecta cómo trabaja tu agencia con cómo participa tu cliente, para lograr mejores resultados de marketing.</p>
+          <p class="pd-lead" data-pd-state="client" hidden>GISBA conecta el trabajo de tu agencia con la experiencia de tus clientes.</p>
         <div class="pd-actions">
           <a class="button button-solid" href="index.html#contacto" data-cta="demo" data-event="demo_cta_click" data-location="hero">Agenda una demo <span aria-hidden="true">→</span></a>
           <a class="pd-textlink" href="como-trabajamos.html" data-event="how_it_works_click">Ver cómo funciona <span aria-hidden="true">→</span></a>
@@ -83,9 +84,9 @@
         </div>
         <div data-pd-state="client" hidden>
           <p class="pd-label"><span></span> Para tu cliente</p>
-          <h2>Su experiencia, siempre clara.</h2>
-          <p class="pd-copy">Tu cliente accede a sus resultados, aprobaciones y reportes, y coordina contigo sin salir de GISBA.</p>
-          <ul class="pd-feats"><li><span class="pd-feat-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><strong>Resultados claros</strong><span>Sus campañas y resultados, en un solo lugar.</span></li><li><span class="pd-feat-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15Z"/><path d="M10 20.5h4"/></svg></span><strong>Aprobaciones al día</strong><span>Aprueba y comenta sin salir de GISBA.</span></li><li><span class="pd-feat-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4Z"/></svg></span><strong>Coordinación con tu agencia</strong><span>Mensajes y reportes con todo el contexto.</span></li></ul>
+          <h2>Resultados claros, sin ruido.</h2>
+          <p class="pd-copy">Tu cliente ve lo importante, participa cuando corresponde y mantiene todo el contexto con tu agencia.</p>
+          <ul class="pd-feats pd-feats-min"><li><span class="pd-feat-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><strong>Resultados</strong></li><li><span class="pd-feat-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4Z"/></svg></span><strong>Coordinación</strong></li><li><span class="pd-feat-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span><strong>Aprobaciones</strong></li></ul>
         </div>
       </div>
 
@@ -103,8 +104,20 @@
               <div class="pd-pulsebar"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></svg><span><strong>GISBA Pulse</strong> detecta lo que necesita tu atención.</span></div>
             </div>
           </div>
-          <div data-pd-state="client" hidden class="pd-portal-shot">
-            <img src="assets/gisba-portal-cliente-v3.png" width="1672" height="941" alt="Portal del cliente de GISBA OS: resumen de resultados, aprobación pendiente y coordinación reciente con la agencia" loading="lazy">
+          <div data-pd-state="client" hidden class="pc-app" role="img" aria-label="Vista de ejemplo del portal del cliente: resultados de campañas, acciones pendientes y últimas actualizaciones de la agencia">
+            <aside class="pc-side" aria-hidden="true"><b>GISBA <span>OS</span></b><ul><li class="on"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5v8.5H4Z"/></svg><span>Resumen</span></li><li><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4L3.5 11l6.5 2.5L13 20Z"/></svg><span>Campañas</span></li><li><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg><span>Aprobaciones</span></li><li><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4Z"/></svg><span>Mensajes</span></li><li><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Reportes</span></li></ul></aside>
+            <div class="pc-main" aria-hidden="true">
+              <div class="pc-top"><span class="pc-search"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg><em>Buscar...</em></span><span class="pc-bell"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15Z"/><path d="M10 20.5h4"/></svg><i></i></span><span class="pc-avatar">C</span></div>
+              <div class="pc-hello"><div><h3>Hola, Carolina</h3><p>Aquí tienes el resumen de tus campañas.</p></div><span class="pc-date"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14" rx="2.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg>Últimos 30 días</span></div>
+              <div class="pc-kpis"><div class="pc-kpi"><span class="pc-kpi-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><div><small>Alcance total</small><b>125,4K</b><em>↑ 12%</em><i>vs. período anterior</i></div></div><div class="pc-kpi"><span class="pc-kpi-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4l12 7-5.2 1.4L10.5 18Z"/></svg></span><div><small>Clics</small><b>4,8K</b><em>↑ 28%</em><i>vs. período anterior</i></div></div><div class="pc-kpi"><span class="pc-kpi-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span><div><small>Conversiones</small><b>320</b><em>↑ 16%</em><i>vs. período anterior</i></div></div></div>
+              <div class="pc-cols">
+                <section class="pc-card"><header><h4>Campañas en curso</h4><span>Ver todas →</span></header><ul class="pc-list"><li><span class="pc-thumb" style="background:#f59e0b"></span><div><strong>Lanzamiento de producto</strong><small class="run">En curso · 40% completado</small><span class="pc-bar"><i class="run" style="width:40%"></i></span></div><span class="pc-go"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li><li><span class="pc-thumb" style="background:#111827"></span><div><strong>Always On</strong><small class="run">En curso · 66% completado</small><span class="pc-bar"><i class="run" style="width:66%"></i></span></div><span class="pc-go"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li><li><span class="pc-thumb" style="background:#ea580c"></span><div><strong>Rebranding</strong><small class="rev">En revisión · 80% completado</small><span class="pc-bar"><i class="rev" style="width:80%"></i></span></div><span class="pc-go"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li></ul></section>
+                <div class="pc-col2">
+                  <section class="pc-card"><header><h4>Acciones pendientes <b>2</b></h4><span>Ver todas →</span></header><ul class="pc-list pc-acts"><li><span class="pc-thumb" style="background:#f59e0b"></span><div><strong>Aprobar pieza gráfica</strong><small>Campaña Lanzamiento de producto · 8 mar</small></div><span class="pc-btn">Revisar</span></li><li><span class="pc-thumb" style="background:#111827"></span><div><strong>Revisar copy de anuncios</strong><small>Campaña Always On · 5 mar</small></div><span class="pc-btn">Revisar</span></li></ul></section>
+                  <section class="pc-card pc-ups"><header><h4>Últimas actualizaciones</h4><span>Ver todas →</span></header><ul><li><i>M</i><span>María comentó en una pieza</span><small>Hace 2 horas</small></li><li><i>R</i><span>Se compartió un nuevo reporte</span><small>Hace 1 día</small></li><li><i>N</i><span>Nueva versión lista para revisión</span><small>Hace 2 días</small></li></ul></section>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -190,11 +203,7 @@
     });
   }
 
-  var shot = document.querySelector('.pd-portal-shot img');
-  function preload() { if (shot) shot.loading = 'eager'; }
   tabs.forEach(function (t, i) {
-    t.addEventListener('pointerenter', preload, { once: true });
-    t.addEventListener('focus', preload, { once: true });
     t.addEventListener('click', function () { select(t.dataset.pdTab, false); });
     t.addEventListener('keydown', function (e) {
       var k = e.key, next = null;
