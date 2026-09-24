@@ -1,0 +1,83 @@
+/* Producto V1: estado "Para tu agencia" (hoja propia de servicios.html) */
+.pd-page { --pd-violet: #4d24ff; --pd-violet-2: #8a5cff; --pd-ink: #0b0d2b; --pd-muted: #5d6a91; --pd-line: #e3defb; --pd-soft: #f3f0ff; --pd-ease: cubic-bezier(.2, .8, .2, 1); padding-bottom: 110px; }
+
+/* ---------- Grid ---------- */
+.pd-grid { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); column-gap: 48px; row-gap: 34px; padding-top: 140px; align-items: start; }
+.pd-hero-copy { grid-column: 1; grid-row: 1; align-self: center; }
+.pd-orbit { grid-column: 2; grid-row: 1; }
+.pd-stage-copy { grid-column: 1; grid-row: 2; align-self: center; }
+.pd-stage-visual { grid-column: 2; grid-row: 2; min-width: 0; }
+
+/* ---------- Copy del hero ---------- */
+.pd-hero-copy h1 { max-width: 640px; margin: 0 0 20px; font-size: clamp(2.5rem, 4.6vw, 4.3rem); line-height: 1.03; }
+.pd-hero-copy h1 em { font-style: normal; color: var(--pd-violet); background: none; -webkit-text-fill-color: currentColor; }
+.pd-lead { max-width: 500px; margin: 0 0 28px; color: var(--pd-muted); font-size: 1.1rem; line-height: 1.55; }
+.pd-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+.pd-textlink { display: inline-flex; align-items: center; gap: 8px; color: var(--pd-ink); font-weight: 600; transition: color .18s var(--pd-ease); }
+.pd-textlink:hover { color: var(--pd-violet); }
+
+/* ---------- Selector Agencia / GISBA OS / Cliente ---------- */
+.pd-orbit { position: relative; display: grid; place-items: center; min-height: 250px; }
+.pd-ring { position: absolute; left: 50%; top: 50%; border-radius: 50%; border: 1px solid var(--pd-line); transform: translate(-50%, -50%); pointer-events: none; }
+.pd-ring-1 { width: 220px; height: 220px; }
+.pd-ring-2 { width: 330px; height: 330px; border-color: rgba(227,222,251,.55); }
+.pd-dot { position: absolute; left: 50%; width: 8px; height: 8px; margin-left: -4px; border: 2px solid var(--pd-violet); border-radius: 50%; background: #fff; }
+.pd-dot-t { top: 4px; }
+.pd-dot-b { bottom: 4px; }
+.pd-tabs { position: relative; width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 26px; }
+.pd-center { width: 150px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: #fff; box-shadow: 0 24px 60px rgba(77,36,255,.16), inset 0 0 0 1px var(--pd-line); }
+.pd-center img { width: 82%; height: auto; }
+
+.pd-node { position: relative; display: flex; align-items: center; gap: 12px; padding: 14px 16px 14px 14px; border: 1px solid var(--pd-line); border-radius: 999px; background: #fff; color: var(--pd-ink); box-shadow: 0 10px 26px rgba(56,41,142,.07); cursor: default; }
+.pd-node::before { content: ""; position: absolute; top: 50%; width: 26px; border-top: 1.5px dashed rgba(77,36,255,.3); }
+.pd-node-agency::before { left: 100%; }
+.pd-node-client::before { right: 100%; }
+.pd-node-ico { flex: none; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; color: var(--pd-violet); background: var(--pd-soft); }
+.pd-node-text { display: grid; gap: 2px; }
+.pd-node-text strong { font-size: 1rem; font-weight: 600; }
+.pd-node-text small { color: var(--pd-muted); font-size: .8rem; }
+/* activo: violeta de marca */
+.pd-node.is-active { color: #fff; border-color: transparent; background: linear-gradient(135deg, #4d24ff, #8a5cff); box-shadow: 0 16px 38px rgba(77,36,255,.3); }
+.pd-node.is-active .pd-node-ico { color: #fff; background: rgba(255,255,255,.2); }
+.pd-node.is-active .pd-node-text small { color: rgba(255,255,255,.88); }
+/* inactivo: neutro, menor jerarquia */
+.pd-node:not(.is-active) { color: #5b6485; box-shadow: none; background: rgba(255,255,255,.75); }
+.pd-node:not(.is-active) .pd-node-ico { color: #7d86a6; background: #f4f4f9; }
+.pd-node:not(.is-active) .pd-node-text small { color: #8a93b3; }
+
+/* ---------- Estado: Para tu agencia ---------- */
+.pd-label { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 14px; color: var(--pd-violet); font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.pd-label span { width: 28px; height: 1px; background: currentColor; }
+.pd-stage-copy h2 { margin: 0 0 14px; font-size: clamp(1.9rem, 3vw, 2.7rem); line-height: 1.06; }
+.pd-copy { max-width: 440px; margin: 0 0 26px; color: var(--pd-muted); font-size: 1.05rem; line-height: 1.6; }
+.pd-feats { display: flex; flex-wrap: wrap; gap: 18px 30px; margin: 0; padding: 0; list-style: none; }
+.pd-feats li { display: flex; align-items: center; gap: 12px; font-size: .98rem; font-weight: 600; color: var(--pd-ink); }
+.pd-feat-ico { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 14px; color: var(--pd-violet); background: var(--pd-soft); }
+
+/* ---------- Dashboard de agencia (asset aprobado, completo) ---------- */
+.pd-shot { margin: 0; overflow: hidden; border: 1px solid var(--pd-line); border-radius: 22px; background: #fff; box-shadow: 0 26px 60px rgba(56,41,142,.16); }
+.pd-shot img { display: block; width: 100%; height: auto; image-rendering: auto; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .pd-grid { grid-template-columns: 1fr; padding-top: 120px; }
+  .pd-hero-copy, .pd-orbit, .pd-stage-copy, .pd-stage-visual { grid-column: 1; }
+  .pd-hero-copy { grid-row: 1; } .pd-orbit { grid-row: 2; } .pd-stage-copy { grid-row: 3; } .pd-stage-visual { grid-row: 4; }
+  .pd-orbit { min-height: 0; padding: 26px 0; }
+}
+@media (max-width: 720px) {
+  .pd-grid { row-gap: 26px; padding-top: 110px; }
+  .pd-actions { gap: 16px; }
+  .pd-actions .button { flex: 1 1 100%; }
+  .pd-orbit { padding: 0; }
+  .pd-ring, .pd-dot, .pd-center { display: none; }
+  .pd-tabs { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pd-node::before { display: none; }
+  .pd-node { padding: 10px 12px 10px 10px; gap: 10px; }
+  .pd-node-ico { width: 38px; height: 38px; }
+  .pd-node-ico svg { width: 20px; height: 20px; }
+  .pd-node-text strong { font-size: .88rem; line-height: 1.2; }
+  .pd-node-text small { display: none; }
+  .pd-feats { flex-direction: column; gap: 14px; }
+  .pd-shot { border-radius: 16px; }
+}
