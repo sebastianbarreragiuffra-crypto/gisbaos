@@ -709,7 +709,7 @@ body.home-page {
 
 body.home-page::before { display: none; }
 .home-page .site-header { background: rgba(255,255,255,.9); }
-.home-page .site-header.scrolled { border-color: #e9e8f2; background: rgba(255,255,255,.92); box-shadow: 0 10px 35px rgba(34, 29, 92, .06); }
+.home-page .site-header.scrolled { border-color: #e9e8f2; background: #fff; box-shadow: 0 10px 35px rgba(34, 29, 92, .06); backdrop-filter: none; }
 .home-page .nav-shell { height: 98px; }
 .home-page .brand { color: #080925; font-size: 1.1rem; }
 .home-page .brand img:not(.header-brand-banner) { width: 52px; height: 52px; border-radius: 14px; }
@@ -1503,7 +1503,9 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   min-height: auto;
   padding: 92px 0 36px;
   overflow: hidden;
-  background: #fff;
+  background:
+    radial-gradient(ellipse 78% 110% at 76% 28%,rgba(117,77,255,.22),rgba(117,77,255,.08) 48%,transparent 76%),
+    linear-gradient(180deg,#f5f3ff 0%,#faf9ff 72%,#fff 100%);
 }
 
 .motion-hero-shell {
