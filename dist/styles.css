@@ -2564,3 +2564,6 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pfaq-item[open] .pfaq-plus::before { transform: rotate(-45deg); }
 @media (max-width: 900px) { .pfaq { grid-template-columns: 1fr; gap: 32px; } .pfaq-tabs { grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; padding-bottom: 4px; } }
 @media (max-width: 560px) { .pfaq-item summary { padding: 18px 20px; } .pfaq-item p { padding: 0 20px 20px; } }
+.pricing-badges li { display: inline-flex; align-items: center; gap: 8px; }
+.pricing-badges li svg { color: var(--violet); }
+.pricing-tabs a { display: inline-flex; align-items: center; gap: 8px; }
