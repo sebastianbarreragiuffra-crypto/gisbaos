@@ -300,18 +300,46 @@
       </div>
     </section>
 
-    <section id="experiencia-cliente" class="section client-experience client-experience-image" aria-labelledby="client-experience-title">
-      <div class="container client-experience-image-shell reveal">
-        <header class="client-experience-mobile-copy">
-          <p class="eyebrow"><span></span> Portal del cliente</p>
+    <section id="experiencia-cliente" class="section client-experience" aria-labelledby="client-experience-title">
+      <div class="container client-experience-shell">
+        <header class="client-experience-heading reveal">
+          <p class="eyebrow"><span></span> Experiencia del cliente final</p>
           <h2 id="client-experience-title">Así lo ve <em>tu cliente.</em></h2>
-          <p>Todo lo que necesita para entender resultados, aprobar decisiones y mantenerse coordinado con tu agencia.</p>
+          <p>Una experiencia simple y conectada para entender resultados, revisar oportunidades y continuar cada conversación.</p>
         </header>
-        <a class="client-experience-product-link" href="assets/gisba-portal-cliente-v3.png" target="_blank" rel="noopener" aria-label="Abrir la vista completa del portal del cliente de GISBA OS">
-          <span class="client-experience-product-window">
-            <img src="assets/gisba-portal-cliente-v3.png" width="1672" height="941" alt="Portal del cliente de GISBA OS con resultados, aprobaciones, coordinación y mensajes" loading="lazy" decoding="async">
-          </span>
-        </a>
+
+        <div class="client-experience-visual reveal" aria-label="Vistas del portal de cliente en GISBA OS">
+          <div class="client-visual-glow" aria-hidden="true"></div>
+          <div class="client-product-story" data-product-story>
+            <div class="client-story-tabs" role="tablist" aria-label="Secciones disponibles para el cliente">
+              <button id="client-tab-resumen" class="active" type="button" role="tab" aria-selected="true" aria-controls="client-panel-resumen" tabindex="0" data-story-tab="0"><span>01</span><strong>Resumen</strong><small>Resultados y prioridades</small></button>
+              <button id="client-tab-oportunidades" type="button" role="tab" aria-selected="false" aria-controls="client-panel-oportunidades" tabindex="-1" data-story-tab="1"><span>02</span><strong>Oportunidades</strong><small>Acciones pendientes</small></button>
+              <button id="client-tab-conversaciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-conversaciones" tabindex="-1" data-story-tab="2"><span>03</span><strong>Conversaciones</strong><small>Todo el contexto</small></button>
+            </div>
+            <div class="client-story-stage" aria-live="polite">
+              <figure id="client-panel-resumen" class="active" role="tabpanel" aria-labelledby="client-tab-resumen" data-story-panel="0" aria-hidden="false">
+                <a href="assets/gisba-portal-cliente-resumen.png" target="_blank" rel="noopener" aria-label="Abrir vista completa del resumen del cliente">
+                  <img src="assets/gisba-portal-cliente-resumen.png" width="1448" height="1086" alt="Resumen del portal de cliente de GISBA OS con resultados, alertas y oportunidades activas" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <figure id="client-panel-oportunidades" role="tabpanel" aria-labelledby="client-tab-oportunidades" data-story-panel="1" aria-hidden="true">
+                <a href="assets/gisba-portal-cliente-oportunidades.png" target="_blank" rel="noopener" aria-label="Abrir vista completa de oportunidades del cliente">
+                  <img src="assets/gisba-portal-cliente-oportunidades.png" width="1448" height="1086" alt="Panel de oportunidades del cliente con estados, próximas acciones y actividad reciente" loading="lazy" decoding="async">
+                </a>
+              </figure>
+              <figure id="client-panel-conversaciones" role="tabpanel" aria-labelledby="client-tab-conversaciones" data-story-panel="2" aria-hidden="true">
+                <a href="assets/gisba-portal-cliente-conversaciones.png" target="_blank" rel="noopener" aria-label="Abrir vista completa de conversaciones del cliente">
+                  <img src="assets/gisba-portal-cliente-conversaciones.png" width="1448" height="1086" alt="Bandeja de conversaciones del cliente conectada con contactos, oportunidades y próximas acciones" loading="lazy" decoding="async">
+                </a>
+              </figure>
+            </div>
+            <div class="client-story-meta">
+              <p><span aria-hidden="true">✦</span> Cambia de vista para recorrer la experiencia completa.</p>
+              <a href="#contacto" data-cta="demo" data-event="demo_cta_click" data-location="client-portal">Quiero verlo en una demo <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="client-story-progress" aria-hidden="true"><span></span></div>
+          </div>
+        </div>
       </div>
     </section>
 
