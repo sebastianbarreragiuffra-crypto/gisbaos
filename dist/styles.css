@@ -2293,3 +2293,60 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   .integration-status-grid small { padding: 5px 6px; font-size: .58rem; }
   .pulse-actions { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   MOTION SYSTEM V1 (capa de presentación sobre el Freeze V1)
+   Solo transform/opacity. Sin JS el contenido queda visible: el estado inicial
+   oculto solo existe bajo html.js. Sin will-change global, sin loops nuevos.
+   ========================================================================== */
+:root {
+  --ease-gisba: cubic-bezier(.2, .8, .2, 1);
+  --motion-hover: .16s;
+  --motion-ui: .2s;
+  --motion-reveal: .28s;
+  --motion-distance: 12px;
+  --motion-stagger: 80ms;
+}
+
+/* Reveal: un solo movimiento por bloque, una sola vez */
+.reveal { opacity: 1; transform: none; transition: none; }
+.js .reveal { transition: opacity var(--motion-reveal) var(--ease-gisba), transform var(--motion-reveal) var(--ease-gisba); }
+.js .reveal:not(.visible) { opacity: 0; transform: translateY(var(--motion-distance)); }
+/* El Hero se pinta de inmediato: no depende de un observer (protege el LCP) */
+.js .motion-hero-shell.reveal:not(.visible) { opacity: 1; transform: none; }
+
+/* GISBA Pulse: panel y luego Qué cambió -> Por qué importa -> Recomendación */
+.js .pulse-panel .pulse-insight article { opacity: 0; transform: translateY(8px); transition: opacity var(--motion-reveal) var(--ease-gisba), transform var(--motion-reveal) var(--ease-gisba); transition-delay: calc(var(--stagger, 0) * var(--motion-stagger)); }
+.js .pulse-panel.visible .pulse-insight article { opacity: 1; transform: none; }
+.pulse-insight article:nth-child(2) { --stagger: 1; }
+.pulse-insight article:nth-child(3) { --stagger: 2; }
+
+/* Navbar y botones: feedback inmediato */
+.site-header { transition: background var(--motion-ui) var(--ease-gisba), border-color var(--motion-ui) var(--ease-gisba); }
+.main-nav > a:not(.button)::after { transition: right var(--motion-hover) var(--ease-gisba); }
+.button { transition: transform var(--motion-hover) var(--ease-gisba), box-shadow var(--motion-hover) var(--ease-gisba), background var(--motion-hover) var(--ease-gisba); }
+.button span[aria-hidden] { transition: transform var(--motion-hover) var(--ease-gisba); }
+
+/* FAQ: sin animar height; la respuesta entra con opacity + transform */
+summary span { transition: transform var(--motion-ui) var(--ease-gisba); }
+@keyframes faq-answer-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba); }
+
+/* Táctil: sin hover pegajoso; feedback por :active */
+@media (hover: none) {
+  .button:hover { transform: none; }
+  .button:active { transform: translateY(1px); }
+}
+
+/* Mobile: menor distancia y sin stagger */
+@media (max-width: 780px) {
+  :root { --motion-distance: 8px; --motion-stagger: 0ms; }
+}
+
+/* Movimiento reducido: se conserva jerarquía y estados, sin desplazamientos */
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal:not(.visible),
+  .js .pulse-panel .pulse-insight article { opacity: 1; transform: none; transition: none; }
+  .button:hover, .button:active { transform: none; }
+  details[open] > p { animation: none; }
+}
