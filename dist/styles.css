@@ -2587,3 +2587,14 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-close-band h2 { margin: 0; font-size: clamp(1.6rem, 2.8vw, 2.3rem); }
 .pricing-close-band .button-solid { color: #4d24ff; background: #fff; box-shadow: none; }
 .pricing-close-band ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin: 0; padding: 0; list-style: none; font-size: .9rem; opacity: .92; }
+
+/* Ver como funciona + Como empezar */
+.pricing-how { margin: 18px 0 0; }
+.pricing-how a { display: inline-flex; align-items: center; gap: 10px; color: var(--violet); font-weight: 600; }
+.pricing-how a span { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; font-size: .7rem; background: var(--surface-strong); }
+.pricing-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin: 0; padding: 0; list-style: none; }
+.pricing-steps li { display: flex; gap: 16px; align-items: flex-start; padding-top: 22px; border-top: 1px solid var(--line-strong); }
+.pricing-step-num { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-family: var(--font-display); font-weight: 600; background: linear-gradient(135deg, #6e3cff, #a05cff); }
+.pricing-steps h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.pricing-steps p { margin: 0; color: var(--muted); font-size: .92rem; }
+@media (max-width: 800px) { .pricing-steps { grid-template-columns: 1fr; gap: 20px; } }
