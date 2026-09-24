@@ -144,3 +144,10 @@ Atributos de tracking ya preparados (sin enviar eventos a ningún proveedor toda
 ### Motion
 
 Motion System V1 es una fase separada, posterior a este freeze. No tiene autorización para modificar copy, layout, arquitectura, positioning, CTA ni responsive — trabaja sobre la estructura ya congelada.
+
+## Trabajo en paralelo (reglas permanentes para Claude y Codex)
+
+- `main` (carpeta principal `C:\Users\SEBAS\Desktop\gisbaos`) NO se edita durante el desarrollo: solo integración, QA final, push y deploy. Si detectas que estás en `main`, detente antes de editar y usa tu propia rama/worktree.
+- Una tarea = una rama/worktree; nunca dos agentes en la misma carpeta. Tarea terminada = QA + commit + working tree limpio + reportar SHA y detenerse; la integra un solo integrador, que también decide el número final de `styles.css?v=XX`.
+- Cambios desconocidos: no borrar, integrar ni resetear; identificar y, si hace falta, conservar en `wip/<nombre>`. Nunca desplegar desde un working tree sucio: solo desde `main` limpio o una extracción exacta del commit aprobado.
+- Reglas completas: `docs/gisba-parallel-work-rules.md`.
