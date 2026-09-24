@@ -2493,3 +2493,27 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-addon-price .pricing-price span { font-size: .72rem; }
 @media (max-width: 1100px) { .pricing-addons { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .pricing-addons { grid-template-columns: 1fr; } }
+
+/* Planes con degradado de tono */
+.pricing-card { --pc-text: #150f3a; --pc-muted: #514a86; --pc-line: rgba(21,15,58,.16); --pc-chip: rgba(255,255,255,.55); padding-bottom: 92px; color: var(--pc-text); background: #dcd7f5; }
+.pricing-card.plan-2 { --pc-text: #fff; --pc-muted: rgba(255,255,255,.82); --pc-line: rgba(255,255,255,.3); --pc-chip: rgba(255,255,255,.16); background: #8f78f5; }
+.pricing-card.plan-3 { --pc-text: #fff; --pc-muted: rgba(255,255,255,.82); --pc-line: rgba(255,255,255,.3); --pc-chip: rgba(255,255,255,.14); background: #4d24ff; }
+.pricing-card h3, .pricing-card .pricing-price strong { color: var(--pc-text); }
+.pricing-card .pricing-plan, .pricing-card .pricing-label, .pricing-card .pricing-note, .pricing-card .pricing-price span { color: var(--pc-muted); }
+.pricing-card .pricing-accounts { color: var(--pc-text); }
+.pricing-cta-btn { width: 100%; min-height: 46px; margin: 8px 0 6px; border-radius: 12px; color: #fff; font-size: .95rem; background: #2b16a8; border-color: rgba(255,255,255,.18); box-shadow: none; }
+.pricing-cta-btn:hover { background: #22128a; box-shadow: none; }
+.pricing-card.plan-3 .pricing-cta-btn { background: #2b16a8; }
+.pricing-label-line { padding-top: 14px; border-top: 1px solid var(--pc-line); }
+.pricing-features { gap: 12px; margin-bottom: 26px; font-weight: 500; }
+.pricing-card .pricing-features li { display: flex; align-items: center; gap: 10px; }
+.pricing-card .pricing-features li::before { content: none; }
+.pricing-features svg { flex: none; color: var(--pc-text); }
+.pricing-card.plan-1 .pricing-features svg { color: var(--violet); }
+.pricing-foot { display: flex; align-items: stretch; gap: 10px; margin-top: auto; }
+.pricing-users { min-width: 62px; display: grid; place-content: center; padding: 8px 10px; text-align: center; border: 1px solid var(--pc-line); border-radius: 12px; background: var(--pc-chip); }
+.pricing-users strong { font-family: var(--font-display); font-size: 1.15rem; line-height: 1; }
+.pricing-users small { font-size: .68rem; color: var(--pc-muted); }
+.pricing-channels { flex: 1; display: flex; align-items: center; justify-content: space-evenly; gap: 6px; padding: 8px 12px; border: 1px solid var(--pc-line); border-radius: 12px; background: var(--pc-chip); }
+.pricing-channels svg { width: 18px; height: 18px; }
+@media (max-width: 560px) { .pricing-channels { padding-inline: 8px; } }
