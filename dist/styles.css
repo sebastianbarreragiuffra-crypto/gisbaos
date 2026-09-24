@@ -2356,3 +2356,75 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
   .pulse-panel { padding-bottom: 56px; }
   .pulse-control-note { max-width: 56%; }
 }
+
+/* ==========================================================================
+   MOTION SYSTEM V1.1: firma de movimiento por módulo (Hero > Pulse > WhatsApp/Portal > resto)
+   Solo transform/opacity; el contenido nunca queda oculto sin html.js; sin loops.
+   ========================================================================== */
+
+/* HERO: llegada. La imagen LCP nunca usa opacity; solo transform (10 px, ~400 ms) */
+@keyframes hero-canvas-arrive { from { transform: translateY(10px); } to { transform: none; } }
+@keyframes hero-copy-arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.motion-hero-canvas { animation: hero-canvas-arrive .4s var(--ease-gisba) both; }
+@media (max-width: 780px) {
+  .motion-hero-mobile-copy > p:first-child,
+  .motion-hero-mobile-copy h1,
+  .motion-hero-mobile-copy > p:nth-of-type(2),
+  .motion-hero-mobile-actions { animation: hero-copy-arrive .34s var(--ease-gisba) both; }
+  .motion-hero-mobile-copy h1 { animation-delay: 40ms; }
+  .motion-hero-mobile-copy > p:nth-of-type(2) { animation-delay: 80ms; }
+  .motion-hero-mobile-actions { animation-delay: 120ms; }
+  .motion-hero-canvas { animation-delay: 160ms; }
+}
+
+/* PULSE: inteligencia. Filas en horizontal (detecta > explica > recomienda) y un énfasis único */
+.pulse-panel { --motion-stagger: 90ms; }
+.js .pulse-panel .pulse-insight article { transform: translateX(-10px); transition-duration: .24s; }
+.js .pulse-panel.visible .pulse-insight article { transform: none; }
+.pulse-insight article:nth-child(3) { position: relative; }
+.pulse-insight article:nth-child(3)::after { content: ""; position: absolute; inset: -1px; border: 1px solid rgba(92, 48, 255, .5); border-radius: inherit; opacity: 0; pointer-events: none; }
+@keyframes pulse-reco-ring { 0% { opacity: 0; } 40% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes pulse-priority-emphasis { 0% { transform: scale(1); } 45% { transform: scale(1.07); } 100% { transform: scale(1); } }
+.js .pulse-panel.visible .pulse-insight article:nth-child(3)::after { animation: pulse-reco-ring .5s var(--ease-gisba) 280ms both; }
+.js .pulse-panel.visible .pulse-priority { animation: pulse-priority-emphasis .36s var(--ease-gisba) 200ms both; }
+@media (max-width: 780px) { .pulse-panel { --motion-stagger: 40ms; } }
+
+/* PORTAL: control calmado. Copy primero; la interfaz entra después con un asentamiento suave */
+.js .client-experience-image-shell.reveal:not(.visible),
+.js .whatsapp-approved-shell.reveal:not(.visible) { opacity: 1; transform: none; }
+.js .client-experience-image-shell .client-experience-mobile-copy { transition: opacity .24s var(--ease-gisba), transform .24s var(--ease-gisba); }
+.js .client-experience-image-shell .client-experience-product-link { transition: opacity .32s var(--ease-gisba) .12s, transform .32s var(--ease-gisba) .12s; }
+.js .client-experience-image-shell:not(.visible) .client-experience-mobile-copy { opacity: 0; transform: translateY(8px); }
+.js .client-experience-image-shell:not(.visible) .client-experience-product-link { opacity: 0; transform: translateY(10px) scale(.992); }
+
+/* WHATSAPP: coordinación. Texto y luego el visual, con otro desplazamiento y otro retraso que el Portal */
+.js .whatsapp-approved-shell .whatsapp-mobile-copy { transition: opacity .24s var(--ease-gisba), transform .24s var(--ease-gisba); }
+.js .whatsapp-approved-shell .whatsapp-approved-visual { transition: opacity .3s var(--ease-gisba) .1s, transform .3s var(--ease-gisba) .1s; }
+.js .whatsapp-approved-shell:not(.visible) .whatsapp-mobile-copy { opacity: 0; transform: translateY(8px); }
+.js .whatsapp-approved-shell:not(.visible) .whatsapp-approved-visual { opacity: 0; transform: translateY(16px); }
+
+/* RESTO: encabezados más ligeros que los bloques de producto */
+.section-heading.reveal, .faq-intro.reveal, .pulse-copy.reveal, .dashboard-business-heading.reveal,
+.gisba-pillars-heading.reveal, .decision-flow-heading.reveal, .integrations-status-heading.reveal { --motion-distance: 8px; --motion-reveal: .24s; }
+
+/* Microinteracciones de escritorio: 1-2 px, 160 ms; nada de hover en táctil */
+@media (hover: hover) and (pointer: fine) {
+  .gisba-method-card:hover { transform: translateY(-2px); }
+}
+@media (hover: none) {
+  .gisba-method-card:hover { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-hero-canvas,
+  .motion-hero-mobile-copy > p,
+  .motion-hero-mobile-copy h1,
+  .motion-hero-mobile-actions { animation: none; }
+  .js .pulse-panel .pulse-insight article,
+  .js .client-experience-image-shell:not(.visible) .client-experience-mobile-copy,
+  .js .client-experience-image-shell:not(.visible) .client-experience-product-link,
+  .js .whatsapp-approved-shell:not(.visible) .whatsapp-mobile-copy,
+  .js .whatsapp-approved-shell:not(.visible) .whatsapp-approved-visual { opacity: 1; transform: none; transition: none; }
+  .js .pulse-panel.visible .pulse-insight article:nth-child(3)::after,
+  .js .pulse-panel.visible .pulse-priority { animation: none; }
+}

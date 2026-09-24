@@ -110,7 +110,11 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
       }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' });
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item) => {
+    // Tras un refresh a mitad de página, lo que quedó por encima del viewport no debe re-animarse al volver
+    if (item.getBoundingClientRect().bottom < 0) { item.classList.add('visible'); return; }
+    observer.observe(item);
+  });
 }
 
 document.querySelectorAll('details').forEach((detail) => {
