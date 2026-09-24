@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Precios | GISBA</title>
   <meta name="description" content="Precios de GISBA OS, software para agencias de marketing. Planes a definir según el tamaño de tu agencia.">
+  <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Precios | GISBA">
   <meta property="Precios de GISBA OS para agencias de marketing.">
@@ -12,7 +13,7 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="styles.css?v=72">
+  <link rel="stylesheet" href="styles.css?v=73">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="inner-page">
@@ -57,8 +58,8 @@
           <li>[Soporte]</li><li>[Garantía]</li><li>[Implementación y consultoría]</li>
         </ul>
         <div class="pricing-tabs" aria-label="Secciones de precios">
-          <a class="is-active" href="#planes" data-tab="planes" aria-current="true">Planes</a>
-          <a href="#complementos" data-tab="complementos">Complementos</a>
+          <a class="is-active" href="#planes" data-tab="planes" data-event="pricing_tab_click" aria-current="true">Planes</a>
+          <a href="#complementos" data-tab="complementos" data-event="pricing_tab_click">Complementos</a>
         </div>
       </div>
     </section>
@@ -68,7 +69,7 @@
         <div class="pricing-head reveal">
           <h2 id="plans-title">Más que una plataforma</h2>
           <p>[Subtítulo por definir.]</p>
-          <div class="pricing-switch" role="group" aria-label="Periodo de facturación"><button type="button" class="is-active" aria-pressed="true" data-billing="monthly">Mensual</button><button type="button" aria-pressed="false" data-billing="annual">Anual <small>-20%</small></button></div>
+          <div class="pricing-switch" role="group" aria-label="Periodo de facturación"><button type="button" class="is-active" aria-pressed="true" data-billing="monthly" data-event="pricing_billing_toggle">Mensual</button><button type="button" aria-pressed="false" data-billing="annual" data-event="pricing_billing_toggle">Anual <small>-20%</small></button></div>
         </div>
         <div class="pricing-grid reveal">
           <article class="pricing-card">
@@ -77,7 +78,8 @@
             <p class="pricing-label">Precio</p>
             <p class="pricing-price"><strong data-monthly="$199" data-annual="$159">$199</strong> <span>USD/mes</span></p>
             <p class="pricing-note"><span data-billing-note>Facturación mensual</span> · [valores de ejemplo]</p>
-            <a class="button button-ghost" href="index.html#contacto">Agenda una demo</a>
+            <p class="pricing-accounts">Hasta [X] cuentas de cliente</p>
+            <a class="button button-ghost" href="index.html#contacto" data-event="pricing_plan_click" data-plan="plan-1" data-location="pricing">Consultar este plan</a>
             <p class="pricing-label">Funciones base</p>
             <ul><li>[Funciones por definir]</li><li>[Funciones por definir]</li><li>[Usuarios por definir]</li></ul>
           </article>
@@ -87,7 +89,8 @@
             <p class="pricing-label">Precio</p>
             <p class="pricing-price"><strong data-monthly="$399" data-annual="$319">$399</strong> <span>USD/mes</span></p>
             <p class="pricing-note"><span data-billing-note>Facturación mensual</span> · [valores de ejemplo]</p>
-            <a class="button button-solid" href="index.html#contacto">Agenda una demo</a>
+            <p class="pricing-accounts">Hasta [X] cuentas de cliente</p>
+            <a class="button button-solid" href="index.html#contacto" data-event="pricing_plan_click" data-plan="plan-2" data-location="pricing">Consultar este plan</a>
             <p class="pricing-label">Funciones base</p>
             <ul><li>Todo lo del Plan 1</li><li>[Funciones por definir]</li><li>[Usuarios por definir]</li></ul>
           </article>
@@ -97,7 +100,8 @@
             <p class="pricing-label">Precio</p>
             <p class="pricing-price"><strong>A medida</strong> <span></span></p>
             <p class="pricing-note"><span data-billing-note>Facturación mensual</span> · [valores de ejemplo]</p>
-            <a class="button button-ghost" href="index.html#contacto">Agenda una demo</a>
+            <p class="pricing-accounts">Cuentas de cliente a medida</p>
+            <a class="button button-ghost" href="index.html#contacto" data-event="pricing_plan_click" data-plan="plan-3" data-location="pricing">Consultar este plan</a>
             <p class="pricing-label">Funciones base</p>
             <ul><li>Todo lo del Plan 2</li><li>[Funciones por definir]</li><li>[Soporte por definir]</li></ul>
           </article>
@@ -127,7 +131,7 @@
     <section class="pricing-section" aria-labelledby="pfaq-title">
       <div class="container faq-grid">
         <div class="faq-intro reveal"><p class="eyebrow"><span></span> Preguntas frecuentes</p><h2 id="pfaq-title">Todo lo que necesitas saber</h2></div>
-        <div class="faq-list reveal"><details><summary>¿Hay contrato mínimo de permanencia?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Cuánto tiempo dura la implementación?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Puedo cambiarme de plan en cualquier momento?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Cuándo se empieza a cobrar?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Hay algún pago inicial de implementación?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Con qué canales y herramientas se integra GISBA?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details></div>
+        <div class="faq-list reveal"><details><summary>¿GISBA reemplaza mi CRM?<span aria-hidden="true">+</span></summary><p>No. Puede utilizar información comercial conectada para analizar resultados, pero no administra el proceso de ventas.</p></details><details><summary>¿GISBA modifica campañas automáticamente?<span aria-hidden="true">+</span></summary><p>No. GISBA detecta y recomienda; tu equipo decide antes de ejecutar cualquier cambio.</p></details><details><summary>¿Hay contrato mínimo de permanencia?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Cuánto tiempo dura la implementación?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Puedo cambiarme de plan en cualquier momento?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Cuándo se empieza a cobrar?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Hay algún pago inicial de implementación?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details><details><summary>¿Con qué canales y herramientas se integra GISBA?<span aria-hidden="true">+</span></summary><p>[Respuesta por definir.]</p></details></div>
       </div>
     </section>
 

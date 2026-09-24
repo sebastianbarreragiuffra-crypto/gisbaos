@@ -2476,3 +2476,4 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-switch small { margin-left: 4px; font-size: .72rem; font-weight: 600; opacity: .85; }
 [data-tab-panel][hidden] { display: none; }
 .pricing-tabs a { cursor: pointer; }
+.pricing-accounts { margin: 0 0 6px; font-weight: 600; font-size: .92rem; }
