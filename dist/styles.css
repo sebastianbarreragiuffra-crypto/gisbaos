@@ -2598,3 +2598,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-steps h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .pricing-steps p { margin: 0; color: var(--muted); font-size: .92rem; }
 @media (max-width: 800px) { .pricing-steps { grid-template-columns: 1fr; gap: 20px; } }
+
+/* Aviso de borrador */
+.pricing-draft { position: relative; z-index: 2; margin: 0; padding: 10px 16px; text-align: center; font-size: .85rem; color: #4a2f00; background: #ffe9a8; border-bottom: 1px solid #f1cf6b; }
+.pricing-draft { max-width: 640px; margin: 0 auto 22px; padding: 9px 16px; border-radius: 999px; border: 1px solid #f1cf6b; }
