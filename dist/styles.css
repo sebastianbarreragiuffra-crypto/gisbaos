@@ -2350,3 +2350,9 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
   .button:hover, .button:active { transform: none; }
   details[open] > p { animation: none; }
 }
+
+/* Pulse en móvil: el escalón del marco escala con el alto del panel; se reserva espacio para que no tape la nota final */
+@media (max-width: 780px) {
+  .pulse-panel { padding-bottom: 56px; }
+  .pulse-control-note { max-width: 56%; }
+}
