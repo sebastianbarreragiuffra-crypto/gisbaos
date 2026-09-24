@@ -18,9 +18,11 @@
   <meta name="twitter:image" content="https://gisba-marketing-chile.sebastianbarreragiuf.chatgpt.site/assets/gisba-hero-motion.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GISBA OS","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Sistema operativo para agencias de marketing que conecta clientes, campañas, decisiones y resultados."}</script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=67">
-  <link rel="stylesheet" href="whatsapp-section.css?v=5">
-  <script src="script.js?v=18" defer></script>
+  <link rel="preload" href="assets/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-400.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=68">
+  <link rel="stylesheet" href="whatsapp-section.css?v=6">
+  <script src="script.js?v=19" defer></script>
 </head>
 <body class="home-page">
   <svg class="shape-defs" aria-hidden="true" focusable="false">
@@ -49,8 +51,8 @@
         <a href="como-trabajamos.html">Cómo funciona</a>
         <a href="index.html#contacto">Contacto</a>
         <a href="nosotros.html">Nosotros</a>
-        <span class="nav-login" aria-label="Iniciar sesión">Iniciar sesión</span>
-        <a class="button button-small button-solid" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
+        <a class="nav-login" href="#" aria-label="Iniciar sesión" data-cta="login" data-event="login_click">Iniciar sesión</a>
+        <a class="button button-small button-solid" href="#contacto" data-cta="demo" data-event="demo_cta_click" data-location="navbar">Agenda una demo <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
@@ -63,18 +65,18 @@
           <h1 id="motion-hero-title">Escala tu agencia <em>sin multiplicar el trabajo operativo.</em></h1>
           <p>Centraliza clientes, campañas y decisiones. GISBA detecta qué necesita atención, recomienda qué hacer y mantiene a tu equipo y clientes coordinados.</p>
           <div class="motion-hero-mobile-actions">
-            <a class="button button-solid" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
-            <a class="button button-ghost" href="#como-funciona"><span class="play-icon" aria-hidden="true">▶</span> Ver cómo funciona</a>
+            <a class="button button-solid" href="#contacto" data-cta="demo" data-event="demo_cta_click" data-location="hero">Agenda una demo <span aria-hidden="true">→</span></a>
+            <a class="button button-ghost" href="#como-funciona" data-event="how_it_works_click" data-location="hero"><span class="play-icon" aria-hidden="true">▶</span> Ver cómo funciona</a>
           </div>
         </div>
 
         <div class="motion-hero-canvas">
-          <img class="motion-hero-image" src="assets/gisba-hero-motion.jpg" width="1280" height="511" alt="GISBA OS con un panel operativo que prioriza alertas, aprobaciones y tareas para agencias de marketing.">
+          <img class="motion-hero-image" src="assets/gisba-hero-motion.jpg" width="1280" height="511" fetchpriority="high" alt="GISBA OS con un panel operativo que prioriza alertas, aprobaciones y tareas para agencias de marketing.">
 
           <p class="motion-hero-copy-overlay">Centraliza clientes, campañas y decisiones. GISBA detecta qué necesita atención, recomienda qué hacer y mantiene a tu equipo y clientes coordinados.</p>
 
-          <a class="motion-hero-link motion-hero-demo" href="#contacto"><span class="sr-only">Agenda una demo</span></a>
-          <a class="motion-hero-link motion-hero-how" href="#como-funciona"><span class="sr-only">Ver cómo funciona</span></a>
+          <a class="motion-hero-link motion-hero-demo" href="#contacto" data-cta="demo" data-event="demo_cta_click" data-location="hero"><span class="sr-only">Agenda una demo</span></a>
+          <a class="motion-hero-link motion-hero-how" href="#como-funciona" data-event="how_it_works_click" data-location="hero"><span class="sr-only">Ver cómo funciona</span></a>
 
           <div class="motion-dashboard" aria-label="Demostración animada del flujo de GISBA OS">
             <article class="motion-state motion-state-1">
@@ -278,7 +280,6 @@
         <div class="gisba-method-cta reveal">
           <span class="gisba-method-spark" aria-hidden="true">✦</span>
           <p>Diseñado para agencias que quieren escalar.</p>
-          <a class="button button-solid" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -288,6 +289,7 @@
         <header class="decision-flow-heading reveal">
           <p class="eyebrow"><span></span> Cómo funciona</p>
           <h2 id="decision-flow-title">De datos dispersos a <em>decisiones claras.</em></h2>
+          <p class="decision-flow-differentiation">GISBA conecta performance, señales y decisiones de cada cuenta para que tu agencia sepa dónde actuar y mantenga todo el contexto en un solo lugar.</p>
         </header>
         <ol class="decision-flow-steps reveal">
           <li><span>01</span><div><h3>Conecta</h3><p>Campañas y fuentes de información.</p></div></li>
@@ -322,7 +324,6 @@
           <p class="eyebrow"><span></span> Coordinación por WhatsApp</p>
           <h2 id="closing-title">Coordina marketing con tus clientes desde WhatsApp.</h2>
           <p>GISBA OS conecta a la agencia de marketing con su cliente para aprobar campañas, resolver solicitudes y dejar decisiones registradas sin perder contexto.</p>
-          <a class="button button-solid" href="#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
         </header>
         <figure class="whatsapp-approved-visual" aria-label="Coordinación entre una agencia de marketing y su cliente por WhatsApp, conectada con GISBA OS">
           <img src="assets/gisba-coordinacion-whatsapp-v2.png" width="1942" height="809" alt="Coordina marketing con tus clientes desde WhatsApp: smartphone con una conversación entre Agencia Demo y Cliente Andes junto a la coordinación registrada en GISBA OS" loading="lazy" decoding="async">
@@ -330,6 +331,12 @@
       </div>
     </section>
 
+    <!-- TESTIMONIOS (Objetivo 2, FINAL WEB FREEZE V1): componente preparado pero OCULTO del DOM público.
+         Los nombres/logos/quotes actuales (NEXA Digital, Bruma Creative Studio, ALTA Agencia Digital) son
+         SIMULACIONES DE DISEÑO, no clientes reales. No activar esta sección hasta reemplazar los tres
+         testimonios por datos reales (nombre, cargo, agencia y cita verificados). Para activarla: quitar
+         este comentario que envuelve la sección #testimonios completa. Ver AGENTS.md > Testimonios. -->
+    <!--
     <section id="testimonios" class="section landing-testimonials" aria-labelledby="testimonials-title">
       <div class="container">
         <header class="section-heading centered testimonials-heading reveal">
@@ -382,6 +389,7 @@
         </div>
       </div>
     </section>
+    -->
 
     <section id="faq" class="section landing-faq faq" aria-labelledby="landing-faq-title">
       <div class="container faq-grid">
@@ -419,7 +427,7 @@
           <h2 id="contact-title">Gestiona más clientes sin multiplicar la complejidad.</h2>
           <p>Descubre cómo GISBA conecta campañas, decisiones, equipo y clientes en una sola operación.</p>
         </div>
-        <form class="contact-form" data-contact-form>
+        <form class="contact-form" data-contact-form data-form-event="demo_form_submit" data-form-start-event="demo_form_start" data-form-success-event="demo_success">
           <div class="form-row">
             <label>Nombre<input name="nombre" autocomplete="name" required placeholder="Tu nombre"></label>
             <label>Correo<input type="email" name="correo" autocomplete="email" required placeholder="nombre@empresa.cl"></label>
@@ -446,7 +454,7 @@
               </div>
             </fieldset>
             <label><span class="field-label">Comentarios adicionales <small class="optional-label">(opcional)</small></span><textarea name="mensaje" rows="4" placeholder="Cuéntanos cualquier detalle que debamos conocer"></textarea></label>
-          <button class="button button-solid" type="submit">Agenda una demo <span aria-hidden="true">→</span></button>
+          <button class="button button-solid" type="submit" data-cta="demo" data-event="demo_cta_click" data-location="final">Agenda una demo <span aria-hidden="true">→</span></button>
           <p class="form-note">La primera conversación es para entender tu escenario y definir si podemos ayudarte.</p>
           <p class="form-direct-contact">Si tu aplicación de correo no se abre, escribe directamente a <a href="mailto:contacto@gisbaos.cl">contacto@gisbaos.cl</a>.</p>
           <div class="form-result" role="status" aria-live="polite" data-form-result hidden></div>

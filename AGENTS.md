@@ -87,3 +87,60 @@
 - No declares Git local, GitHub y Sites sincronizados hasta verificar el SHA local/remoto, la versión desplegada y el DOM real de la URL pública.
 - Después del despliegue, comprueba por red los assets y versiones CSS esperados, ausencia de contenido obsoleto, consola limpia, cero overflow y capturas públicas en los viewports pedidos.
 - El baseline pre-motion debe quedar publicado y verificado antes de comenzar cualquier motion. No implementes motion sin una instrucción explícita posterior.
+
+## FINAL WEB FREEZE V1 (website comercial GISBA OS)
+
+### Alcance permanente
+
+- Este repositorio es el WEBSITE / LANDING comercial de GISBA OS. No es el software GISBA OS: no se diseña backend, base de datos, autenticación, APIs ni booking aquí.
+- "Iniciar sesión" es un enlace (`<a class="nav-login" data-cta="login">`) que solo redirige a otra web/app; su destino final se define en `script.js` (`LOGIN_URL`).
+- "Agenda una demo" no instala Calendly/Cal.com ni backend propio; por ahora todos los CTA apuntan a `#contacto` (formulario en la misma página).
+
+### ICP
+
+- Comprador y usuario principal: agencias de marketing digital en Chile (Founder/CEO, Director de Marketing, Director de Performance, Head of Growth, COO). El cliente de la agencia NO es el buyer.
+- La home mantiene lenguaje premium/internacional (escalable a LatAm); no repetir "Chile" artificialmente fuera de metadata/SEO/contacto.
+
+### GISBA Core (tesis a proteger)
+
+- GISBA OS conecta, por cada cuenta: performance + señales + decisiones + coordinación + trazabilidad. El valor es conectar información fragmentada, no acumular funcionalidades.
+- Flujo GISBA Pulse: DETECTA → EXPLICA → RECOMIENDA → DECIDE (humano) → REGISTRA. Nunca comunicar "recomienda → ejecuta automáticamente".
+- GISBA no debe leerse como ERP, CRM, task manager genérico, inbox omnicanal ni "solución 360". WhatsApp es coordinación Agencia ↔ GISBA ↔ Cliente de la agencia, no atención al comprador final.
+
+### Los tres directorios de evaluación
+
+Toda decisión relevante del website se evalúa con: (A) GISBA Web & Conversion Board — claridad, UX, conversión; (B) GISBA Search & Acquisition Board — SEO técnico, paid search readiness, sin convertir la home en catálogo de keywords; (C) GISBA Product Engineering & Revenue Board — implementación, performance, recorrido comercial. Ninguno diseña backend.
+
+### Breakpoints y jerarquía
+
+- Baseline visual: 1440px. En 1920px no se escala el contenido, solo se agrega aire lateral (`--container: min(1340px, calc(100% - 48px))`).
+- Responsive a validar siempre: 1920 / 1440 / 1024 / 768 / 390.
+- Mobile se rediseña por jerarquía (mensaje → beneficio → producto/visual), nunca es un desktop reducido a escala.
+
+### CTA "Agenda una demo": distribución final
+
+Distribución aprobada (único lugar donde debe existir un botón grande "Agenda una demo"): **Navbar → Hero → CTA final** (formulario de `#contacto`). No repetir un CTA grande en GISBA Pulse, Portal del Cliente, WhatsApp, Testimonios, "La forma de GISBA" ni otros módulos intermedios. El footer puede tener enlaces de navegación normales (texto), no un botón duplicado.
+
+Todos los CTA de este tipo llevan `data-cta="demo"`; "Iniciar sesión" lleva `data-cta="login"`. El destino centralizado se controla en `dist/script.js` con las constantes `DEMO_BOOKING_URL` y `LOGIN_URL` (al inicio del archivo): mientras sean `null`, se conserva el `href` actual de cada enlace; para redirigir todos los CTA a la vez (por ejemplo a un proveedor de booking o a la URL real de login), basta con asignarles un string ahí — no hay que tocar el HTML de cada página.
+
+Atributos de tracking ya preparados (sin enviar eventos a ningún proveedor todavía): `data-event="demo_cta_click"` + `data-location="navbar|hero|final"` en cada CTA de demo; `data-event="login_click"` en "Iniciar sesión"; `data-event="how_it_works_click"` en "Ver cómo funciona"; en el formulario de contacto, `data-form-event="demo_form_submit"`, `data-form-start-event="demo_form_start"` y `data-form-success-event="demo_success"`.
+
+### Testimonios (Objetivo 2, FINAL WEB FREEZE V1)
+
+- La sección `#testimonios` de `dist/index.html` está **comentada / oculta del DOM público** porque sus tres testimonios (NEXA Digital, Bruma Creative Studio, ALTA Agencia Digital) son simulaciones de diseño, no clientes reales.
+- Nunca publicar nombres, logos o citas ficticias como prueba social real.
+- Para activarla: reemplazar los tres testimonios por datos reales (nombre, cargo, agencia, cita verificados) y quitar el comentario `<!-- TESTIMONIOS ... -->` que envuelve la sección completa en `dist/index.html`. No hace falta rediseñar: el componente (HTML + CSS en `styles.css`, clases `.landing-testimonials`/`.testimonial-*`) queda listo para usarse tal cual.
+
+### SEO técnico
+
+- `dist/robots.txt` y `dist/sitemap.xml` existen y apuntan al dominio público actual (`gisba-marketing-chile.sebastianbarreragiuf.chatgpt.site`). `propuesta-2.html` queda excluido del sitemap (no es parte de la navegación pública) y bloqueado en robots.txt.
+- No se agregó `<link rel="canonical">`: el dominio `.chatgpt.site` es de Sites/staging, no está confirmado como dominio final. Cuando se confirme el dominio de producción, agregar canonical absoluto en las 6 páginas y actualizar las URLs de `sitemap.xml`/`robots.txt` y los `og:image`/`twitter:image` de `index.html`.
+- Fuentes servidas en TTF (no WOFF2); se agregó `<link rel="preload">` para Manrope e Inter regular en `index.html`. Convertir a WOFF2 queda como mejora futura de performance (no se hizo en este freeze para no arriesgar el diseño con herramientas de conversión no verificadas).
+
+### Proceso de release (permanente)
+
+`git diff` → revisar archivos → commit pequeño y descriptivo → `push` → **Deploy Sites** (paso manual, independiente del push, vía Codex/ChatGPT — ver sección "Publicación y baseline" arriba) → QA sobre la URL pública. Nunca declarar Git local, GitHub y Sites sincronizados sin verificar SHA local = origin/main = versión desplegada.
+
+### Motion
+
+Motion System V1 es una fase separada, posterior a este freeze. No tiene autorización para modificar copy, layout, arquitectura, positioning, CTA ni responsive — trabaja sobre la estructura ya congelada.
