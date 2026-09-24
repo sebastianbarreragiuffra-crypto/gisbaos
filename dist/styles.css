@@ -1503,7 +1503,9 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   min-height: auto;
   padding: 92px 0 36px;
   overflow: hidden;
-  background: #fff;
+  background:
+    radial-gradient(ellipse 60% 90% at 78% 28%,rgba(117,77,255,.15),transparent 72%),
+    linear-gradient(180deg,#fafbff 0%,#f8f7ff 68%,#fff 100%);
 }
 
 .motion-hero-shell {
