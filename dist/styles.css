@@ -709,7 +709,7 @@ body.home-page {
 
 body.home-page::before { display: none; }
 .home-page .site-header { background: rgba(255,255,255,.9); }
-.home-page .site-header.scrolled { border-color: #e9e8f2; background: #fff; box-shadow: 0 10px 35px rgba(34, 29, 92, .06); backdrop-filter: none; }
+.home-page .site-header.scrolled { border-color: #e9e8f2; background: rgba(255,255,255,.92); box-shadow: 0 10px 35px rgba(34, 29, 92, .06); backdrop-filter: blur(18px); }
 .home-page .nav-shell { height: 98px; }
 .home-page .brand { color: #080925; font-size: 1.1rem; }
 .home-page .brand img:not(.header-brand-banner) { width: 52px; height: 52px; border-radius: 14px; }
