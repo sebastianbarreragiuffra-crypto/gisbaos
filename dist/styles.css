@@ -2518,3 +2518,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-channels svg { width: 18px; height: 18px; }
 @media (max-width: 560px) { .pricing-channels { padding-inline: 8px; } }
 .pricing-addon-desc { margin: -6px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.45; }
+.pricing-table .cmp-group th { padding: 12px 22px; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--violet); background: var(--surface-strong); }
+.pricing-table .cmp-yes { display: inline-flex; color: var(--violet); }
+.pricing-table .cmp-no { color: var(--muted); opacity: .6; }
+.pricing-table td { font-weight: 500; }
