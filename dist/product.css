@@ -244,3 +244,6 @@
 
 @media (min-width: 721px) { .pd-visual-card { padding-bottom: 100px; } }
 @media (min-width: 721px) { .pd-visual-card { padding-bottom: 120px; } }
+
+/* isotipo central: monocromatico grafito, sin texto (no cambia con el estado) */
+.pd-center img { width: 52%; height: auto; }
