@@ -2481,3 +2481,15 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-hero .eyebrow { justify-content: center; }
 .pricing-table thead th:nth-child(3), .pricing-table tbody td:nth-child(3) { background: rgba(138, 92, 255, .07); }
 .pricing-tabs a:focus-visible, .pricing-switch button:focus-visible, .pricing-card .button:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
+
+/* Adicionales */
+.pricing-addons { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.pricing-addon { position: relative; isolation: isolate; display: flex; flex-direction: column; gap: 16px; padding: 24px 22px 44px; border: 0; border-radius: 0; background: #f3f0ff; box-shadow: none; clip-path: url(#gisba-frame-shape); filter: drop-shadow(0 16px 26px rgba(45,31,116,.09)); }
+.pricing-addon-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: var(--violet); background: #fff; }
+.pricing-addon h3 { margin: 0; font-size: 1.05rem; font-weight: 600; color: var(--violet); }
+.pricing-addon-price { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: auto; padding: 16px 18px; border-radius: 14px; background: #fff; }
+.pricing-addon-price .pricing-price { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.1; }
+.pricing-addon-price .pricing-price strong { font-size: 1.9rem; }
+.pricing-addon-price .pricing-price span { font-size: .72rem; }
+@media (max-width: 1100px) { .pricing-addons { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .pricing-addons { grid-template-columns: 1fr; } }
