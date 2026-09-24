@@ -60,7 +60,7 @@
 
 ### WhatsApp
 
-- Visual aprobado: `dist/assets/gisba-coordinacion-whatsapp.jpg`.
+- Visual aprobado: `dist/assets/gisba-coordinacion-whatsapp-v2.png`.
 - Conserva el teléfono, la conversación Agencia ↔ Cliente y la interfaz GISBA con aprobación registrada, tarea creada y pendiente de ejecución.
 - No lo sustituyas por cuatro cards, diagramas abstractos ni un nuevo mockup sin autorización.
 - El copy puede mantenerse como HTML fuera del asset.
