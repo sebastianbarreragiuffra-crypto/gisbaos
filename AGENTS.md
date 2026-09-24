@@ -109,7 +109,7 @@
 
 ### Los tres directorios de evaluación
 
-Toda decisión relevante del website se evalúa con: (A) GISBA Web & Conversion Board — claridad, UX, conversión; (B) GISBA Search & Acquisition Board — SEO técnico, paid search readiness, sin convertir la home en catálogo de keywords; (C) GISBA Product Engineering & Revenue Board — implementación, performance, recorrido comercial. Ninguno diseña backend.
+Toda decisión relevante del website se evalúa con: (A) GISBA Web & Conversion Board — claridad, UX, conversión; (B) GISBA Search & Acquisition Board — SEO técnico, paid search readiness, sin convertir la home en catálogo de keywords; (C) GISBA Product Engineering & Revenue Board — implementación, performance, recorrido comercial. Ninguno diseña backend. Método completo (integrantes, contraste obligatorio, reglas anti-conformidad, anti-overdesign y freeze): `docs/gisba-3-board-review.md`; léelo solo cuando haya una decisión relevante.
 
 ### Breakpoints y jerarquía
 
