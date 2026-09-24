@@ -2477,3 +2477,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 [data-tab-panel][hidden] { display: none; }
 .pricing-tabs a { cursor: pointer; }
 .pricing-accounts { margin: 0 0 6px; font-weight: 600; font-size: .92rem; }
+.pricing-hero h1 { margin-inline: auto; }
+.pricing-hero .eyebrow { justify-content: center; }
+.pricing-table thead th:nth-child(3), .pricing-table tbody td:nth-child(3) { background: rgba(138, 92, 255, .07); }
+.pricing-tabs a:focus-visible, .pricing-switch button:focus-visible, .pricing-card .button:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
