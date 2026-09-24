@@ -2602,3 +2602,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 /* Aviso de borrador */
 .pricing-draft { position: relative; z-index: 2; margin: 0; padding: 10px 16px; text-align: center; font-size: .85rem; color: #4a2f00; background: #ffe9a8; border-bottom: 1px solid #f1cf6b; }
 .pricing-draft { max-width: 640px; margin: 0 auto 22px; padding: 9px 16px; border-radius: 999px; border: 1px solid #f1cf6b; }
+
+/* FAQ: evita desborde en movil */
+.pfaq-side, .pfaq-list { min-width: 0; }
+@media (max-width: 900px) { .pfaq { grid-template-columns: minmax(0, 1fr); } }
