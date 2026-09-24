@@ -2522,3 +2522,12 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .pricing-table .cmp-yes { display: inline-flex; color: var(--violet); }
 .pricing-table .cmp-no { color: var(--muted); opacity: .6; }
 .pricing-table td { font-weight: 500; }
+
+/* Tabla: iconos y jerarquia */
+.pricing-table thead th { padding-block: 22px; font-size: 1.05rem; }
+.pricing-table th[scope="row"] { width: 38%; }
+.pricing-table td { width: 20.6%; }
+.cmp-label { display: inline-flex; align-items: center; gap: 12px; }
+.cmp-icon { flex: none; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 10px; color: var(--violet); background: var(--surface-strong); }
+.pricing-table tbody tr:not(.cmp-group):hover > * { background: rgba(138, 92, 255, .05); }
+.pricing-table .cmp-group th { padding-block: 16px; }
