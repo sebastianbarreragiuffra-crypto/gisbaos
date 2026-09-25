@@ -1,0 +1,87 @@
+/* Producto: motion + depth final (3 momentos: Hero, GISBA Pulse, Próximo paso). Hoja propia de servicios.html */
+.pr-page { --pm-ease: cubic-bezier(.2, .8, .2, 1); }
+
+/* ---------- Hero: selector con indicador deslizante ---------- */
+.pr-seg { position: relative; isolation: isolate; }
+.pr-seg::before { content: ""; position: absolute; z-index: -1; top: 5px; bottom: 5px; left: 5px; width: calc((100% - 16px) / 2); border-radius: 14px; background: linear-gradient(135deg, #4d24ff, #7b4dff); box-shadow: 0 12px 26px rgba(77,36,255,.32); transition: transform .38s var(--pm-ease); will-change: transform; }
+.pr-seg[data-active="client"]::before { transform: translateX(calc(100% + 6px)); }
+.pr-seg-btn { position: relative; transition: color .25s ease, background .18s; }
+.pr-seg-btn.is-active, .pr-seg-btn.is-active:hover { background: transparent; box-shadow: none; }
+
+/* ---------- Hero: cambio de perspectiva (misma plataforma) ---------- */
+[data-pr-state].pr-out { opacity: .5; filter: saturate(.85); transition: opacity .17s ease, filter .17s ease; }
+[data-pr-state].pr-in { animation: none; }
+[data-pr-state].pr-in .pr-top, [data-pr-state].pr-in .pr-greet, [data-pr-state].pr-in .pr-kpis, [data-pr-state].pr-in .pr-cols, [data-pr-state].pr-in .pr-side { animation: pmIn .42s var(--pm-ease) both; }
+[data-pr-state].pr-in .pr-side { animation-delay: .04s; }
+[data-pr-state].pr-in .pr-greet { animation-delay: .08s; }
+[data-pr-state].pr-in .pr-kpis { animation-delay: .16s; }
+[data-pr-state].pr-in .pr-cols { animation-delay: .26s; }
+@keyframes pmIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Hero: halo detrás del dashboard ---------- */
+.pr-stage { position: relative; isolation: isolate; }
+.pr-stage::before { content: ""; position: absolute; z-index: -1; inset: -10% -6% -8% -10%; background: radial-gradient(ellipse 58% 52% at 54% 50%, rgba(123,77,255,.2), rgba(123,77,255,0) 72%); pointer-events: none; }
+
+/* ---------- GISBA Pulse: narrativa secuencial (una sola vez) ---------- */
+.pr-pulse { isolation: isolate; overflow: hidden; }
+.pr-pulse::before { content: ""; position: absolute; z-index: -1; top: 14%; left: 50%; width: min(1100px, 96%); height: 62%; transform: translateX(-50%); background: radial-gradient(ellipse at center, rgba(123,77,255,.15), rgba(123,77,255,0) 68%); opacity: .75; pointer-events: none; }
+.pr-pulse .pr-arrow path { stroke-dasharray: 1; }
+
+.pr-seq:not(.is-played) :is(.pr-signal-wrap, .pr-step, .pr-chip, .pr-why, .pr-link, .pr-recs li, .pr-decide) { opacity: 0; }
+.pr-pulse.pr-seq:not(.is-played) .pr-arrow path { stroke-dashoffset: 1; }
+.pr-pulse.pr-seq:not(.is-played) .pr-bars i { transform: scaleY(0); }
+
+.pr-pulse.pr-seq.is-played::before { animation: pmHalo 1.8s ease-out both; }
+.pr-pulse.pr-seq.is-played .pr-signal-wrap { animation: pmSeq .5s var(--pm-ease) both; }
+.pr-pulse.pr-seq.is-played .pr-spark { animation: pmSpark .6s ease-out .5s both; }
+.pr-pulse.pr-seq.is-played .pr-step:nth-child(1) { animation: pmSeq .45s var(--pm-ease) .6s both, pmRing 1s ease-out .6s; }
+.pr-pulse.pr-seq.is-played .pr-step:nth-child(1) .pr-chip:nth-of-type(1) { animation: pmSeq .4s var(--pm-ease) .8s both; }
+.pr-pulse.pr-seq.is-played .pr-step:nth-child(1) .pr-chip:nth-of-type(2) { animation: pmSeq .4s var(--pm-ease) .92s both; }
+.pr-pulse.pr-seq.is-played .pr-arrow:nth-child(2) path { animation: pmDraw .4s ease-out 1.15s both; }
+.pr-pulse.pr-seq.is-played .pr-step:nth-child(3) { animation: pmSeq .45s var(--pm-ease) 1.4s both, pmRing 1s ease-out 1.4s; }
+.pr-pulse.pr-seq.is-played .pr-why { animation: pmSeq .4s var(--pm-ease) 1.6s both; }
+.pr-pulse.pr-seq.is-played .pr-bars i { transform-origin: bottom; animation: pmBar .5s var(--pm-ease) both; }
+.pr-pulse.pr-seq.is-played .pr-bars i:nth-child(1) { animation-delay: 1.6s; }
+.pr-pulse.pr-seq.is-played .pr-bars i:nth-child(2) { animation-delay: 1.7s; }
+.pr-pulse.pr-seq.is-played .pr-bars i:nth-child(3) { animation-delay: 1.8s; }
+.pr-pulse.pr-seq.is-played .pr-link { animation: pmSeq .4s var(--pm-ease) 1.85s both; }
+.pr-pulse.pr-seq.is-played .pr-arrow:nth-child(4) path { animation: pmDraw .4s ease-out 1.95s both; }
+.pr-pulse.pr-seq.is-played .pr-step:nth-child(5) { animation: pmSeq .45s var(--pm-ease) 2.2s both, pmRing 1s ease-out 2.2s; }
+.pr-pulse.pr-seq.is-played .pr-recs li { animation: pmSeq .4s var(--pm-ease) both; }
+.pr-pulse.pr-seq.is-played .pr-recs li:nth-child(1) { animation-delay: 2.4s; }
+.pr-pulse.pr-seq.is-played .pr-recs li:nth-child(2) { animation-delay: 2.5s; }
+.pr-pulse.pr-seq.is-played .pr-recs li:nth-child(3) { animation-delay: 2.6s; }
+.pr-pulse.pr-seq.is-played .pr-decide { animation: pmSeq .5s var(--pm-ease) 2.95s both; }
+
+@keyframes pmIn5 { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+@keyframes pmSeq { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes pmBar { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes pmDraw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes pmSpark { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.16); box-shadow: 0 0 0 6px rgba(123,77,255,.14); } }
+@keyframes pmRing { 0% { box-shadow: 0 18px 40px rgba(56,41,142,.08), 0 0 0 0 rgba(77,36,255,0); } 35% { box-shadow: 0 18px 40px rgba(56,41,142,.08), 0 0 0 4px rgba(77,36,255,.13); } 100% { box-shadow: 0 18px 40px rgba(56,41,142,.08), 0 0 0 0 rgba(77,36,255,0); } }
+@keyframes pmHalo { 0% { opacity: .5; } 40% { opacity: 1; } 100% { opacity: .8; } }
+
+/* ---------- Próximo paso: entrada mínima ---------- */
+.pr-next.pr-seq:not(.is-played) :is(.pr-next-copy > :not(.button), .pr-next-stage) { opacity: 0; }
+.pr-next.pr-seq.is-played .pr-next-copy > :not(.button) { animation: pmSeq .5s var(--pm-ease) both; }
+.pr-next.pr-seq.is-played .pr-next-copy > :nth-child(2) { animation-delay: .06s; }
+.pr-next.pr-seq.is-played .pr-next-copy > :nth-child(3) { animation-delay: .12s; }
+.pr-next.pr-seq.is-played .pr-perks { animation-delay: .2s; }
+.pr-next.pr-seq.is-played .pr-next-stage { animation: pmSeq .6s var(--pm-ease) .2s both; }
+.pr-next.pr-seq.is-played .pr-prio-av li:first-child { animation: pmSpot 1.4s ease-out 1s both; }
+@keyframes pmSpot { 0%, 100% { box-shadow: inset 0 0 0 0 rgba(77,36,255,0); } 35% { box-shadow: inset 0 0 0 2px rgba(123,77,255,.28); } }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  [data-pr-state].pr-in { animation: pmIn5 .3s var(--pm-ease) both; }
+  [data-pr-state].pr-in :is(.pr-top, .pr-greet, .pr-kpis, .pr-cols, .pr-side) { animation: none; }
+  .pr-stage::before { inset: -4% -2% -3% -2%; opacity: .6; }
+  .pr-pulse::before { opacity: .5; height: 44%; }
+  .pr-pulse.pr-seq.is-played::before { animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pr-seg::before { transition: none; }
+  .pr-seg-btn { transition: none; }
+  [data-pr-state].pr-out { transition: none; }
+  [data-pr-state].pr-in, [data-pr-state].pr-in * { animation: none !important; }
+}

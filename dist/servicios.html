@@ -13,6 +13,7 @@
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="styles.css?v=89">
   <link rel="stylesheet" href="product.css?v=17">
+  <link rel="stylesheet" href="product-motion.css?v=1">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="inner-page">
@@ -116,11 +117,11 @@
         <article class="pr-step"><header><span class="pr-num">1</span><div><h3>Detecta</h3><p>Analiza tus datos, conversaciones y rendimiento en tiempo real.</p></div></header>
           <div class="pr-chip r"><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6 4 4 6-8"/><path d="M15 7h5v5"/></svg></span><div><strong>Caída en rendimiento</strong><small>↓ -28% en leads</small></div></div>
           <div class="pr-chip g"><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l7 3v5.4c0 4-2.9 7.2-7 8.6-4.1-1.4-7-4.6-7-8.6V6.5Z"/><path d="M8.8 12.2l2.2 2.2 4-4.2"/></svg></span><div><strong>Oportunidad detectada</strong><small>ROAS 32% sobre el promedio</small></div></div></article>
-        <span class="pr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="pr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <article class="pr-step"><header><span class="pr-num">2</span><div><h3>Explica</h3><p>Te muestra por qué está pasando y qué impacto tiene.</p></div></header>
           <div class="pr-why"><span class="pr-bars" aria-hidden="true"><i style="height:100%"></i><i style="height:62%"></i><i style="height:44%"></i></span><p>El rendimiento cayó por saturación de audiencia en el conjunto de anuncios.</p></div>
           <span class="pr-link">Ver análisis completo</span></article>
-        <span class="pr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="pr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <article class="pr-step"><header><span class="pr-num">3</span><div><h3>Recomienda</h3><p>Te sugiere acciones concretas para mejorar tus resultados.</p></div></header>
           <ul class="pr-recs">
             <li class="g"><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span>Aumentar presupuesto en un 20%</li>
@@ -180,39 +181,6 @@
       <p class="closing-copyright">© <span data-year></span> GISBA OS. Todos los derechos reservados.</p>
     </div>
   </footer>
-<script>
-(function () {
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-pr-tab]'));
-  var states = Array.prototype.slice.call(document.querySelectorAll('[data-pr-state]'));
-  var stage = document.getElementById('pr-stage');
-  if (!tabs.length) return;
-  function select(name, focus) {
-    tabs.forEach(function (t) {
-      var on = t.dataset.prTab === name;
-      t.classList.toggle('is-active', on);
-      t.setAttribute('aria-selected', on ? 'true' : 'false');
-      t.tabIndex = on ? 0 : -1;
-      if (on && focus) t.focus();
-    });
-    if (stage) stage.setAttribute('aria-labelledby', 'pr-tab-' + name);
-    states.forEach(function (el) {
-      var show = el.dataset.prState === name;
-      if (show && el.hidden) { el.hidden = false; el.classList.remove('pr-in'); void el.offsetWidth; el.classList.add('pr-in'); }
-      else if (!show) { el.hidden = true; el.classList.remove('pr-in'); }
-    });
-  }
-  tabs.forEach(function (t, i) {
-    t.addEventListener('click', function () { select(t.dataset.prTab, false); });
-    t.addEventListener('keydown', function (e) {
-      var k = e.key, next = null;
-      if (k === 'ArrowRight' || k === 'ArrowDown') next = tabs[(i + 1) % tabs.length];
-      else if (k === 'ArrowLeft' || k === 'ArrowUp') next = tabs[(i - 1 + tabs.length) % tabs.length];
-      else if (k === 'Home') next = tabs[0];
-      else if (k === 'End') next = tabs[tabs.length - 1];
-      if (next) { e.preventDefault(); select(next.dataset.prTab, true); }
-    });
-  });
-})();
-</script>
+<script src="product-motion.js?v=1" defer></script>
 </body>
 </html>
