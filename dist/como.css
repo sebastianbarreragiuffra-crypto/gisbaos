@@ -72,3 +72,20 @@
   .cx-final .button { width: 100%; justify-content: center; }
   .cx-perks { flex-direction: column; gap: 14px; }
 }
+
+/* 04 · Coordina: texto a la izquierda, imagen ancha a la derecha */
+.cx-coord .cx-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
+.cx-coord .cx-copy h2 { max-width: 520px; margin: 0 0 24px; font-size: clamp(2.2rem, 3.9vw, 3.5rem); line-height: 1.04; color: #0b0d2b; }
+.cx-coord .cx-lead { max-width: 500px; }
+.cx-checks { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.cx-checks li { display: flex; align-items: center; gap: 14px; color: #4b5578; font-size: 1.05rem; line-height: 1.35; }
+.cx-check { flex: none; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: #4d24ff; }
+.cx-coord .cx-shot img { max-width: 1044px; border-radius: 0; box-shadow: none; }
+@media (max-width: 1024px) {
+  .cx-coord .cx-grid { grid-template-columns: 1fr; }
+  .cx-coord .cx-copy h2, .cx-coord .cx-lead { max-width: none; }
+}
+@media (max-width: 720px) {
+  .cx-coord .cx-copy h2 { font-size: clamp(2rem, 8.6vw, 2.5rem); }
+  .cx-checks li { font-size: 1rem; }
+}
