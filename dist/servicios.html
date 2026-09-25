@@ -44,116 +44,128 @@
     </div>
   </header>
 
-  <main id="contenido" class="pd-page">
-    <div class="container hx-grid">
-      <div class="hx-copy">
-        <div class="hx-tabs" role="tablist" aria-label="Experiencias de GISBA OS">
-          <button type="button" id="hx-tab-agency" class="hx-pill hx-pill-agency is-active" role="tab" aria-selected="true" aria-controls="hx-main" tabindex="0" data-hx-tab="agency" data-event="product_experience_click"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 8h.01M13 8h.01M9 12h.01M13 12h.01M10 20.5v-3.5h4v3.5"/></svg><span>Para tu agencia</span></button>
-          <span class="hx-core" aria-hidden="true"><img src="assets/gisba-isotipo-grafito.png" width="270" height="248" alt=""></span>
-          <button type="button" id="hx-tab-client" class="hx-pill hx-pill-client" role="tab" aria-selected="false" aria-controls="hx-main" tabindex="-1" data-hx-tab="client" data-event="product_experience_click"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg><span>Para tu cliente</span></button>
-        </div>
-        <p class="eyebrow"><span></span> Producto</p>
-        <h1 id="pd-title">Dos experiencias. <em>Un mismo contexto.</em></h1>
-        <p class="hx-lead">GISBA conecta el trabajo de tu agencia con la experiencia de tus clientes.</p>
-        <div class="hx-actions">
-          <a class="button button-solid" href="index.html#contacto" data-cta="demo" data-event="demo_cta_click" data-location="hero">Agenda una demo <span aria-hidden="true">→</span></a>
-          <a class="hx-textlink" href="como-trabajamos.html" data-event="how_it_works_click">Ver cómo funciona <span aria-hidden="true">→</span></a>
+  <main id="contenido" class="pr-page">
+  <section class="pr-hero" aria-labelledby="pr-title">
+    <div class="container pr-hero-grid">
+      <div class="pr-hero-copy">
+        <p class="pr-eyebrow"><span></span> Producto <span></span></p>
+        <h1 id="pr-title">Dos experiencias. <em>Un mismo contexto.</em></h1>
+        <p class="pr-lead">GISBA conecta el trabajo de tu agencia con la experiencia de tus clientes. Todo en un solo lugar, con IA que te ayuda a priorizar y tomar mejores decisiones.</p>
+        <div class="pr-seg" role="tablist" aria-label="Experiencias de GISBA OS">
+          <button type="button" id="pr-tab-agency" class="pr-seg-btn is-active" role="tab" aria-selected="true" aria-controls="pr-stage" tabindex="0" data-pr-tab="agency" data-event="product_experience_click">Para tu agencia</button>
+          <button type="button" id="pr-tab-client" class="pr-seg-btn" role="tab" aria-selected="false" aria-controls="pr-stage" tabindex="-1" data-pr-tab="client" data-event="product_experience_click">Para tu cliente</button>
         </div>
       </div>
-
-      <div class="hx-stage">
-        <div class="hx-app" aria-label="Vista de ejemplo de GISBA OS">
-          <header class="hx-top">
-            <img class="hx-logo" src="assets/gisba-os-brand-banner-v5.png" width="2172" height="724" alt="GISBA OS">
-            <div class="hx-user" aria-hidden="true">
-              <span class="hx-bell"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15Z"/><path d="M10 20.5h4"/></svg><i></i></span>
-              <span class="hx-me" data-hx-state="agency"><b>AE</b><span><strong>Agencia Ejemplo</strong><small>Cuenta demo</small></span></span>
-              <span class="hx-me" data-hx-state="client" hidden><b>C</b><span><strong>Carolina</strong><small>Cliente</small></span></span>
-            </div>
-          </header>
-
-          <div class="hx-body">
-            <div class="hx-side" aria-hidden="true">
-              <ul data-hx-state="agency"><li class="on"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5v8.5H4Z"/></svg><span>Inicio</span></li><li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg><span>Clientes</span></li><li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Campañas</span></li><li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c.6-3.8 3.4-5.8 7-5.8s6.4 2 7 5.8"/></svg><span>Equipo</span></li><li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg><span>Aprobaciones</span></li></ul>
-              <ul data-hx-state="client" hidden><li class="on"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5v8.5H4Z"/></svg><span>Resumen</span></li><li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4L3.5 11l6.5 2.5L13 20Z"/></svg><span>Campañas</span></li><li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg><span>Aprobaciones</span></li><li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4Z"/></svg><span>Mensajes</span></li><li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Reportes</span></li></ul>
-            </div>
-
-            <div id="hx-main" class="hx-main" role="tabpanel" aria-labelledby="hx-tab-agency" aria-live="polite">
-              <div data-hx-state="agency">
-                <div class="hx-headrow">
-                  <div>
-                    <h2>Tu operación, conectada.</h2>
-                    <p>Clientes, campañas y equipo con el contexto necesario para avanzar.</p>
-                    <p class="hx-concepts">Clientes y campañas<i>·</i>Equipo y coordinación<i>·</i>Aprobaciones y contexto</p>
-                  </div>
-                  <a class="hx-pulsepill" href="#gisba-pulse" data-event="product_pulse_link_click"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7Z"/></svg><span>GISBA Pulse · 3 señales nuevas</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-                <div class="hx-kpis" aria-hidden="true"><div class="hx-kpi"><span class="hx-kpi-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span><small>Clientes activos</small><b>12</b><em class="up">↑ 20% <i>vs. período anterior</i></em></div><div class="hx-kpi"><span class="hx-kpi-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><small>Campañas activas</small><b>28</b><em class="up">↑ 33% <i>vs. período anterior</i></em></div><div class="hx-kpi"><span class="hx-kpi-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><small>Prioridades pendientes</small><b>5</b><em class="up">↑ 2 <i>vs. ayer</i></em></div><div class="hx-kpi"><span class="hx-kpi-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span><small>Aprobaciones</small><b>3</b><em class="down">↓ 50% <i>vs. período anterior</i></em></div></div>
-                <div class="hx-cols" aria-hidden="true">
-                  <section class="hx-card hx-perf"><header><h3>Performance de clientes</h3><span>Ver todos →</span></header>
-                    <table><thead><tr><th>Cliente</th><th>Campañas activas</th><th>Inversión</th><th>Resultados</th><th></th></tr></thead><tbody><tr><td><span class="hx-tile" style="background:#0f1226;color:#fff">U</span>Urban Store</td><td>8</td><td>$12,480</td><td><span class="hx-bars"><span><i style="--h:30%"></i><i style="--h:55%"></i><i style="--h:40%"></i><i style="--h:70%"></i></span><span><i class="dk" style="--h:50%"></i><i class="dk" style="--h:35%"></i><i class="dk" style="--h:65%"></i><i class="dk" style="--h:45%"></i></span></span></td><td class="up">↑ 28%</td></tr><tr><td><span class="hx-tile" style="background:#e8dccb;color:#4a3a26">C</span>Colección Verano</td><td>5</td><td>$8,320</td><td><span class="hx-bars"><span><i style="--h:50%"></i><i style="--h:35%"></i><i style="--h:65%"></i><i style="--h:45%"></i></span><span><i class="dk" style="--h:30%"></i><i class="dk" style="--h:55%"></i><i class="dk" style="--h:40%"></i><i class="dk" style="--h:70%"></i></span></span></td><td class="up">↑ 18%</td></tr><tr><td><span class="hx-tile" style="background:#1b1b1f;color:#fff">E</span>Urban Essentials</td><td>4</td><td>$5,960</td><td><span class="hx-bars"><span><i style="--h:30%"></i><i style="--h:55%"></i><i style="--h:40%"></i><i style="--h:70%"></i></span><span><i class="dk" style="--h:50%"></i><i class="dk" style="--h:35%"></i><i class="dk" style="--h:65%"></i><i class="dk" style="--h:45%"></i></span></span></td><td class="up">↑ 24%</td></tr><tr><td><span class="hx-tile" style="background:#2c2c31;color:#fff">A</span>Accesorios</td><td>3</td><td>$4,210</td><td><span class="hx-bars"><span><i style="--h:50%"></i><i style="--h:35%"></i><i style="--h:65%"></i><i style="--h:45%"></i></span><span><i class="dk" style="--h:30%"></i><i class="dk" style="--h:55%"></i><i class="dk" style="--h:40%"></i><i class="dk" style="--h:70%"></i></span></span></td><td class="up">↑ 12%</td></tr></tbody></table>
-                  </section>
-                  <section class="hx-card hx-prio"><header><h3>Prioridades de hoy</h3><span>Ver todas →</span></header><ul><li><span class="hx-pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><div><strong>Revisar caída de rendimiento</strong><small>Urban Store · Google Ads</small></div><span class="hx-tag hi">Alta</span><span class="hx-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li><li><span class="hx-pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2.5"/><circle cx="9" cy="10" r="1.5"/><path d="M5 17l5-4.5 3.5 3 2.5-2 3 3.5"/></svg></span><div><strong>Aprobar pieza creativa</strong><small>Colección Verano · Meta Ads</small></div><span class="hx-tag ap">Aprobación</span><span class="hx-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li><li><span class="hx-pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4Z"/></svg></span><div><strong>Cliente pendiente de respuesta</strong><small>Urban Essentials</small></div><span class="hx-tag md">Media</span><span class="hx-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li></ul></section>
-                </div>
-              </div>
-
-              <div data-hx-state="client" hidden>
-                <div class="hx-headrow">
-                  <div>
-                    <h2>Resultados claros, sin ruido.</h2>
-                    <p>Tu cliente ve lo importante, participa cuando corresponde y mantiene todo el contexto con tu agencia.</p>
-                    <p class="hx-concepts">Resultados<i>·</i>Coordinación<i>·</i>Aprobaciones</p>
-                  </div>
-                </div>
-                <div class="hx-kpis" aria-hidden="true"><div class="hx-kpi"><span class="hx-kpi-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><small>Alcance total</small><b>125,4K</b><em class="up">↑ 12% <i>vs. período anterior</i></em></div><div class="hx-kpi"><span class="hx-kpi-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4l12 7-5.2 1.4L10.5 18Z"/></svg></span><small>Clics</small><b>4,8K</b><em class="up">↑ 28% <i>vs. período anterior</i></em></div><div class="hx-kpi"><span class="hx-kpi-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span><small>Conversiones</small><b>320</b><em class="up">↑ 16% <i>vs. período anterior</i></em></div><div class="hx-kpi"><span class="hx-kpi-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span><small>Aprobaciones pendientes</small><b>2</b><em class="up">↑ 1 <i>vs. ayer</i></em></div></div>
-                <div class="hx-cols" aria-hidden="true">
-                  <section class="hx-card"><header><h3>Campañas en curso</h3><span>Ver todas →</span></header><ul class="hx-list"><li><span class="hx-tile" style="background:#f59e0b;color:#fff">L</span><div><strong>Lanzamiento de producto</strong><small class="run">En curso · 40% completado</small><span class="hx-bar"><i class="run" style="width:40%"></i></span></div><span class="hx-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li><li><span class="hx-tile" style="background:#111827;color:#fff">A</span><div><strong>Always On</strong><small class="run">En curso · 66% completado</small><span class="hx-bar"><i class="run" style="width:66%"></i></span></div><span class="hx-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li><li><span class="hx-tile" style="background:#ea580c;color:#fff">R</span><div><strong>Rebranding</strong><small class="rev">En revisión · 80% completado</small><span class="hx-bar"><i class="rev" style="width:80%"></i></span></div><span class="hx-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></li></ul></section>
-                  <section class="hx-card"><header><h3>Acciones pendientes <b class="hx-count">2</b></h3><span>Ver todas →</span></header><ul class="hx-list hx-acts"><li><span class="hx-pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2.5"/><circle cx="9" cy="10" r="1.5"/><path d="M5 17l5-4.5 3.5 3 2.5-2 3 3.5"/></svg></span><div><strong>Aprobar pieza gráfica</strong><small>Campaña Lanzamiento de producto · 8 mar</small></div><span class="hx-btn">Revisar</span></li><li><span class="hx-pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2.5"/><circle cx="9" cy="10" r="1.5"/><path d="M5 17l5-4.5 3.5 3 2.5-2 3 3.5"/></svg></span><div><strong>Revisar copy de anuncios</strong><small>Campaña Always On · 5 mar</small></div><span class="hx-btn">Revisar</span></li></ul></section>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="hx-note">Datos de demostración.</p>
+      <div id="pr-stage" class="pr-stage" role="tabpanel" aria-labelledby="pr-tab-agency" aria-live="polite">
+        <div class="pr-tilt" role="img" aria-label="Vista de ejemplo de GISBA OS"><div class="pr-app" data-pr-state="agency">
+  <header class="pr-top"><img class="pr-logo" src="assets/gisba-os-brand-banner-v5.png" width="2172" height="724" alt=""><span class="pr-range">Últimos 30 días <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></header>
+  <div class="pr-body"><ul class="pr-side"><li class="on"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5v8.5H4Z"/></svg><span>Resumen</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg><span>Clientes</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4L3.5 11l6.5 2.5L13 20Z"/></svg><span>Campañas</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="15" rx="3.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg><span>Tareas</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg><span>Aprobaciones</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Reportes</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7Z"/></svg><span>Pulse</span></li></ul>
+    <div class="pr-main">
+      <h3>Hola, equipo <span aria-hidden="true">👋</span></h3><p class="pr-sub">Aquí está el estado de tu agencia</p>
+      <div class="pr-kpis"><div class="pr-kpi"><span class="pr-kico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span><small>Clientes activos</small><b>12</b><em class="up">↑ +2</em></div><div class="pr-kpi"><span class="pr-kico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4L3.5 11l6.5 2.5L13 20Z"/></svg></span><small>Campañas activas</small><b>28</b><em class="up">↑ +6</em></div><div class="pr-kpi"><span class="pr-kico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="15" rx="3.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span><small>Tareas pendientes</small><b>7</b><em class="dn">↑ +3</em></div><div class="pr-kpi"><span class="pr-kico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span><small>Aprobaciones</small><b>4</b><em class="up">↓ -2</em></div></div>
+      <div class="pr-cols">
+        <section class="pr-card"><header><h4>Actividad reciente</h4><span>Ver todas</span></header><ul class="pr-feed">
+          <li><span class="pr-fi v"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4Z"/></svg></span><div><strong>Nuevo comentario del cliente</strong><small>Campaña Q4 · Clínica Dental</small></div><time>hace 12 min</time></li>
+          <li><span class="pr-fi g"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7Z"/></svg></span><div><strong>Sugerencia de GISBA Pulse</strong><small>Optimizar presupuesto en Meta</small></div><time>hace 28 min</time></li>
+          <li><span class="pr-fi b"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span><div><strong>Aprobación completada</strong><small>Piezas campaña Lanzamiento</small></div><time>hace 1 h</time></li>
+          <li><span class="pr-fi v"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span><div><strong>Tarea asignada</strong><small>Revisar propuesta Cliente B</small></div><time>hace 2 h</time></li>
+        </ul></section>
+        <section class="pr-card"><header><h4>Prioridades de hoy</h4></header><ul class="pr-prio">
+          <li><i></i><span>Revisar propuesta cliente A</span><em class="hi">Alta</em></li>
+          <li><i></i><span>Aprobar piezas campaña Q4</span><em class="md">Media</em></li>
+          <li><i></i><span>Reunión con cliente B</span><em class="td">Hoy</em></li>
+          <li><i></i><span>Revisar sugerencia de Pulse</span><em class="hi">Alta</em></li>
+        </ul></section>
       </div>
     </div>
-<section id="gisba-pulse" class="pp-section" aria-labelledby="pp-title">
+  </div>
+</div><div class="pr-app" data-pr-state="client" hidden>
+  <header class="pr-top"><img class="pr-logo" src="assets/gisba-os-brand-banner-v5.png" width="2172" height="724" alt=""><span class="pr-range">Últimos 30 días <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></header>
+  <div class="pr-body"><ul class="pr-side"><li class="on"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5v8.5H4Z"/></svg><span>Resumen</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4L3.5 11l6.5 2.5L13 20Z"/></svg><span>Campañas</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg><span>Aprobaciones</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v10.5H9.5L5.5 19.5V16H4Z"/></svg><span>Mensajes</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Reportes</span></li></ul>
+    <div class="pr-main">
+      <h3>Hola, Carolina <span aria-hidden="true">👋</span></h3><p class="pr-sub">Aquí tienes el resumen de tus campañas</p>
+      <div class="pr-kpis"><div class="pr-kpi"><span class="pr-kico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><small>Alcance total</small><b>125,4K</b><em class="up">↑ 12%</em></div><div class="pr-kpi"><span class="pr-kico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4L3.5 11l6.5 2.5L13 20Z"/></svg></span><small>Clics</small><b>4,8K</b><em class="up">↑ 28%</em></div><div class="pr-kpi"><span class="pr-kico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span><small>Conversiones</small><b>320</b><em class="up">↑ 16%</em></div><div class="pr-kpi"><span class="pr-kico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span><small>Aprobaciones pendientes</small><b>2</b><em class="up">↑ 1 vs. ayer</em></div></div>
+      <div class="pr-cols">
+        <section class="pr-card"><header><h4>Campañas en curso</h4><span>Ver todas</span></header><ul class="pr-camps">
+          <li><b style="background:#f59e0b">L</b><div><strong>Lanzamiento de producto</strong><small>En curso · 40% completado</small><span class="pr-bar"><i style="width:40%"></i></span></div></li>
+          <li><b style="background:#111827">A</b><div><strong>Always On</strong><small>En curso · 66% completado</small><span class="pr-bar"><i style="width:66%"></i></span></div></li>
+          <li><b style="background:#ea580c">R</b><div><strong>Rebranding</strong><small>En revisión · 80% completado</small><span class="pr-bar am"><i style="width:80%"></i></span></div></li>
+        </ul></section>
+        <section class="pr-card"><header><h4>Acciones pendientes <em class="pr-count">2</em></h4></header><ul class="pr-prio pr-acts">
+          <li><i></i><span>Aprobar pieza gráfica</span><em class="pr-review">Revisar</em></li>
+          <li><i></i><span>Revisar copy de anuncios</span><em class="pr-review">Revisar</em></li>
+        </ul></section>
+      </div>
+    </div>
+  </div>
+</div></div>
+      </div>
+    </div>
+  </section>
+  <section id="gisba-pulse" class="pr-pulse" aria-labelledby="pp-title">
     <div class="container">
-      <div class="pp-head">
-        <p class="pp-eyebrow"><span></span> GISBA Pulse <span></span></p>
-        <h2 id="pp-title">Detecta lo que necesita <em>tu atención.</em></h2>
-        <p class="pp-sub">Una señal. Su contexto. El siguiente paso.</p>
-      </div>
-
-      <div class="pp-card" data-pp-card>
-        <p class="pp-example"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/></svg> Ejemplo de señal</p>
-        <div class="pp-signal">
-          <span class="pp-signal-ico"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></span>
-          <div><strong>CPL aumentó 18%</strong><small>Meta Ads · Prospecting · Q4</small></div>
-          <span class="pp-pill"><i aria-hidden="true"></i>Necesita atención</span>
+      <div class="pr-pulse-head">
+        <div>
+          <p class="pr-eyebrow"><span></span> GISBA Pulse <span></span></p>
+          <h2 id="pp-title">Detecta lo que <em>necesita tu atención.</em></h2>
+          <p class="pr-lead">GISBA analiza la información de tus clientes, campañas y conversaciones, y te muestra de forma simple qué está pasando y qué deberías hacer.</p>
         </div>
-
-        <div class="pp-steps">
-          <article class="pp-step">
-            <header><span class="pp-num">01</span><h3>Detecta</h3></header>
-            <p>El CPL aumentó en los últimos 7 días.</p>
-            <div class="pp-chart-wrap"><svg class="pp-chart" viewBox="0 0 470 168" role="img" aria-label="Gráfico de ejemplo: el costo por lead sube de $10 a $40 entre el 7 y el 13 de marzo"><defs><linearGradient id="pp-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a5cff" stop-opacity=".26"/><stop offset="1" stop-color="#8a5cff" stop-opacity="0"/></linearGradient></defs><g class="pp-grid"><line x1="52" y1="132.0" x2="440" y2="132.0"/><text x="40" y="136.0" text-anchor="end">$10</text><line x1="52" y1="93.3" x2="440" y2="93.3"/><text x="40" y="97.3" text-anchor="end">$20</text><line x1="52" y1="54.7" x2="440" y2="54.7"/><text x="40" y="58.7" text-anchor="end">$30</text><line x1="52" y1="16.0" x2="440" y2="16.0"/><text x="40" y="20.0" text-anchor="end">$40</text><text x="52.0" y="156" text-anchor="middle">7 mar</text><text x="168.4" y="156" text-anchor="middle">9 mar</text><text x="284.8" y="156" text-anchor="middle">11 mar</text><text x="440.0" y="156" text-anchor="middle">13 mar</text></g><path d="M52.0,124.3 C58.5,121.7 77.9,110.7 90.8,108.8 C103.7,106.9 116.7,116.5 129.6,112.7 C142.5,108.8 155.5,92.0 168.4,85.6 C181.3,79.2 194.3,74.6 207.2,74.0 C220.1,73.4 233.1,83.7 246.0,81.7 C258.9,79.8 271.9,68.8 284.8,62.4 C297.7,56.0 310.7,44.4 323.6,43.1 C336.5,41.8 349.5,56.6 362.4,54.7 C375.3,52.7 388.3,37.9 401.2,31.5 C414.1,25.0 433.5,18.6 440.0,16.0 L440.0,132 L52.0,132 Z" fill="url(#pp-fill)"/><path d="M52.0,124.3 C58.5,121.7 77.9,110.7 90.8,108.8 C103.7,106.9 116.7,116.5 129.6,112.7 C142.5,108.8 155.5,92.0 168.4,85.6 C181.3,79.2 194.3,74.6 207.2,74.0 C220.1,73.4 233.1,83.7 246.0,81.7 C258.9,79.8 271.9,68.8 284.8,62.4 C297.7,56.0 310.7,44.4 323.6,43.1 C336.5,41.8 349.5,56.6 362.4,54.7 C375.3,52.7 388.3,37.9 401.2,31.5 C414.1,25.0 433.5,18.6 440.0,16.0" class="pp-line"/><circle cx="440.0" cy="16.0" r="4.5" class="pp-dot"/></svg><span class="pp-badge">+18%</span></div>
-          </article>
-          <article class="pp-step">
-            <span class="pp-next" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></span>
-            <header><span class="pp-num">02</span><h3>Explica</h3></header>
-            <span class="pp-tile"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span>
-            <p>El cambio se concentra en audiencias frías y creatividades de video.</p>
-          </article>
-          <article class="pp-step">
-            <span class="pp-next" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></span>
-            <header><span class="pp-num">03</span><h3>Recomienda</h3></header>
-            <div class="pp-reco"><span class="pp-tile pp-tile-violet"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7Z"/></svg></span><p>Revisa segmentación y creatividades antes de aumentar presupuesto.</p></div>
-          </article>
-        </div>
-
-        <p class="pp-decide"><span aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span> Tu equipo decide. GISBA registra la decisión.</p>
+        <div class="pr-signal-wrap"><div class="pr-signal">
+          <p class="pr-signal-top"><span class="pr-spark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7Z"/></svg></span><strong>GISBA Pulse detectó una oportunidad</strong><time>hace 5 min</time></p>
+          <h3>Aumentar presupuesto en campaña de Meta</h3>
+          <p>La campaña tiene un ROAS 32% mayor al promedio de los últimos 30 días.</p>
+          <span class="pr-btn-out">Ver detalle <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div></div>
       </div>
+      <div class="pr-steps">
+        <article class="pr-step"><header><span class="pr-num">1</span><div><h3>Detecta</h3><p>Analiza tus datos, conversaciones y rendimiento en tiempo real.</p></div></header>
+          <div class="pr-chip r"><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6 4 4 6-8"/><path d="M15 7h5v5"/></svg></span><div><strong>Caída en rendimiento</strong><small>↓ -28% en leads</small></div></div>
+          <div class="pr-chip g"><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l7 3v5.4c0 4-2.9 7.2-7 8.6-4.1-1.4-7-4.6-7-8.6V6.5Z"/><path d="M8.8 12.2l2.2 2.2 4-4.2"/></svg></span><div><strong>Oportunidad detectada</strong><small>ROAS 32% sobre el promedio</small></div></div></article>
+        <span class="pr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <article class="pr-step"><header><span class="pr-num">2</span><div><h3>Explica</h3><p>Te muestra por qué está pasando y qué impacto tiene.</p></div></header>
+          <div class="pr-why"><span class="pr-bars" aria-hidden="true"><i style="height:100%"></i><i style="height:62%"></i><i style="height:44%"></i></span><p>El rendimiento cayó por saturación de audiencia en el conjunto de anuncios.</p></div>
+          <span class="pr-link">Ver análisis completo</span></article>
+        <span class="pr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <article class="pr-step"><header><span class="pr-num">3</span><div><h3>Recomienda</h3><p>Te sugiere acciones concretas para mejorar tus resultados.</p></div></header>
+          <ul class="pr-recs">
+            <li class="g"><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg></span>Aumentar presupuesto en un 20%</li>
+            <li><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span>Probar nueva audiencia</li>
+            <li><span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14M5 16h14"/><circle cx="9" cy="8" r="2"/><circle cx="15" cy="16" r="2"/></svg></span>Ajustar mensajes</li>
+          </ul></article>
+      </div>
+      <p class="pr-decide"><span><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span>Tu equipo decide. GISBA registra la decisión.</p>
+    </div>
+  </section>
+  <section id="proximo-paso" class="pr-next" aria-labelledby="pn-title">
+    <div class="container pr-next-grid">
+      <div class="pr-next-copy">
+        <p class="pr-eyebrow"><span></span> Próximo paso <span></span></p>
+        <h2 id="pn-title">Mira GISBA aplicado <em>a tu agencia.</em></h2>
+        <p class="pr-lead">En una demo revisamos cómo hoy gestionas clientes, campañas y decisiones, y te mostramos cómo GISBA puede conectar ese flujo en un solo contexto.</p>
+        <a class="button button-solid" href="index.html#contacto" data-cta="demo" data-event="demo_cta_click" data-location="final">Agenda una demo <span aria-hidden="true">→</span></a>
+        <ul class="pr-perks">
+          <li><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14" rx="2.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg></span>Demo adaptada a tu agencia</li>
+          <li><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>Sin compromiso</li>
+          <li><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg></span>Recorremos el flujo completo</li>
+        </ul>
+      </div>
+      <div class="pr-next-stage"><div class="pr-tilt pr-tilt-2" role="img" aria-label="Vista de ejemplo de campañas en GISBA OS: estado y rendimiento por campaña, objetivos del mes y tareas pendientes del cliente"><div class="pr-app pr-app-camps">
+  <header class="pr-top"><img class="pr-logo" src="assets/gisba-os-brand-banner-v5.png" width="2172" height="724" alt=""><span class="pr-range">Todos los clientes <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></header>
+  <div class="pr-body"><ul class="pr-side"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5v8.5H4Z"/></svg><span>Resumen</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M2.8 19.5c.5-3.4 3-5.1 6.2-5.1s5.7 1.7 6.2 5.1"/><path d="M16 5.4a3.3 3.3 0 0 1 0 6.2M18.4 14.6c1.8.6 2.9 2.2 3.2 4.9"/></svg><span>Clientes</span></li><li class="on"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4L3.5 11l6.5 2.5L13 20Z"/></svg><span>Campañas</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="15" rx="3.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg><span>Tareas</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.5 2.5 4.5-5"/></svg><span>Aprobaciones</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Reportes</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7Z"/></svg><span>Pulse</span></li></ul>
+    <div class="pr-main">
+      <h3>Campañas</h3>
+      <div class="pr-cols pr-cols-camps">
+        <section class="pr-card"><table class="pr-table"><thead><tr><th>Campaña</th><th>Estado</th><th>Rendimiento</th></tr></thead><tbody><tr><td><strong>Lanzamiento Q4</strong><small>Clínica Dental</small></td><td><em class="pr-st ok">Activa</em></td><td><span class="pr-mini" aria-hidden="true"><i style="height:30%"></i><i style="height:45%"></i><i style="height:40%"></i><i style="height:70%"></i><i style="height:95%"></i></span></td></tr><tr><td><strong>Campaña Leads</strong><small>Inmobiliaria</small></td><td><em class="pr-st ok">Activa</em></td><td><span class="pr-mini" aria-hidden="true"><i style="height:35%"></i><i style="height:25%"></i><i style="height:55%"></i><i style="height:60%"></i><i style="height:80%"></i></span></td></tr><tr><td><strong>Remarketing</strong><small>E-commerce</small></td><td><em class="pr-st pa">Pausada</em></td><td><span class="pr-mini" aria-hidden="true"><i style="height:60%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:40%"></i><i style="height:35%"></i></span></td></tr><tr><td><strong>Brand Awareness</strong><small>Tech Startup</small></td><td><em class="pr-st ok">Activa</em></td><td><span class="pr-mini" aria-hidden="true"><i style="height:25%"></i><i style="height:40%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:90%"></i></span></td></tr></tbody></table></section>
+        <section class="pr-card pr-side-card">
+          <p class="pr-cl"><b>C</b><span><strong>Cliente</strong><small>Clínica Dental</small></span></p>
+          <h4>Objetivos del mes</h4><p class="pr-goal"><span>120 nuevos leads</span><b>78 / 120</b></p><span class="pr-bar"><i style="width:65%"></i></span>
+          <h4>Tareas pendientes</h4>
+          <ul class="pr-prio"><li><i></i><span>Aprobar piezas</span><em class="hi">Hoy</em></li><li><i></i><span>Revisar propuesta</span><em class="td2">Mañana</em></li><li><i></i><span>Reunión mensual</span><em class="td2">Vie 12</em></li></ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div></div></div>
     </div>
   </section>
   </main>
@@ -175,58 +187,36 @@
   </footer>
 <script>
 (function () {
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-hx-tab]'));
-  var states = Array.prototype.slice.call(document.querySelectorAll('[data-hx-state]'));
-  var panel = document.getElementById('hx-main');
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-pr-tab]'));
+  var states = Array.prototype.slice.call(document.querySelectorAll('[data-pr-state]'));
+  var stage = document.getElementById('pr-stage');
   if (!tabs.length) return;
   function select(name, focus) {
     tabs.forEach(function (t) {
-      var on = t.dataset.hxTab === name;
+      var on = t.dataset.prTab === name;
       t.classList.toggle('is-active', on);
       t.setAttribute('aria-selected', on ? 'true' : 'false');
       t.tabIndex = on ? 0 : -1;
       if (on && focus) t.focus();
     });
-    if (panel) panel.setAttribute('aria-labelledby', 'hx-tab-' + name);
+    if (stage) stage.setAttribute('aria-labelledby', 'pr-tab-' + name);
     states.forEach(function (el) {
-      var show = el.dataset.hxState === name;
-      if (show && el.hidden) { el.hidden = false; el.classList.remove('hx-in'); void el.offsetWidth; el.classList.add('hx-in'); }
-      else if (!show) { el.hidden = true; el.classList.remove('hx-in'); }
+      var show = el.dataset.prState === name;
+      if (show && el.hidden) { el.hidden = false; el.classList.remove('pr-in'); void el.offsetWidth; el.classList.add('pr-in'); }
+      else if (!show) { el.hidden = true; el.classList.remove('pr-in'); }
     });
   }
   tabs.forEach(function (t, i) {
-    t.addEventListener('click', function () { select(t.dataset.hxTab, false); });
+    t.addEventListener('click', function () { select(t.dataset.prTab, false); });
     t.addEventListener('keydown', function (e) {
       var k = e.key, next = null;
       if (k === 'ArrowRight' || k === 'ArrowDown') next = tabs[(i + 1) % tabs.length];
       else if (k === 'ArrowLeft' || k === 'ArrowUp') next = tabs[(i - 1 + tabs.length) % tabs.length];
       else if (k === 'Home') next = tabs[0];
       else if (k === 'End') next = tabs[tabs.length - 1];
-      if (next) { e.preventDefault(); select(next.dataset.hxTab, true); }
+      if (next) { e.preventDefault(); select(next.dataset.prTab, true); }
     });
   });
-})();
-</script>
-<script>
-(function () {
-  var card = document.querySelector('[data-pp-card]');
-  if (!card) return;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || !('IntersectionObserver' in window)) { card.classList.add('pp-in'); return; }
-  card.classList.add('pp-armed');
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { card.classList.add('pp-in'); io.disconnect(); }
-    });
-  }, { threshold: 0.05 });
-  io.observe(card);
-  // seguridad: si por cualquier motivo no se dispara, el contenido nunca queda oculto
-  window.setTimeout(function () {
-    if (!card.classList.contains('pp-in')) {
-      var r = card.getBoundingClientRect();
-      if (r.top < window.innerHeight * 1.5) { card.classList.add('pp-in'); io.disconnect(); }
-    }
-  }, 3500);
 })();
 </script>
 </body>
