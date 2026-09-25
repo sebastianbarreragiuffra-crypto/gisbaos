@@ -71,9 +71,18 @@
   [data-pr-state].pr-in { animation: pmIn5 .28s var(--pm-ease) both; }
   [data-pr-state].pr-in .pr-main { animation: none; }
   .pr-stage::before { inset: -4% -2% -3% -2%; opacity: .6; }
-    .pr-pulse::before { opacity: .5; height: 44%; }
+  .pr-pulse::before { opacity: .5; height: 44%; }
   .pr-pulse.pr-seq.is-played::before { animation: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pr-seg::before, .pr-seg-btn, [data-pr-state].pr-out { transition: none; }
-  [data-pr-state].pr-in, [data-pr-state].pr-in *, }
+  .pr-seg::before,
+  .pr-seg-btn,
+  [data-pr-state].pr-out {
+    transition: none;
+  }
+
+  [data-pr-state].pr-in,
+  [data-pr-state].pr-in * {
+    animation: none !important;
+  }
+}
