@@ -21,12 +21,13 @@
   <link rel="preload" href="assets/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/inter-400.ttf" as="font" type="font/ttf" crossorigin>
   <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="styles.css?v=90">
+  <link rel="stylesheet" href="styles.css?v=91">
   <link rel="stylesheet" href="whatsapp-section.css?v=6">
   <link rel="stylesheet" href="home-hero.css?v=3">
   <link rel="stylesheet" href="home-pulse.css?v=1">
   <link rel="stylesheet" href="home-funnel.css?v=1">
   <link rel="stylesheet" href="home-integrations.css?v=1">
+  <link rel="stylesheet" href="home-how.css?v=1">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="home-page">
@@ -178,62 +179,82 @@
       </div>
     </section>
 
-    <section id="forma-gisba" class="section gisba-pillars" aria-labelledby="pillars-title">
+    <section id="como-funciona" class="section hw" aria-labelledby="hw-title">
       <div class="container">
-        <header class="gisba-pillars-heading reveal">
-          <p>La forma de GISBA</p>
-          <h2 id="pillars-title">Controla. <em>Optimiza.</em> Demuestra.</h2>
-          <span>Ordena la operación, decide con mejor información<br>y muestra resultados con claridad.</span>
+        <header class="hw-head reveal">
+          <p class="hw-eyebrow"><span></span> Cómo funciona</p>
+          <h2 id="hw-title">De datos dispersos a <em>decisiones claras.</em></h2>
+          <p>GISBA conecta el contexto de cada cuenta para que tu agencia sepa qué requiere atención, pueda decidir qué hacer y mantenga cada acción conectada.</p>
         </header>
 
-        <div class="gisba-method-grid">
-          <article class="gisba-method-card reveal">
-            <span class="gisba-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3.5 20v-2.2A4.8 4.8 0 0 1 8.3 13h1.4a4.8 4.8 0 0 1 4.8 4.8V20M15 14.2a4.4 4.4 0 0 1 5.5 4.3V20"/></svg></span>
-            <h3>Controla</h3>
-            <p>Clientes, campañas, tareas,<br>aprobaciones y decisiones.</p>
-          </article>
-          <span class="gisba-method-connector" aria-hidden="true">→</span>
-          <article class="gisba-method-card reveal">
-            <span class="gisba-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13.2 2-7 11h5.4l-.8 9 7-12h-5.3l.7-8Z"/></svg></span>
-            <h3>Optimiza</h3>
-            <p>Detecta problemas y oportunidades<br>y recomienda próximas acciones.</p>
-          </article>
-          <span class="gisba-method-connector" aria-hidden="true">→</span>
-          <article class="gisba-method-card reveal">
-            <span class="gisba-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20v-6M10 20V9M15 20V5M20 20V2"/></svg></span>
-            <h3>Demuestra</h3>
-            <p>Conecta inversión, ejecución<br>y resultados para mostrar el impacto<br>del trabajo de tu agencia.</p>
-          </article>
-        </div>
+        <ol class="hw-flow reveal" aria-label="Flujo de GISBA OS">
+          <li class="hw-step" style="--i:0">
+            <header class="hw-sh"><b class="hw-num">01</b><div><small>Contexto</small><h3>Reúne el contexto</h3></div></header>
+            <p class="hw-txt">Campañas, métricas, decisiones y actividad reciente de cada cuenta quedan conectadas.</p>
+            <div class="hw-ui" aria-hidden="true">
+              <div class="hw-acct"><span class="hw-logo">N</span><div><strong>Nimble Labs</strong><small>Cuenta demo · B2B</small></div><i class="hw-dots">···</i></div>
+              <div class="hw-tabs"><span class="on">Resumen</span><span>Campañas</span><span>Actividad</span></div>
+              <div class="hw-kpis">
+                <div><small>ROAS</small><strong>4.8x</strong><em class="up">↑ 12%</em></div>
+                <div><small>CPA</small><strong>$12.450</strong><em class="up">↓ 18%</em></div>
+                <div><small>Inversión</small><strong>$82.3k</strong><em class="up">↑ 7%</em></div>
+              </div>
+              <h4>Actividad reciente</h4>
+              <ul class="hw-list">
+                <li><span class="hw-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4 10v4h3l5 4V6L7 10Zm12-1.5a4.5 4.5 0 0 1 0 7l-1-1.2a3 3 0 0 0 0-4.6Z"/></svg></span><div><strong>Campaña Q2 lanzada</strong><small>hace 2 horas</small></div></li>
+                <li><span class="hw-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 20V10h3.5v10Zm5.5 0V4H14v16Zm5.5 0v-7h3.5v7Z"/></svg></span><div><strong>Nuevo reporte disponible</strong><small>hace 5 horas</small></div></li>
+              </ul>
+            </div>
+          </li>
 
-        <div class="gisba-method-flow reveal" aria-label="Flujo de valor de GISBA">
-          <span><b class="gisba-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3.5 20v-2.2A4.8 4.8 0 0 1 8.3 13h1.4a4.8 4.8 0 0 1 4.8 4.8V20M15 14.2a4.4 4.4 0 0 1 5.5 4.3V20"/></svg></b><strong>Clientes y campañas</strong></span>
-          <i aria-hidden="true">→</i>
-          <span><b class="gisba-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13.2 2-7 11h5.4l-.8 9 7-12h-5.3l.7-8Z"/></svg></b><strong>Recomendaciones y decisiones</strong></span>
-          <i aria-hidden="true">→</i>
-          <span><b class="gisba-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20v-6M10 20V9M15 20V5M20 20V2"/></svg></b><strong>Ejecución y resultados</strong></span>
-        </div>
+          <li class="hw-arrow" aria-hidden="true"><span>→</span></li>
 
-        <div class="gisba-method-cta reveal">
-          <span class="gisba-method-spark" aria-hidden="true">✦</span>
-          <p>Diseñado para agencias que quieren escalar.</p>
-        </div>
-      </div>
-    </section>
+          <li class="hw-step" style="--i:1">
+            <header class="hw-sh"><b class="hw-num">02</b><div><small>Prioridad</small><h3>Prioriza lo que requiere atención</h3></div></header>
+            <p class="hw-txt">GISBA identifica señales relevantes y recomienda dónde conviene actuar primero.</p>
+            <div class="hw-ui" aria-hidden="true">
+              <div class="hw-pulse-h"><span class="hw-pi"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span><strong>GISBA PULSE</strong><em>3 señales</em><i class="hw-dots">···</i></div>
+              <ul class="hw-sigs">
+                <li class="r"><span class="hw-si">!</span><div><strong>CPA en aumento</strong><small>El CPA aumentó 18% en los últimos 7 días.</small></div><b>›</b></li>
+                <li><span class="hw-si a">!</span><div><strong>Rendimiento por debajo</strong><small>2 campañas con ROAS menor a 2.0x.</small></div><b>›</b></li>
+                <li><span class="hw-si v"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/></svg></span><div><strong>Oportunidad de crecimiento</strong><small>Audiencia similar con +32% de potencial.</small></div><b>›</b></li>
+              </ul>
+            </div>
+          </li>
 
-    <section id="como-funciona" class="section decision-flow" aria-labelledby="decision-flow-title">
-      <div class="container">
-        <header class="decision-flow-heading reveal">
-          <p class="eyebrow"><span></span> Cómo funciona</p>
-          <h2 id="decision-flow-title">De datos dispersos a <em>decisiones claras.</em></h2>
-          <p class="decision-flow-differentiation">GISBA OS es software para agencias de marketing que conecta performance, señales y decisiones de cada cuenta en un mismo contexto, para que tu agencia sepa dónde actuar.</p>
-        </header>
-        <ol class="decision-flow-steps reveal">
-          <li><span>01</span><div><h3>Conecta</h3><p>Campañas y fuentes de información.</p></div></li>
-          <li><span>02</span><div><h3>GISBA analiza</h3><p>Detecta cambios, riesgos y oportunidades.</p></div></li>
-          <li><span>03</span><div><h3>Tu agencia decide</h3><p>Revisa recomendaciones, asigna tareas o solicita aprobación.</p></div></li>
-          <li><span>04</span><div><h3>Todo queda conectado</h3><p>Equipo, cliente, decisiones y resultados mantienen contexto.</p></div></li>
+          <li class="hw-arrow" aria-hidden="true"><span>→</span></li>
+
+          <li class="hw-step" style="--i:2">
+            <header class="hw-sh"><b class="hw-num">03</b><div><small>Decisión</small><h3>Tu agencia decide y coordina</h3></div></header>
+            <p class="hw-txt">Tu equipo revisa la recomendación, asigna responsables, coordina con el cliente y define el siguiente paso.</p>
+            <div class="hw-ui" aria-hidden="true">
+              <div class="hw-dec-h"><span class="hw-si">!</span><div><strong>Ajustar presupuesto</strong><small>Aumentar inversión en campañas de alto rendimiento.</small></div><em>Pendiente</em></div>
+              <dl class="hw-fields">
+                <div><dt>Responsable</dt><dd><span class="hw-av">VR</span><div><strong>Valentina Ruiz</strong><small>Performance Lead</small></div><i>⌄</i></dd></div>
+                <div><dt>Fecha objetivo</dt><dd><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="5.5" width="16" height="14" rx="2.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg><strong>12 abr 2024</strong><i>⌄</i></dd></div>
+                <div><dt>Coordinar con</dt><dd><span class="hw-logo sm">N</span><strong>Nimble Labs (Cliente)</strong><i>⌄</i></dd></div>
+              </dl>
+              <div class="hw-btns"><span class="hw-btn p">Aprobar decisión</span><span class="hw-btn">Solicitar cambios</span></div>
+            </div>
+          </li>
+
+          <li class="hw-arrow" aria-hidden="true"><span>→</span></li>
+
+          <li class="hw-step" style="--i:3">
+            <header class="hw-sh"><b class="hw-num">04</b><div><small>Trazabilidad</small><h3>Mantén la trazabilidad</h3></div></header>
+            <p class="hw-txt">La decisión, la ejecución y el resultado quedan conectados para que equipo y cliente mantengan contexto.</p>
+            <div class="hw-ui" aria-hidden="true">
+              <h4 class="hw-th">Historial de la decisión</h4>
+              <ol class="hw-tl">
+                <li><span class="hw-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7 3h7l5 5v13H7Zm7 1.5V9h4.5ZM9.5 13h6v1.4h-6Zm0 3h6v1.4h-6Z"/></svg></span><div><strong>Decisión aprobada</strong><small>por Valentina Ruiz</small></div><time>12 abr, 10:24</time></li>
+                <li><span class="hw-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3 11.5 21 3l-5.5 18-4-6.5Z"/></svg></span><div><strong>Acción registrada</strong><small>Ajuste de presupuesto</small></div><time>12 abr, 14:06</time></li>
+                <li><span class="hw-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 20V10h3.5v10Zm5.5 0V4H14v16Zm5.5 0v-7h3.5v7Z"/></svg></span><div><strong>Resultado actualizado</strong><small>ROAS +24% en 7 días</small></div><time>19 abr, 09:12</time></li>
+                <li><span class="hw-ic ok"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><strong>Contexto conservado</strong><small>Disponible para equipo y cliente</small></div><time>19 abr, 09:15</time></li>
+              </ol>
+            </div>
+          </li>
         </ol>
+        <p class="hw-demo reveal">Datos de demostración</p>
       </div>
     </section>
 

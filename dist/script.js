@@ -338,16 +338,6 @@ if (heroProduct && precisePointer.matches && !reducedMotion) {
   window.addEventListener('blur', resetHeroTilt);
 }
 
-const methodSection = document.querySelector('.gisba-pillars');
-if (methodSection && !reducedMotion && 'IntersectionObserver' in window) {
-  const methodObserver = new IntersectionObserver(([entry]) => {
-    if (!entry.isIntersecting) return;
-    methodSection.classList.add('is-running');
-    methodObserver.disconnect();
-  }, { threshold: .28 });
-  methodObserver.observe(methodSection);
-}
-
 if (document.body.classList.contains('home-page')) {
   const backToTop = document.createElement('button');
   backToTop.className = 'back-to-top';
