@@ -30,11 +30,6 @@
     if (seg) seg.dataset.active = name;
     if (stage) stage.setAttribute('aria-labelledby', 'pr-tab-' + name);
     if (status && announce) status.textContent = labels[name];
-    if (stage && announce && !reduce) {
-      stage.classList.remove('pr-halo');
-      void stage.offsetWidth;
-      stage.classList.add('pr-halo');
-    }
 
     var target = states.filter(function (el) { return el.dataset.prState === name; })[0];
     if (!target) return;
@@ -71,16 +66,17 @@
 
   /* ----- GISBA Pulse: se reproduce una vez al entrar ----- */
   if (reduce || !('IntersectionObserver' in window)) return;
-  function playOnce(section, trigger, threshold) {
+  function playOnce(section, trigger, threshold, cls) {
     if (!section || !trigger) return;
     section.classList.add('pr-seq');
     var io = new IntersectionObserver(function (entries) {
       if (!entries.some(function (e) { return e.isIntersecting; })) return;
-      section.classList.add('is-played');
+      section.classList.add(cls);
       io.disconnect();
     }, { threshold: threshold, rootMargin: '0px 0px -12% 0px' });
     io.observe(trigger);
   }
   var pulse = document.getElementById('gisba-pulse');
-  playOnce(pulse, pulse && pulse.querySelector('.pr-pulse-head'), 0.4);
+  playOnce(pulse, pulse && pulse.querySelector('.pr-pulse-head'), 0.4, 'is-played');
+  playOnce(pulse, pulse && pulse.querySelector('.pr-steps'), 0.25, 'is-steps');
 })();

@@ -26,38 +26,37 @@
 /* ---------- Hero: halo detrás del dashboard ---------- */
 .pr-stage { position: relative; isolation: isolate; }
 .pr-stage::before { content: ""; position: absolute; z-index: -1; inset: -10% -6% -8% -10%; background: radial-gradient(ellipse 58% 52% at 54% 50%, rgba(123,77,255,.2), rgba(123,77,255,0) 72%); opacity: .85; pointer-events: none; }
-.pr-stage.pr-halo::before { animation: pmStageHalo .6s ease-out both; }
-@keyframes pmStageHalo { 0% { opacity: .85; } 35% { opacity: 1; } 100% { opacity: .85; } }
 
 /* ---------- GISBA Pulse: narrativa secuencial (una sola vez, ~2,7 s) ---------- */
 .pr-pulse { isolation: isolate; overflow: hidden; }
 .pr-pulse::before { content: ""; position: absolute; z-index: -1; top: 14%; left: 50%; width: min(1100px, 96%); height: 62%; transform: translateX(-50%); background: radial-gradient(ellipse at center, rgba(123,77,255,.14), rgba(123,77,255,0) 68%); opacity: .75; pointer-events: none; }
 .pr-pulse.pr-seq .pr-arrow path { stroke-dasharray: 1; }
 
-.pr-pulse.pr-seq:not(.is-played) :is(.pr-signal-wrap, .pr-step, .pr-chip, .pr-why, .pr-link, .pr-recs li, .pr-decide) { opacity: 0; }
-.pr-pulse.pr-seq:not(.is-played) .pr-arrow path { stroke-dashoffset: 1; }
-.pr-pulse.pr-seq:not(.is-played) .pr-bars i { transform: scaleY(0); }
+.pr-pulse.pr-seq:not(.is-played) .pr-signal-wrap { opacity: 0; }
+.pr-pulse.pr-seq:not(.is-steps) :is(.pr-step, .pr-chip, .pr-why, .pr-link, .pr-recs li, .pr-decide) { opacity: 0; }
+.pr-pulse.pr-seq:not(.is-steps) .pr-arrow path { stroke-dashoffset: 1; }
+.pr-pulse.pr-seq:not(.is-steps) .pr-bars i { transform: scaleY(0); }
 
 .pr-pulse.pr-seq.is-played::before { animation: pmHalo 1.6s ease-out both; }
 .pr-pulse.pr-seq.is-played .pr-signal-wrap { animation: pmSeq .4s var(--pm-ease) both; }
 .pr-pulse.pr-seq.is-played .pr-spark { animation: pmSpark .55s ease-out .35s both; }
-.pr-pulse.pr-seq.is-played .pr-step:nth-child(1) { animation: pmSeq .4s var(--pm-ease) .45s both; }
-.pr-pulse.pr-seq.is-played .pr-step:nth-child(1) .pr-chip { animation: pmSeq .35s var(--pm-ease) .6s both; }
-.pr-pulse.pr-seq.is-played .pr-arrow:nth-child(2) path { animation: pmDraw .3s ease-out .9s both; }
-.pr-pulse.pr-seq.is-played .pr-step:nth-child(3) { animation: pmSeq .4s var(--pm-ease) 1.1s both; }
-.pr-pulse.pr-seq.is-played .pr-why { animation: pmSeq .35s var(--pm-ease) 1.25s both; }
-.pr-pulse.pr-seq.is-played .pr-bars i { transform-origin: bottom; animation: pmBar .4s var(--pm-ease) both; }
-.pr-pulse.pr-seq.is-played .pr-bars i:nth-child(1) { animation-delay: 1.3s; }
-.pr-pulse.pr-seq.is-played .pr-bars i:nth-child(2) { animation-delay: 1.36s; }
-.pr-pulse.pr-seq.is-played .pr-bars i:nth-child(3) { animation-delay: 1.42s; }
-.pr-pulse.pr-seq.is-played .pr-link { animation: pmSeq .35s var(--pm-ease) 1.5s both; }
-.pr-pulse.pr-seq.is-played .pr-arrow:nth-child(4) path { animation: pmDraw .3s ease-out 1.6s both; }
-.pr-pulse.pr-seq.is-played .pr-step:nth-child(5) { animation: pmSeq .4s var(--pm-ease) 1.8s both; }
-.pr-pulse.pr-seq.is-played .pr-recs li { animation: pmSeq .35s var(--pm-ease) both; }
-.pr-pulse.pr-seq.is-played .pr-recs li:nth-child(1) { animation-delay: 1.95s; }
-.pr-pulse.pr-seq.is-played .pr-recs li:nth-child(2) { animation-delay: 2.05s; }
-.pr-pulse.pr-seq.is-played .pr-recs li:nth-child(3) { animation-delay: 2.15s; }
-.pr-pulse.pr-seq.is-played .pr-decide { animation: pmSeq .4s var(--pm-ease) 2.35s both; }
+.pr-pulse.pr-seq.is-steps .pr-step:nth-child(1) { animation: pmSeq .4s var(--pm-ease) .45s both; }
+.pr-pulse.pr-seq.is-steps .pr-step:nth-child(1) .pr-chip { animation: pmSeq .35s var(--pm-ease) .6s both; }
+.pr-pulse.pr-seq.is-steps .pr-arrow:nth-child(2) path { animation: pmDraw .3s ease-out .9s both; }
+.pr-pulse.pr-seq.is-steps .pr-step:nth-child(3) { animation: pmSeq .4s var(--pm-ease) 1.1s both; }
+.pr-pulse.pr-seq.is-steps .pr-why { animation: pmSeq .35s var(--pm-ease) 1.25s both; }
+.pr-pulse.pr-seq.is-steps .pr-bars i { transform-origin: bottom; animation: pmBar .4s var(--pm-ease) both; }
+.pr-pulse.pr-seq.is-steps .pr-bars i:nth-child(1) { animation-delay: 1.3s; }
+.pr-pulse.pr-seq.is-steps .pr-bars i:nth-child(2) { animation-delay: 1.36s; }
+.pr-pulse.pr-seq.is-steps .pr-bars i:nth-child(3) { animation-delay: 1.42s; }
+.pr-pulse.pr-seq.is-steps .pr-link { animation: pmSeq .35s var(--pm-ease) 1.5s both; }
+.pr-pulse.pr-seq.is-steps .pr-arrow:nth-child(4) path { animation: pmDraw .3s ease-out 1.6s both; }
+.pr-pulse.pr-seq.is-steps .pr-step:nth-child(5) { animation: pmSeq .4s var(--pm-ease) 1.8s both; }
+.pr-pulse.pr-seq.is-steps .pr-recs li { animation: pmSeq .35s var(--pm-ease) both; }
+.pr-pulse.pr-seq.is-steps .pr-recs li:nth-child(1) { animation-delay: 1.95s; }
+.pr-pulse.pr-seq.is-steps .pr-recs li:nth-child(2) { animation-delay: 2.05s; }
+.pr-pulse.pr-seq.is-steps .pr-recs li:nth-child(3) { animation-delay: 2.15s; }
+.pr-pulse.pr-seq.is-steps .pr-decide { animation: pmSeq .4s var(--pm-ease) 2.35s both; }
 
 @keyframes pmSeq { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @keyframes pmBar { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -72,11 +71,9 @@
   [data-pr-state].pr-in { animation: pmIn5 .28s var(--pm-ease) both; }
   [data-pr-state].pr-in .pr-main { animation: none; }
   .pr-stage::before { inset: -4% -2% -3% -2%; opacity: .6; }
-  .pr-stage.pr-halo::before { animation: none; }
-  .pr-pulse::before { opacity: .5; height: 44%; }
+    .pr-pulse::before { opacity: .5; height: 44%; }
   .pr-pulse.pr-seq.is-played::before { animation: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .pr-seg::before, .pr-seg-btn, [data-pr-state].pr-out { transition: none; }
-  [data-pr-state].pr-in, [data-pr-state].pr-in *, .pr-stage.pr-halo::before { animation: none !important; }
-}
+  [data-pr-state].pr-in, [data-pr-state].pr-in *, }
