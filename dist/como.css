@@ -144,3 +144,92 @@
   .cx-tl-card strong { padding-right: 0; }
   .cx-tl-card time { position: static; display: block; margin-top: 4px; }
 }
+
+/* ==========================================================
+   Ritmo visual final: fondo, alturas y composición por sección
+   compacto (01) > fuerte (02) > compacto (03) > fuerte (04) > compacto (05)
+   ========================================================== */
+.cx-section { padding: 64px 0 72px; background: #fff; }
+
+/* 01 · Contexto (hero de la página): compacto, halo muy suave */
+.cx-hero { padding: 116px 0 60px; background: radial-gradient(900px 360px at 84% 0%, rgba(91,44,255,.055), transparent 66%), #fff; }
+.cx-ctx .cx-grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
+.cx-ctx .cx-shot img { max-width: 700px; }
+
+/* 02 · Detecta: protagonista, Pulse a ~58% del ancho */
+.cx-detect { padding: 112px 0 124px; background: linear-gradient(180deg, #fff 0%, #F4F3FB 38%, #F1EEFF 100%); }
+.cx-detect .cx-grid { grid-template-columns: minmax(0, .42fr) minmax(0, .58fr); align-items: start; column-gap: 56px; }
+.cx-detect .cx-copy { padding-top: 34px; }
+.cx-detect .cx-copy h2 { max-width: 480px; }
+.cx-detect .cx-shot img { max-width: 1060px; }
+
+/* 03 · Decide: compacto, producto a la izquierda y texto a la derecha */
+.cx-decide { padding: 60px 0 68px; background: #fff; }
+.cx-decide .cx-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+.cx-decide .cx-shot { order: 1; }
+.cx-decide .cx-copy { order: 2; }
+.cx-decide .cx-shot img { max-width: 620px; }
+
+/* 04 · Coordina: protagonista, más aire */
+.cx-coord { padding: 112px 0 124px; background: linear-gradient(180deg, #F4F3FB 0%, #F1EEFF 100%); }
+
+/* 05 · Registra: compacta y calmada */
+.cx-reg { padding: 76px 0 100px; background: #fff; }
+.cx-reg .cx-grid { align-items: center; }
+
+/* CTA final */
+.cx-cta { padding: 96px 0 104px; color: #fff; text-align: center; background: #0B1028; }
+.cx-cta-inner { display: grid; justify-items: center; }
+.cx-cta h2 { max-width: 760px; margin: 0 0 18px; font-size: clamp(2.1rem, 3.8vw, 3.3rem); line-height: 1.08; color: #fff; }
+.cx-cta p { max-width: 600px; margin: 0 0 32px; color: #B9C0DA; font-size: 1.12rem; line-height: 1.6; }
+.cx-cta .button { padding: 17px 32px; font-size: 1.05rem; border-radius: 14px; background: #5B2CFF; color: #fff; box-shadow: 0 16px 36px rgba(91,44,255,.4); }
+
+/* Responsive del ritmo */
+@media (max-width: 1024px) {
+  .cx-section { padding: 52px 0 56px; }
+  .cx-hero { padding: 108px 0 48px; }
+  .cx-detect, .cx-coord { padding: 72px 0 80px; }
+  .cx-detect .cx-grid, .cx-decide .cx-grid { grid-template-columns: 1fr; align-items: start; }
+  .cx-detect .cx-copy { padding-top: 0; }
+  .cx-decide .cx-copy { order: 1; }
+  .cx-decide .cx-shot { order: 2; }
+  .cx-reg { padding: 56px 0 72px; }
+  .cx-cta { padding: 72px 0 80px; }
+}
+@media (max-width: 720px) {
+  .cx-section { padding: 44px 0 48px; }
+  .cx-hero { padding: 100px 0 40px; }
+  .cx-detect, .cx-coord { padding: 60px 0 64px; }
+  .cx-cta { padding: 60px 0 68px; }
+  .cx-cta .button { width: 100%; justify-content: center; }
+}
+
+/* Ajuste de alturas: compacto / fuerte / compacto / fuerte / compacto */
+.cx-detect { padding: 128px 0 140px; }
+.cx-coord { padding: 128px 0 140px; }
+.cx-decide .cx-shot img { max-width: 500px; }
+.cx-reg { padding: 60px 0 76px; }
+.cx-reg .cx-tl { padding: 18px 22px 20px; }
+.cx-reg .cx-tl-head { margin-bottom: 14px; }
+.cx-reg .cx-tl-list { gap: 8px; }
+.cx-reg .cx-tl-list::before { left: 22px; top: 30px; bottom: 30px; }
+.cx-reg .cx-tl-ico { width: 44px; height: 44px; }
+.cx-reg .cx-tl-card { padding: 9px 14px; }
+.cx-reg .cx-tl-card p { font-size: .8rem; }
+@media (max-width: 1024px) {
+  .cx-detect, .cx-coord { padding: 76px 0 84px; }
+  .cx-decide .cx-shot img { max-width: 560px; }
+}
+@media (max-width: 720px) {
+  .cx-detect, .cx-coord { padding: 60px 0 64px; }
+  .cx-reg .cx-tl-list::before { left: 20px; }
+  .cx-reg .cx-tl-ico { width: 40px; height: 40px; }
+}
+.cx-reg { padding: 44px 0 60px; }
+.cx-reg .cx-tl-list { gap: 6px; }
+.cx-reg .cx-tl-card { padding: 8px 14px; }
+@media (max-width: 720px) {
+  .cx-reg { padding: 40px 0 48px; }
+  .cx-reg .cx-tl { padding: 14px 12px 16px; }
+  .cx-reg .cx-tl-card p { font-size: .78rem; }
+}
