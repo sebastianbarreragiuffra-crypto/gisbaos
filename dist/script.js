@@ -117,6 +117,9 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
   });
 }
 
+// Solo habilita los estados ocultos cuando todos los reveals ya tienen un fallback u observer.
+document.documentElement.classList.add('reveal-ready');
+
 document.querySelectorAll('details').forEach((detail) => {
   detail.addEventListener('toggle', () => {
     if (!detail.open) return;
