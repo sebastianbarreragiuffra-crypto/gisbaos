@@ -309,3 +309,6 @@
   .pn-copy .button { width: 100%; justify-content: center; }
   .pn-perks { flex-direction: column; gap: 14px; }
 }
+
+/* Pie de Producto: dos columnas con enlaces reales */
+.closing-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
