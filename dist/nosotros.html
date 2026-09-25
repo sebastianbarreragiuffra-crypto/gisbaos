@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="styles.css?v=89">
+  <link rel="stylesheet" href="styles.css?v=90">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="inner-page about-page">
@@ -44,18 +44,20 @@
   </header>
 
   <main id="contenido">
-    <section class="section about-hero about-hero-simple" aria-labelledby="about-title">
-      <div class="about-glow" aria-hidden="true"></div>
-      <div class="container about-story-grid">
-        <div class="about-story-copy reveal">
+    <section class="section about-hero about-hero-simple about-hero-v2" aria-labelledby="about-title">
+      <div class="container about-hero-v2-grid">
+        <div class="about-hero-v2-copy reveal">
           <p class="eyebrow"><span></span> Nosotros</p>
-          <h1 id="about-title">Estrategia para crecer.<br><em>Tecnología para hacerlo posible.</em></h1>
-          <p class="hero-lead">Somos GISBA. Unimos marketing, desarrollo comercial y software para ayudar a las empresas a atraer clientes, simplificar procesos y convertir sus necesidades en soluciones reales.</p>
-          <a class="button button-solid" href="index.html#contacto">Conversemos <span aria-hidden="true">→</span></a>
+          <h1 id="about-title">Construimos GISBA OS para que las agencias puedan crecer sin multiplicar su trabajo operativo.</h1>
+          <p class="about-hero-v2-lead">Cuando una agencia crece, también crecen las cuentas, los datos, las decisiones y la coordinación con clientes. GISBA OS nace para conectar ese contexto y hacer la operación más clara.</p>
+          <a class="button button-solid" href="index.html#contacto" data-cta="demo" data-event="demo_cta_click" data-location="hero">Agenda una demo <span aria-hidden="true">→</span></a>
         </div>
-        <div class="about-image-placeholder reveal" role="img" aria-label="Espacio reservado para una fotografía del equipo GISBA">
-          <span>Imagen</span>
-          <small>Fotografía del equipo</small>
+        <div class="about-hero-v2-visual reveal">
+          <div class="about-founders-frame">
+            <img class="founder-rodrigo" src="assets/rodrigo-loyola.png" width="640" height="640" alt="Rodrigo Loyola, cofundador de GISBA OS" decoding="async">
+            <img class="founder-sebastian" src="assets/sebastian-barrera.jpeg" width="862" height="585" alt="Sebastián Barrera, cofundador de GISBA OS" decoding="async">
+          </div>
+          <p class="about-founders-names"><span><strong>Rodrigo Loyola</strong> · Cofundador</span><span><strong>Sebastián Barrera</strong> · Cofundador</span></p>
         </div>
       </div>
     </section>
