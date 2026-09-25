@@ -174,3 +174,7 @@
   .pr-seg-btn { transition: none; }
   [data-pr-state].pr-in { animation: none; }
 }
+
+/* Pie de Producto: dos columnas con enlaces reales */
+.closing-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 640px) { .closing-links { grid-template-columns: 1fr; } }
