@@ -13,6 +13,7 @@
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="styles.css?v=89">
   <link rel="stylesheet" href="product.css?v=17">
+  <link rel="stylesheet" href="product-motion.css?v=1">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="inner-page">
@@ -180,39 +181,6 @@
       <p class="closing-copyright">© <span data-year></span> GISBA OS. Todos los derechos reservados.</p>
     </div>
   </footer>
-<script>
-(function () {
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-pr-tab]'));
-  var states = Array.prototype.slice.call(document.querySelectorAll('[data-pr-state]'));
-  var stage = document.getElementById('pr-stage');
-  if (!tabs.length) return;
-  function select(name, focus) {
-    tabs.forEach(function (t) {
-      var on = t.dataset.prTab === name;
-      t.classList.toggle('is-active', on);
-      t.setAttribute('aria-selected', on ? 'true' : 'false');
-      t.tabIndex = on ? 0 : -1;
-      if (on && focus) t.focus();
-    });
-    if (stage) stage.setAttribute('aria-labelledby', 'pr-tab-' + name);
-    states.forEach(function (el) {
-      var show = el.dataset.prState === name;
-      if (show && el.hidden) { el.hidden = false; el.classList.remove('pr-in'); void el.offsetWidth; el.classList.add('pr-in'); }
-      else if (!show) { el.hidden = true; el.classList.remove('pr-in'); }
-    });
-  }
-  tabs.forEach(function (t, i) {
-    t.addEventListener('click', function () { select(t.dataset.prTab, false); });
-    t.addEventListener('keydown', function (e) {
-      var k = e.key, next = null;
-      if (k === 'ArrowRight' || k === 'ArrowDown') next = tabs[(i + 1) % tabs.length];
-      else if (k === 'ArrowLeft' || k === 'ArrowUp') next = tabs[(i - 1 + tabs.length) % tabs.length];
-      else if (k === 'Home') next = tabs[0];
-      else if (k === 'End') next = tabs[tabs.length - 1];
-      if (next) { e.preventDefault(); select(next.dataset.prTab, true); }
-    });
-  });
-})();
-</script>
+<script src="product-motion.js?v=1" defer></script>
 </body>
 </html>

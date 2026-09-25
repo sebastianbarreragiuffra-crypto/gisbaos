@@ -1,0 +1,67 @@
+/* Producto: última pasada de motion (solo Hero + GISBA Pulse). Solo transform/opacity; sin JS todo es visible. */
+:root { --pm-ease: cubic-bezier(.2, .8, .2, 1); }
+
+/* ---------- Hero: pill activo deslizante ---------- */
+.pr-seg { position: relative; }
+.pr-seg-btn { position: relative; z-index: 1; }
+.pr-seg-pill { position: absolute; z-index: 0; top: 5px; bottom: 5px; left: 5px; width: calc((100% - 16px) / 2); border-radius: 14px; background: linear-gradient(135deg, #4d24ff, #7b4dff); box-shadow: 0 12px 26px rgba(77,36,255,.3); transition: transform .26s var(--pm-ease); will-change: transform; pointer-events: none; }
+.pr-seg-pill[data-pos="client"] { transform: translateX(calc(100% + 6px)); }
+.pr-seg.has-pill .pr-seg-btn.is-active { background: transparent; box-shadow: none; }
+.pr-seg.has-pill .pr-seg-btn { transition: color .2s; }
+
+/* ---------- Hero: halo estático detrás del dashboard ---------- */
+.pr-stage { position: relative; isolation: isolate; }
+.pr-stage::before { content: ""; position: absolute; z-index: -1; inset: -8% -2% -4% -6%; pointer-events: none; background: radial-gradient(60% 55% at 55% 50%, rgba(123,77,255,.14), rgba(123,77,255,0) 70%); }
+
+/* ---------- Hero: misma plataforma, distinta perspectiva ---------- */
+@keyframes pmRise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes pmFade { from { opacity: 0; } to { opacity: 1; } }
+[data-pr-state].pr-out { opacity: .55; filter: saturate(.85); transition: opacity .1s linear, filter .1s linear; }
+[data-pr-state].pr-in { animation: pmFade .16s linear both; }
+[data-pr-state].pr-in .pr-top2 { animation: pmRise .22s var(--pm-ease) both; }
+[data-pr-state].pr-in .pr-kpis { animation: pmRise .24s var(--pm-ease) .05s both; }
+[data-pr-state].pr-in .pr-cols { animation: pmRise .26s var(--pm-ease) .1s both; }
+
+/* ---------- GISBA Pulse: una sola historia ---------- */
+.pr-pulse[data-pp] .pr-signal-wrap { position: relative; opacity: 0; transform: translateY(8px); }
+.pr-pulse[data-pp] .pr-signal-wrap::before { content: ""; position: absolute; z-index: -1; inset: -14% -8%; pointer-events: none; background: radial-gradient(55% 55% at 55% 50%, rgba(123,77,255,.16), rgba(123,77,255,0) 70%); opacity: .45; }
+.pr-pulse[data-pp].is-sig .pr-signal-wrap { opacity: 1; transform: none; transition: opacity .45s var(--pm-ease), transform .45s var(--pm-ease); }
+.pr-pulse[data-pp].is-sig .pr-signal-wrap::before { animation: pmHalo 1.4s ease-out 1 both; }
+@keyframes pmHalo { 0% { opacity: .45; } 35% { opacity: 1; } 100% { opacity: .6; } }
+.pr-pulse[data-pp].is-hl .pr-signal { animation: pmHl .8s ease-out 1; }
+@keyframes pmHl { 0% { box-shadow: 0 30px 60px rgba(56,41,142,.16), 0 0 0 0 rgba(123,77,255,0); } 35% { box-shadow: 0 30px 60px rgba(56,41,142,.16), 0 0 0 5px rgba(123,77,255,.2); } 100% { box-shadow: 0 30px 60px rgba(56,41,142,.16), 0 0 0 0 rgba(123,77,255,0); } }
+
+.pr-pulse[data-pp] .pr-step { opacity: 0; transform: translateY(8px); transition: opacity .4s var(--pm-ease), transform .4s var(--pm-ease), border-color .3s, box-shadow .3s; }
+.pr-pulse[data-pp] .pr-steps > .pr-arrow { opacity: 0; transition: opacity .35s ease; }
+.pr-pulse[data-pp].is-s1 .pr-step:nth-child(1), .pr-pulse[data-pp].is-s2 .pr-step:nth-child(3), .pr-pulse[data-pp].is-s3 .pr-step:nth-child(5) { opacity: 1; transform: none; }
+.pr-pulse[data-pp].is-s2 .pr-steps > .pr-arrow:nth-child(2), .pr-pulse[data-pp].is-s3 .pr-steps > .pr-arrow:nth-child(4) { opacity: 1; }
+.pr-pulse[data-pp] .pr-step.is-focus { border-color: #d9cfff; box-shadow: 0 22px 46px rgba(91,44,255,.14); }
+
+.pr-pulse[data-pp] .pr-bars i { transform: scaleY(0); transform-origin: bottom; transition: transform .5s var(--pm-ease); }
+.pr-pulse[data-pp].is-bars .pr-bars i { transform: none; }
+.pr-pulse[data-pp].is-bars .pr-bars i:nth-child(2) { transition-delay: .07s; }
+.pr-pulse[data-pp].is-bars .pr-bars i:nth-child(3) { transition-delay: .14s; }
+
+.pr-pulse[data-pp] .pr-recs li { opacity: 0; transform: translateY(6px); transition: opacity .35s var(--pm-ease), transform .35s var(--pm-ease); }
+.pr-pulse[data-pp].is-recs .pr-recs li { opacity: 1; transform: none; }
+.pr-pulse[data-pp].is-recs .pr-recs li:nth-child(2) { transition-delay: .1s; }
+.pr-pulse[data-pp].is-recs .pr-recs li:nth-child(3) { transition-delay: .2s; }
+
+.pr-pulse[data-pp] .pr-decide { opacity: 0; transform: translateY(8px); transition: opacity .45s var(--pm-ease), transform .45s var(--pm-ease); }
+.pr-pulse[data-pp].is-end .pr-decide { opacity: 1; transform: none; }
+
+/* ---------- Móvil: fade corto + 5px, sin stagger ---------- */
+@keyframes pmRiseS { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+@media (max-width: 900px) {
+  .pr-stage::before { opacity: .55; }
+  [data-pr-state].pr-in { animation: pmRiseS .2s var(--pm-ease) both; }
+  [data-pr-state].pr-in .pr-top2, [data-pr-state].pr-in .pr-kpis, [data-pr-state].pr-in .pr-cols { animation: none; }
+}
+
+/* ---------- Movimiento reducido: estados finales directos ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .pr-seg-pill, .pr-seg.has-pill .pr-seg-btn { transition: none; }
+  [data-pr-state].pr-in, [data-pr-state].pr-in * { animation: none !important; }
+  [data-pr-state].pr-out { opacity: 1; filter: none; transition: none; }
+  .pr-pulse[data-pp], .pr-pulse[data-pp] * { animation: none !important; }
+}
