@@ -2428,18 +2428,28 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .about-hero-v2-grid { display: grid; grid-template-columns: .95fr 1.2fr; gap: 64px; align-items: center; }
 .about-hero-v2-copy { min-width: 0; }
 .about-hero-v2-copy h1 { max-width: 660px; margin: 0 0 24px; color: #0d0e2b; font-size: clamp(2.5rem, 3.9vw, 3.5rem); line-height: 1.06; letter-spacing: -.035em; }
+.about-hero-v2-copy h1 em { color: transparent; background: linear-gradient(100deg,#4421ff,#6a38ff); background-clip: text; -webkit-background-clip: text; font-style: normal; }
 .about-hero-v2-lead { max-width: 560px; margin: 0 0 34px; color: #4b5170; font-size: 1.08rem; line-height: 1.65; }
-.about-hero-v2-visual { min-width: 0; }
+.about-hero-legend { display: flex; align-items: center; gap: 12px; margin: 30px 0 0; color: #8189a6; }
+.about-hero-legend-icon { flex: none; display: grid; place-items: center; color: #9a86ff; }
+.about-hero-legend ul { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; line-height: 1.35; }
+.about-hero-v2-visual { position: relative; min-width: 0; }
 .about-founders-frame { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; aspect-ratio: 1 / .96; overflow: hidden; background: #fff; clip-path: url(#gisba-frame-shape); box-shadow: 0 30px 80px rgba(54,39,139,.16); }
 .about-founders-frame img { width: 100%; height: 100%; min-width: 0; object-fit: cover; display: block; }
 .about-founders-frame .founder-rodrigo { object-position: 67% 22%; }
 .about-founders-frame .founder-sebastian { object-position: 52% 30%; }
-.about-founders-names { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 14px 0 0; color: #707a99; font-size: .84rem; }
-.about-founders-names span { padding-left: 4px; }
-.about-founders-names strong { color: #0d0e2b; font-weight: 600; }
+.about-founder-badge { position: absolute; z-index: 2; display: grid; gap: 1px; padding: 10px 16px; border-radius: 13px; background: #fff; box-shadow: 0 14px 32px rgba(20,14,54,.2); color: #0d0e2b; font-size: .84rem; line-height: 1.25; }
+.about-founder-badge strong { font-weight: 700; }
+.about-founder-badge small { color: #8189a6; font-size: .72rem; }
+.about-founder-badge.badge-rodrigo { left: 8%; bottom: 13%; }
+.about-founder-badge.badge-sebastian { right: 7%; bottom: 13%; }
+.about-hero-stat { position: absolute; z-index: 2; top: -6%; right: -6%; display: flex; align-items: center; gap: 10px; max-width: 230px; padding: 16px 18px; border-radius: 16px; background: #fff; box-shadow: 0 20px 44px rgba(20,14,54,.16); }
+.about-hero-stat-icon { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; color: #6b3cff; background: #f0edff; }
+.about-hero-stat p { margin: 0; color: #4b5170; font-size: .72rem; font-weight: 800; letter-spacing: .04em; line-height: 1.55; text-transform: uppercase; }
 @media (max-width: 1040px) {
   .about-hero-v2-grid { gap: 40px; }
   .about-hero-v2-copy h1 { font-size: clamp(2.2rem, 4.4vw, 2.7rem); }
+  .about-hero-stat { max-width: 190px; padding: 13px 15px; }
 }
 @media (max-width: 780px) {
   .about-hero-v2 { padding: 112px 0 64px; }
@@ -2448,8 +2458,11 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
   .about-hero-v2-copy h1 { font-size: clamp(2.05rem, 8.6vw, 2.5rem); }
   .about-hero-v2-lead { margin-bottom: 28px; font-size: 1rem; }
   .about-hero-v2-copy .button { width: 100%; justify-content: center; }
+  .about-hero-legend { margin-top: 24px; }
   .about-founders-frame { aspect-ratio: 1 / .92; }
-  .about-founders-names { font-size: .78rem; }
+  .about-founder-badge { padding: 8px 12px; font-size: .74rem; }
+  .about-founder-badge small { font-size: .64rem; }
+  .about-hero-stat { display: none; }
 }
 .about-founders-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(139,92,255,.06), rgba(13,14,43,.16)); }
 .about-founders-frame img { filter: saturate(.92) contrast(1.02); }
