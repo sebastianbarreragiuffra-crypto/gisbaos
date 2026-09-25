@@ -3182,6 +3182,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 }
 .client-story-meta-final { justify-content: flex-start; }
 .client-story-meta-final p { max-width: none; }
+.client-experience-final .client-story-progress { display: none; }
 
 /* Old Home blocks are retired by markup; neutralize any accidental leftovers. */
 .home-page .gisba-pillars,
