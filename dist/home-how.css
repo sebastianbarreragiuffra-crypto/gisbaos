@@ -83,9 +83,9 @@
 
 /* Motion sutil: cabecera y luego 01 → 04 (solo si hay JS) */
 .js .hw-flow.reveal .hw-step { opacity: 0; transform: translateY(12px); }
-.js .hw-flow.reveal.visible .hw-step { opacity: 1; transform: none; transition: opacity .3s ease, transform .3s cubic-bezier(.2,.8,.2,1); transition-delay: calc(.12s + var(--i) * .12s); }
+.js .hw-flow.reveal.visible .hw-step { opacity: 1; transform: none; transition: opacity .3s ease, transform .3s cubic-bezier(.2,.8,.2,1); transition-delay: calc(.2s + var(--i) * .12s); }
 .js .hw-flow.reveal .hw-arrow { opacity: 0; }
-.js .hw-flow.reveal.visible .hw-arrow { opacity: 1; transition: opacity .3s ease .5s; }
+.js .hw-flow.reveal.visible .hw-arrow { opacity: 1; transition: opacity .3s ease .6s; }
 
 @media (max-width: 1240px) {
   .hw-flow { grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr) 34px minmax(0, 1fr) 34px minmax(0, 1fr); }
