@@ -38,3 +38,16 @@
 @media (max-width: 720px) {
   .cx-detect .cx-copy h2 { font-size: clamp(2rem, 8.6vw, 2.5rem); }
 }
+
+/* 03 · Decide: texto a la izquierda, imagen a la derecha */
+.cx-decide .cx-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+.cx-decide .cx-copy h2 { max-width: 520px; margin: 0 0 24px; font-size: clamp(2.2rem, 3.9vw, 3.5rem); line-height: 1.04; color: #0b0d2b; }
+.cx-decide .cx-copy h2 em { display: block; font-style: normal; color: #4d24ff; background: none; -webkit-text-fill-color: currentColor; }
+.cx-decide .cx-shot img { max-width: 1190px; border-radius: 0; box-shadow: none; }
+@media (max-width: 1024px) {
+  .cx-decide .cx-grid { grid-template-columns: 1fr; }
+  .cx-decide .cx-copy h2 { max-width: none; }
+}
+@media (max-width: 720px) {
+  .cx-decide .cx-copy h2 { font-size: clamp(2rem, 8.6vw, 2.5rem); }
+}
