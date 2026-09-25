@@ -270,3 +270,17 @@
   .pp-reco { padding: 18px; gap: 16px; }
   .pp-tile, .pp-reco .pp-tile { width: 62px; height: 62px; }
 }
+
+/* ---------- Selector Agencia / Cliente a la izquierda (fuera de la ventana) ---------- */
+.hx-top { grid-template-columns: 1fr auto; }
+.hx-copy .hx-tabs { justify-content: flex-start; margin: 0 0 30px; }
+.hx-copy .hx-pill { height: 48px; gap: 9px; padding: 0 18px; font-size: .9rem; white-space: nowrap; }
+.hx-copy .hx-pill-agency { padding-right: 40px; margin-right: -30px; }
+.hx-copy .hx-pill-client { padding-left: 40px; margin-left: -30px; }
+.hx-copy .hx-pill svg { width: 20px; height: 20px; }
+.hx-copy .hx-core { width: 64px; height: 64px; }
+@media (max-width: 640px) {
+  .hx-copy .hx-tabs { width: 100%; margin-bottom: 24px; }
+  .hx-copy .hx-pill { flex: 1 1 0; justify-content: center; height: 52px; padding: 0 12px !important; margin: 0 !important; white-space: normal; line-height: 1.15; }
+  .hx-copy .hx-core { display: none; }
+}
