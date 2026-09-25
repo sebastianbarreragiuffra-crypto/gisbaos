@@ -1,0 +1,31 @@
+/* Home: sección "Cada negocio tiene un funnel distinto" (selector Ecommerce / Lead Generation). Hoja propia de index.html */
+.hf { padding: 96px 0 104px; background: linear-gradient(180deg, #fff 0%, #f8f7ff 100%); }
+.hf::before { display: none; }
+.hf-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); column-gap: 48px; align-items: center; }
+.hf-eyebrow { margin: 0 0 20px; color: #5B2CFF; font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.hf-copy h2 { margin: 0 0 22px; font-size: clamp(2.3rem, 3.8vw, 3.5rem); line-height: 1.05; color: #0B1028; }
+.hf-copy h2 span { color: #5B2CFF; }
+.hf-lead { margin: 0 0 34px; max-width: 420px; color: #5F687A; font-size: 1.1rem; line-height: 1.55; }
+.hf-switch { display: grid; gap: 12px; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; max-width: 360px; }
+.hf-switch::before { content: none; }
+.hf-switch button { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 62px; border: 1px solid #e6e2f7; border-radius: 16px; color: #5F687A; background: #fff; font: 600 1.05rem/1 Inter, "Segoe UI", Arial, sans-serif; box-shadow: 0 6px 18px rgba(42,38,90,.05); transition: background .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.hf-switch button:hover { transform: none; border-color: #cfc4ff; }
+.hf-switch button.is-active { color: #5B2CFF; border: 2px solid #c9bcff; background: #f1edff; box-shadow: 0 10px 26px rgba(91,44,255,.14); }
+.hf-visual { min-width: 0; }
+.hf-panel { border: 0; border-radius: 0; background: none; box-shadow: none; overflow: visible; }
+.hf-panel img { width: 100%; height: auto; border-radius: 22px; box-shadow: 0 30px 70px rgba(48,35,111,.14); }
+@media (max-width: 1024px) {
+  .hf { padding: 72px 0 80px; }
+  .hf-grid { grid-template-columns: 1fr; row-gap: 36px; }
+  .hf-lead { max-width: 560px; }
+  .hf-switch { grid-template-columns: 1fr 1fr; max-width: 560px; }
+}
+@media (max-width: 560px) {
+  .hf { padding: 56px 0 64px; }
+  .hf-switch { gap: 8px; }
+  .hf-switch button { min-height: 54px; gap: 8px; font-size: .92rem; border-radius: 14px; }
+  .hf-switch button svg { width: 18px; height: 18px; }
+  .hf-visual { margin-inline: -24px; padding: 6px 24px 26px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .hf-visual::-webkit-scrollbar { display: none; }
+  .hf-panel img { width: 760px; max-width: none; border-radius: 14px; }
+}
