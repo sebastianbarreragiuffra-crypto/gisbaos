@@ -28,7 +28,7 @@
         Array.prototype.forEach.call(stage.querySelectorAll('[data-s="' + n + '"]'), function (el) { el.classList.add('on'); });
         if (n === 2 && stage.querySelector('.cx-sg')) boost(stage);
         if (n === steps.length) {
-          if (stage.getAttribute('data-causal') === 'coordina') { causal(stage, mobile); return; }
+          if (stage.getAttribute('data-causal') === 'coordina') { afterEntry(stage, function () { causal(stage, mobile); }); return; }
           window.setTimeout(function () { finish(stage); }, mobile ? 250 : 450);
         }
       }, Math.round(ms * scale));
@@ -60,7 +60,16 @@
     ], { duration: 650, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'none' });
   }
 
-  /* 04: un mismo evento: mensaje del cliente -> pulso -> GISBA vincula, registra y define el siguiente paso */
+  /* 04: el pulso nace justo cuando termina la entrada del mensaje del cliente */
+  function afterEntry(stage, cb) {
+    var msg = stage.querySelector('.cx-msg.in'), fired = false;
+    var go = function () { if (fired) return; fired = true; stage.setAttribute('data-step', '3'); cb(); };
+    if (!msg) { go(); return; }
+    msg.addEventListener('transitionend', function h(e) { if (e.target !== msg) return; msg.removeEventListener('transitionend', h); go(); });
+    window.setTimeout(go, 700); /* respaldo */
+  }
+
+  /* 04: un mismo evento: mensaje del cliente -> pulso -> GISBA vincula, registra y define el siguiente paso; al final, la respuesta de la agencia */
   function causal(stage, mobile) {
     var msg = stage.querySelector('.cx-msg.in'), target = stage.querySelector('.cx-gp-head');
     var on = function (n) {
@@ -71,7 +80,8 @@
       on(4); boost(stage);
       window.setTimeout(function () { on(5); }, mobile ? 380 : 480);
       window.setTimeout(function () { on(6); }, mobile ? 760 : 960);
-      window.setTimeout(function () { finish(stage); }, mobile ? 1150 : 1450);
+      window.setTimeout(function () { on(7); }, mobile ? 1100 : 1400);
+      window.setTimeout(function () { finish(stage); }, mobile ? 1450 : 1800);
     };
     if (!msg || !target || !msg.animate) { chain(); return; }
     var g = stage.getBoundingClientRect(), a = msg.getBoundingClientRect(), b = target.getBoundingClientRect();
