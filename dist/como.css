@@ -68,3 +68,20 @@
   .cx-coord .cx-copy h2 { font-size: clamp(2rem, 8.6vw, 2.5rem); }
   .cx-checks li { font-size: 1rem; }
 }
+
+/* 01 · Contexto (v2): texto sobrio y dashboard ancho */
+.cx-ctx .cx-grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
+.cx-kicker-num { display: inline-flex; align-items: center; gap: 10px; color: #0b0d2b; letter-spacing: .16em; }
+.cx-kicker-num b { color: #4d24ff; font-weight: 500; letter-spacing: 0; }
+.cx-kicker-num span { width: 92px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #b9a8ff, #e8e2ff); }
+.cx-ctx .cx-copy h1 { max-width: 640px; margin: 0 0 26px; font-size: clamp(2.3rem, 3.9vw, 3.5rem); line-height: 1.04; color: #0b0d2b; }
+.cx-ctx .cx-lead { max-width: 520px; }
+.cx-ctx .cx-shot img { max-width: 1222px; border-radius: 0; box-shadow: none; }
+@media (max-width: 1024px) {
+  .cx-ctx .cx-grid { grid-template-columns: 1fr; }
+  .cx-ctx .cx-copy h1, .cx-ctx .cx-lead { max-width: none; }
+}
+@media (max-width: 720px) {
+  .cx-ctx .cx-copy h1 { font-size: clamp(2.1rem, 9vw, 2.6rem); }
+  .cx-kicker-num span { width: 56px; }
+}
