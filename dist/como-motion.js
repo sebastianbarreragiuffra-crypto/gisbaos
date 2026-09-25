@@ -19,20 +19,88 @@
     var steps = (stage.getAttribute('data-steps') || '100').split(',').map(Number);
     var mobile = window.matchMedia && window.matchMedia('(max-width: 720px)').matches;
     stage.classList.add('is-in');
+    var scale = mobile ? 0.8 : 1;
+    if (stage.querySelector('.cx-sg-scan')) window.setTimeout(function () { scan(stage); }, Math.round(350 * scale));
     steps.forEach(function (ms, i) {
       var n = i + 1;
       window.setTimeout(function () {
         stage.setAttribute('data-step', String(n));
         Array.prototype.forEach.call(stage.querySelectorAll('[data-s="' + n + '"]'), function (el) { el.classList.add('on'); });
+        if (n === 2 && stage.querySelector('.cx-sg')) boost(stage);
         if (n === steps.length) {
-          window.setTimeout(function () {
-            Array.prototype.forEach.call(stage.querySelectorAll('[data-s]'), function (el) { el.classList.add('on'); });
-            stage.classList.add('is-done');
-            stage.dispatchEvent(new CustomEvent('cx:done'));
-          }, mobile ? 250 : 450);
+          if (stage.getAttribute('data-causal') === 'coordina') { afterEntry(stage, function () { causal(stage, mobile); }); return; }
+          window.setTimeout(function () { finish(stage); }, mobile ? 250 : 450);
         }
-      }, mobile ? Math.round(ms * 0.8) : ms);
+      }, Math.round(ms * scale));
     });
+  }
+
+  function finish(stage) {
+    Array.prototype.forEach.call(stage.querySelectorAll('[data-s]'), function (el) { el.classList.add('on'); });
+    stage.classList.add('is-done');
+    stage.dispatchEvent(new CustomEvent('cx:done'));
+  }
+
+  /* halo: un solo refuerzo breve de intensidad */
+  function boost(stage) {
+    stage.classList.add('boost');
+    window.setTimeout(function () { stage.classList.remove('boost'); }, 380);
+  }
+
+  /* 02: banda suave que recorre la lista una sola vez */
+  function scan(stage) {
+    var list = stage.querySelector('.cx-sg-list'), band = stage.querySelector('.cx-sg-scan');
+    if (!list || !band || !band.animate) return;
+    var h = list.getBoundingClientRect().height, bh = band.getBoundingClientRect().height || 56;
+    band.animate([
+      { transform: 'translateY(-' + bh + 'px)', opacity: 0 },
+      { opacity: 1, offset: 0.2 },
+      { opacity: 1, offset: 0.75 },
+      { transform: 'translateY(' + (h - bh * 0.4) + 'px)', opacity: 0 }
+    ], { duration: 650, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'none' });
+  }
+
+  /* 04: el pulso nace justo cuando termina la entrada del mensaje del cliente */
+  function afterEntry(stage, cb) {
+    var msg = stage.querySelector('.cx-msg.in'), fired = false;
+    var go = function () { if (fired) return; fired = true; stage.setAttribute('data-step', '3'); cb(); };
+    if (!msg) { go(); return; }
+    msg.addEventListener('transitionend', function h(e) { if (e.target !== msg) return; msg.removeEventListener('transitionend', h); go(); });
+    window.setTimeout(go, 700); /* respaldo */
+  }
+
+  /* 04: un mismo evento: mensaje del cliente -> pulso -> GISBA vincula, registra y define el siguiente paso; al final, la respuesta de la agencia */
+  function causal(stage, mobile) {
+    var msg = stage.querySelector('.cx-msg.in'), target = stage.querySelector('.cx-gp-head');
+    var on = function (n) {
+      stage.setAttribute('data-step', String(n));
+      Array.prototype.forEach.call(stage.querySelectorAll('[data-s="' + n + '"]'), function (el) { el.classList.add('on'); });
+    };
+    var chain = function () {
+      on(4); boost(stage);
+      window.setTimeout(function () { on(5); }, mobile ? 380 : 480);
+      window.setTimeout(function () { on(6); }, mobile ? 760 : 960);
+      window.setTimeout(function () { on(7); }, mobile ? 1100 : 1400);
+      window.setTimeout(function () { finish(stage); }, mobile ? 1450 : 1800);
+    };
+    if (!msg || !target || !msg.animate) { chain(); return; }
+    var g = stage.getBoundingClientRect(), a = msg.getBoundingClientRect(), b = target.getBoundingClientRect();
+    var horizontal = b.left > a.right - 8;
+    var x0 = (horizontal ? a.right : a.left + a.width / 2) - g.left, y0 = (horizontal ? a.top + a.height / 2 : a.bottom) - g.top;
+    var x1 = (horizontal ? b.left + 22 : b.left + 30) - g.left, y1 = (horizontal ? b.top + b.height / 2 : b.top + b.height / 2) - g.top;
+    var dot = document.createElement('i');
+    dot.className = 'cx-pulse'; dot.setAttribute('aria-hidden', 'true');
+    stage.appendChild(dot);
+    var anim = dot.animate([
+      { transform: 'translate(' + x0 + 'px,' + y0 + 'px) scale(.5)', opacity: 0 },
+      { transform: 'translate(' + (x0 + (x1 - x0) * 0.12) + 'px,' + (y0 + (y1 - y0) * 0.12) + 'px) scale(1)', opacity: 1, offset: 0.12 },
+      { transform: 'translate(' + (x0 + (x1 - x0) * 0.92) + 'px,' + (y0 + (y1 - y0) * 0.92) + 'px) scale(1)', opacity: 1, offset: 0.92 },
+      { transform: 'translate(' + x1 + 'px,' + y1 + 'px) scale(.5)', opacity: 0 }
+    ], { duration: mobile ? 550 : 750, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'forwards' });
+    var arrived = false;
+    var arrive = function () { if (arrived) return; arrived = true; if (dot.parentNode) dot.parentNode.removeChild(dot); chain(); };
+    if (anim.finished && anim.finished.then) anim.finished.then(arrive, arrive); else anim.onfinish = arrive;
+    window.setTimeout(arrive, (mobile ? 550 : 750) + 400); /* respaldo si la animación no llega a terminar (p. ej. pestaña en segundo plano) */
   }
 
   if (!('IntersectionObserver' in window)) { stages.forEach(showAll); }
@@ -77,6 +145,24 @@
       row.addEventListener('click', function () { focusRow(row); });
       row.addEventListener('mouseenter', function () { if (window.matchMedia('(hover: hover)').matches) focusRow(row); });
       row.addEventListener('focus', function () { focusRow(row); });
+    });
+  }
+
+  /* ---- 03 · Decide: solo una elección humana registra la decisión ---- */
+  var dc = document.querySelector('.cx-dc');
+  if (dc) {
+    var opts = Array.prototype.slice.call(dc.querySelectorAll('.cx-opt'));
+    var done = dc.querySelector('.cx-dc-done');
+    var who = dc.querySelector('[data-d="who"]');
+    var verb = { Aprobar: 'Aprobar', Ajustar: 'Ajustar', Descartar: 'Descartar' };
+    opts.forEach(function (o) {
+      o.addEventListener('click', function () {
+        var c = o.getAttribute('data-choice');
+        opts.forEach(function (x) { var on = x === o; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+        dc.classList.add('has-choice');
+        if (who) who.textContent = 'La agencia eligió: ' + verb[c] + '.';
+        if (done && done.hidden) { done.hidden = false; if (!reduce) { done.classList.remove('cx-in'); void done.offsetWidth; done.classList.add('cx-in'); } }
+      });
     });
   }
 })();

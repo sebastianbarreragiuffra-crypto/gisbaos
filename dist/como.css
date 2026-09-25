@@ -74,7 +74,6 @@
 .cx-coord .cx-copy h2 { max-width: 460px; margin: 0 0 24px; font-size: clamp(2.2rem, 3.4vw, 3.2rem); line-height: 1.05; color: var(--ink); }
 .cx-coord .cx-lead { max-width: 430px; }
 .cx-wa { margin: 0; min-width: 0; }
-.cx-wa img { display: block; width: 100%; max-width: 404px; height: auto; margin-inline: auto; image-rendering: auto; }
 .cx-link { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: var(--violet); background: #fff; box-shadow: 0 8px 22px rgba(91,44,255,.16), inset 0 0 0 1px #e3dcff; }
 .cx-gp { min-width: 0; padding: 22px 24px 24px; border: 1px solid #e3dcff; border-radius: 22px; background: linear-gradient(180deg, #fff, var(--canvas)); box-shadow: 0 34px 70px rgba(91,44,255,.14); }
 .cx-gp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #ece8fb; }
@@ -97,7 +96,6 @@
 }
 @media (max-width: 820px) {
   .cx-coord-grid { grid-template-columns: minmax(0, 1fr); }
-  .cx-wa img { max-width: 360px; }
 }
 @media (max-width: 720px) {
   .cx-coord .cx-copy h2 { font-size: clamp(2rem, 8.6vw, 2.5rem); }

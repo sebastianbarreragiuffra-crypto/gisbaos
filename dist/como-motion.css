@@ -164,3 +164,29 @@
 @media (min-width: 1025px) {
   .cx-detect { padding: 96px 0 108px; }
 }
+
+/* ---------- Capas ambientales funcionales (sutiles) ---------- */
+.cx-detect .cx-shot { position: relative; }
+.cx-detect .cx-shot::before { content: ""; position: absolute; inset: -8% -6% -10% -6%; z-index: 0; pointer-events: none; background: radial-gradient(52% 52% at 55% 48%, rgba(91,44,255,.10), transparent 72%); }
+.cx-detect .cx-sg { position: relative; z-index: 1; }
+.cx-cta { position: relative; overflow: hidden; }
+.cx-cta::before { content: ""; position: absolute; left: 50%; top: -55%; width: 900px; max-width: 120%; height: 520px; transform: translateX(-50%); pointer-events: none; background: radial-gradient(closest-side, rgba(91,44,255,.20), transparent); }
+.cx-cta-inner { position: relative; }
+/* 04: la conexión pertenece a la interacción (línea fina + un solo pulso) */
+.cx-link::before, .cx-link::after { content: ""; position: absolute; top: 50%; width: 30px; height: 2px; margin-top: -1px; pointer-events: none; }
+.cx-link::before { right: 100%; background: linear-gradient(90deg, transparent, #cdbfff); }
+.cx-link::after { left: 100%; background: linear-gradient(90deg, #cdbfff, transparent); }
+@keyframes cxPulse { 0% { box-shadow: 0 8px 22px rgba(91,44,255,.16), inset 0 0 0 1px #e3dcff, 0 0 0 0 rgba(91,44,255,.35); } 100% { box-shadow: 0 8px 22px rgba(91,44,255,.16), inset 0 0 0 1px #e3dcff, 0 0 0 14px rgba(91,44,255,0); } }
+.js [data-stage]:is([data-step="3"],[data-step="4"],[data-step="5"],[data-step="6"],[data-step="9"]) .cx-link { animation: cxPulse 1s ease-out 1 both; }
+@media (max-width: 820px) {
+  .cx-coord-grid .cx-link { display: grid; justify-self: center; margin: -10px 0; }
+  .cx-coord-grid .cx-link svg { transform: rotate(90deg); }
+  .cx-link::before, .cx-link::after { display: none; }
+}
+@media (max-width: 720px) {
+  .cx-detect .cx-shot::before, .cx-cta::before { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js [data-stage] .cx-link { animation: none !important; }
+}
+@media (max-width: 1024px) { .cx-section .cx-link { order: 2; } }
