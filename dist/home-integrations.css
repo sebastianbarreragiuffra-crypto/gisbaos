@@ -1,0 +1,23 @@
+/* Home: sección Integraciones compacta (grilla + próximamente discreto). Hoja propia de index.html */
+#integraciones.integrations-status { padding-block: 72px 76px; }
+#integraciones .integrations-status-shell { gap: 30px; }
+.int-main { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.int-main article { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: center; column-gap: 14px; row-gap: 6px; padding: 20px 22px; border: 1px solid #e6e2f7; border-radius: 20px; background: #fff; box-shadow: 0 12px 30px rgba(48,35,111,.07); }
+.int-main img { grid-row: span 2; width: 40px; height: 40px; object-fit: contain; }
+.int-main strong { align-self: end; color: #111432; font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 1rem; font-weight: 600; line-height: 1.2; }
+.int-main small, .int-soon small { justify-self: start; align-self: start; padding: 4px 10px; border-radius: 999px; font: 600 .72rem/1.2 Inter, "Segoe UI", Arial, sans-serif; }
+.int-main .is-available { color: #087b48; background: #e6f7ee; }
+.int-main .is-configurable { color: #5934e9; background: #efeaff; }
+.int-soon { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.int-soon p { margin: 0; color: #7a8097; font: 600 .72rem/1 Inter, "Segoe UI", Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.int-soon ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.int-soon li { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px solid #ebebf3; border-radius: 999px; color: #7a8097; background: #f6f6fa; font: 500 .82rem/1 Inter, "Segoe UI", Arial, sans-serif; }
+.int-soon li img { width: 16px; height: 16px; object-fit: contain; filter: grayscale(1); opacity: .6; }
+@media (max-width: 1024px) { .int-main { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  #integraciones.integrations-status { padding-block: 52px 56px; }
+  .int-main { display: flex; gap: 12px; margin-inline: -24px; padding: 4px 24px 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .int-main::-webkit-scrollbar { display: none; }
+  .int-main article { flex: 0 0 210px; scroll-snap-align: start; }
+  .int-soon { display: grid; gap: 10px; }
+}
