@@ -14,7 +14,7 @@
   .int-strip { padding: 22px 0 20px; }
   .int-strip .container { justify-items: stretch; }
   .int-strip-label, .int-strip-note { text-align: left; }
-  .int-strip-list { flex-wrap: nowrap; justify-content: flex-start; margin-inline: -24px; padding: 2px 24px 6px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .int-strip-list { flex-wrap: nowrap; justify-content: flex-start; margin-inline: -14px; padding: 2px 14px 6px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .int-strip-list::-webkit-scrollbar { display: none; }
   .int-strip-list li { flex: 0 0 auto; scroll-snap-align: start; }
 }
