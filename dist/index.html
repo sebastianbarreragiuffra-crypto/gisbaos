@@ -23,6 +23,7 @@
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="styles.css?v=89">
   <link rel="stylesheet" href="whatsapp-section.css?v=6">
+  <link rel="stylesheet" href="home-hero.css?v=1">
   <script src="script.js?v=21" defer></script>
 </head>
 <body class="home-page">
@@ -58,86 +59,34 @@
   </header>
 
   <main id="contenido">
-        <section id="inicio" class="hero motion-hero" aria-labelledby="motion-hero-title">
-      <div class="container motion-hero-shell reveal">
-        <div class="sr-only motion-hero-mobile-copy">
-          <p>Para agencias de marketing</p>
-          <h1 id="motion-hero-title">Escala tu agencia <em>sin multiplicar el trabajo operativo.</em></h1>
-          <p>Centraliza clientes, campañas y decisiones. GISBA detecta qué necesita atención, recomienda qué hacer y mantiene a tu equipo y clientes coordinados.</p>
-          <div class="motion-hero-mobile-actions">
+        <section id="inicio" class="hh" aria-labelledby="hh-title">
+      <div class="container hh-grid">
+        <div class="hh-copy">
+          <p class="hh-eyebrow">Software para agencias de marketing</p>
+          <h1 id="hh-title">Escala tu agencia <em>sin multiplicar el trabajo operativo.</em></h1>
+          <p class="hh-lead">Centraliza clientes, campañas y decisiones. GISBA detecta qué necesita atención, recomienda qué hacer y mantiene a tu equipo y clientes coordinados.</p>
+          <div class="hh-actions">
             <a class="button button-solid" href="#contacto" data-cta="demo" data-event="demo_cta_click" data-location="hero">Agenda una demo <span aria-hidden="true">→</span></a>
             <a class="button button-ghost" href="#como-funciona" data-event="how_it_works_click" data-location="hero"><span class="play-icon" aria-hidden="true">▶</span> Ver cómo funciona</a>
           </div>
         </div>
-
-        <div class="motion-hero-canvas">
-          <img class="motion-hero-image" src="assets/gisba-hero-motion.jpg" width="1280" height="511" fetchpriority="high" alt="GISBA OS con un panel operativo que prioriza alertas, aprobaciones y tareas para agencias de marketing.">
-
-          <p class="motion-hero-copy-overlay">Centraliza clientes, campañas y decisiones. GISBA detecta qué necesita atención, recomienda qué hacer y mantiene a tu equipo y clientes coordinados.</p>
-
-          <a class="motion-hero-link motion-hero-demo" href="#contacto" data-cta="demo" data-event="demo_cta_click" data-location="hero"><span class="sr-only">Agenda una demo</span></a>
-          <a class="motion-hero-link motion-hero-how" href="#como-funciona" data-event="how_it_works_click" data-location="hero"><span class="sr-only">Ver cómo funciona</span></a>
-
-          <div class="motion-dashboard" aria-label="Demostración animada del flujo de GISBA OS">
-            <article class="motion-state motion-state-1">
-              <div class="motion-state-heading">
-                <span class="motion-state-spark" aria-hidden="true">✦</span>
-                <div><strong>GISBA Pulse</strong><small>Prioridades para hoy</small></div>
+        <div class="hh-visual" role="img" aria-label="Vista de ejemplo de GISBA OS: GISBA Pulse prioriza qué cuenta necesita atención, muestra una alerta de rendimiento y registra una aprobación en el historial.">
+          <div class="hh-app">
+            <div class="hh-bar"><div class="hh-bar-l"><img src="assets/gisba-os-brand-banner-v5.png" width="2172" height="724" alt=""><span>Hoy</span></div><span class="hh-bar-r">Vista de ejemplo</span></div>
+            <div class="hh-body">
+              <div class="hh-panel">
+                <div class="hh-panel-h"><span class="hh-spark" aria-hidden="true">✦</span><div><strong>GISBA Pulse</strong><small>Prioridades para hoy</small></div></div>
+                <ul class="hh-prio">
+                  <li><span class="hh-pi a" aria-hidden="true">▥</span><div><strong>Kozan Digital</strong><small>Rendimiento cayó 18% en 7 días.</small></div><b>Revisar →</b></li>
+                  <li><span class="hh-pi p" aria-hidden="true">▤</span><div><strong>Virel Estrategia</strong><small>Presupuesto esperando aprobación.</small></div><b>Ver decisión →</b></li>
+                  <li><span class="hh-pi r" aria-hidden="true">✓</span><div><strong>Nimwo Marketing</strong><small>Reporte mensual listo.</small></div><b>Enviar →</b></li>
+                </ul>
               </div>
-              <div class="motion-priority motion-priority-alert">
-                <span class="motion-priority-icon" aria-hidden="true">▥</span>
-                <div><strong>Kozan Digital</strong><small>Rendimiento cayó 18% en 7 días.</small></div>
-                <b>Revisar →</b>
+              <div class="hh-side">
+                <div class="hh-card alert"><small><i></i>Alerta nueva</small><strong>El rendimiento cayó 18% en los últimos 7 días.</strong><p>Campaña Meta Ads · Kozan Digital. Conviene revisar presupuesto y segmentación antes de continuar.</p></div>
+                <div class="hh-card ok"><small><i></i>Aprobación registrada</small><strong>Aumento de presupuesto +15%</strong><p>Cliente: Virel Estrategia</p><div class="hh-flow"><span>Pendiente</span><i aria-hidden="true">→</i><b>Aprobado</b></div><p class="hh-note">✓ Cambio guardado en el historial</p></div>
               </div>
-              <div class="motion-priority motion-priority-pending">
-                <span class="motion-priority-icon" aria-hidden="true">▤</span>
-                <div><strong>Virel Estrategia</strong><small>Presupuesto esperando aprobación.</small></div>
-                <b>Ver decisión →</b>
-              </div>
-              <div class="motion-priority motion-priority-ready">
-                <span class="motion-priority-icon" aria-hidden="true">✓</span>
-                <div><strong>Nimwo Marketing</strong><small>Reporte mensual listo.</small></div>
-                <b>Enviar →</b>
-              </div>
-            </article>
-
-            <article class="motion-state motion-state-2">
-              <div class="motion-state-heading">
-                <span class="motion-state-spark motion-state-spark-alert" aria-hidden="true">!</span>
-                <div><strong>Alerta nueva</strong><small>GISBA detectó un cambio relevante</small></div>
-                <em>Requiere atención</em>
-              </div>
-              <div class="motion-focus-card motion-focus-alert">
-                <span class="motion-focus-icon" aria-hidden="true">↘</span>
-                <div><small>CAMPAÑA META ADS · KOZAN DIGITAL</small><strong>El rendimiento cayó 18% en los últimos 7 días.</strong><p>Conviene revisar presupuesto y segmentación antes de continuar.</p></div>
-              </div>
-              <span class="motion-state-action" aria-hidden="true">Revisar campaña <span>→</span></span>
-            </article>
-
-            <article class="motion-state motion-state-3">
-              <div class="motion-state-heading">
-                <span class="motion-state-spark motion-state-spark-success" aria-hidden="true">✓</span>
-                <div><strong>Aprobación registrada</strong><small>La decisión quedó guardada</small></div>
-              </div>
-              <div class="motion-focus-card motion-focus-approval">
-                <span class="motion-focus-icon" aria-hidden="true">$</span>
-                <div><small>PRESUPUESTO DE CAMPAÑA</small><strong>Aumento de presupuesto +15%</strong><p>Cliente: Virel Estrategia</p></div>
-              </div>
-              <div class="motion-status-change"><span>Pendiente</span><i aria-hidden="true">→</i><strong>Aprobado</strong></div>
-              <p class="motion-confirmation">✓ Cambio guardado en el historial</p>
-            </article>
-
-            <article class="motion-state motion-state-4">
-              <div class="motion-state-heading">
-                <span class="motion-state-spark" aria-hidden="true">⚡</span>
-                <div><strong>Seguimiento listo</strong><small>La decisión ya tiene un siguiente paso</small></div>
-              </div>
-              <div class="motion-focus-card motion-focus-task">
-                <span class="motion-focus-icon" aria-hidden="true">✓</span>
-                <div><small>TAREA CREADA PARA EL EQUIPO</small><strong>Aplicar ajuste de presupuesto (+15%)</strong><p>Responsable: Equipo de campañas · Hoy</p></div>
-              </div>
-              <div class="motion-task-footer"><span>Listo para ejecutar</span><b>Ver tarea →</b></div>
-            </article>
+            </div>
           </div>
         </div>
       </div>
