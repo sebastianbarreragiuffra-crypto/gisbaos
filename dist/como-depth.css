@@ -61,3 +61,9 @@
 
 /* el pulso viaja desde el mensaje: el circulo de conexion no pulsa por separado */
 .js [data-stage] .cx-link { animation: none !important; }
+
+/* QA fix: las tarjetas «Por qué importa» / «Recomendación» quedaban de ~100px de texto y cortaban «Recomendación» */
+.cx-sg-box { grid-template-columns: minmax(0, 1fr); gap: 8px; align-content: start; }
+.cx-sg-box .cx-bi { width: 28px; height: 28px; border-radius: 9px; }
+.cx-sg-box .cx-bi svg { width: 16px; height: 16px; }
+.cx-sg-box small, .cx-sg-box p { overflow-wrap: anywhere; }
