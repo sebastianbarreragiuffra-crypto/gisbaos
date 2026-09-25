@@ -866,23 +866,6 @@ body.home-page::before { display: none; }
 @keyframes dashboard-marker-pulse { 0% { opacity: .8; transform: scale(.72); } 75%,100% { opacity: 0; transform: scale(1.35); } }
 @keyframes dashboard-hint-pulse { 0% { box-shadow: 0 0 0 0 rgba(90,47,255,.24); } 70%,100% { box-shadow: 0 0 0 8px rgba(90,47,255,0); } }
 
-.integration-marquee { position: relative; overflow: hidden; padding: 24px 0; border-block: 1px solid #ebeaf3; background: #fff; scroll-margin-top: 78px; }
-.integration-marquee::before,.integration-marquee::after { content: ""; position: absolute; z-index: 2; top: 0; bottom: 0; width: min(9vw,130px); pointer-events: none; }
-.integration-marquee::before { left: 0; background: linear-gradient(90deg,#fff,rgba(255,255,255,0)); }
-.integration-marquee::after { right: 0; background: linear-gradient(270deg,#fff,rgba(255,255,255,0)); }
-.integration-marquee-window { width: 100%; overflow: hidden; }
-.integration-track { display: flex; width: max-content; will-change: transform; animation: integration-scroll-right 38s linear infinite; }
-.integration-marquee:hover .integration-track,.integration-marquee:focus-within .integration-track { animation-play-state: paused; }
-.integration-list { display: flex; align-items: center; gap: 48px; margin: 0; padding: 0 48px 0 0; list-style: none; }
-.integration-list li { min-width: max-content; display: inline-flex; align-items: center; gap: 11px; color: #222641; font-size: .88rem; font-weight: 700; white-space: nowrap; }
-.integration-list img { width: 30px; height: 30px; object-fit: contain; }
-.integration-list li { opacity: .62; transition: opacity .22s ease, transform .22s ease; }
-.integration-list li:hover { opacity: 1; transform: translateY(-2px); }
-@keyframes integration-scroll-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-
-@media (prefers-reduced-motion: reduce) {
-  .integration-track { animation: none; transform: none; }
-}
 
 .brand-banner { position: relative; overflow: hidden; border-block: 1px solid #ecebf5; background: linear-gradient(110deg,#faf9ff 0%,#fff 48%,#f5f2ff 100%); }
 .brand-banner::before { content: ""; position: absolute; width: 460px; height: 460px; left: 50%; top: 50%; border-radius: 50%; background: radial-gradient(circle,rgba(102,64,255,.12),transparent 68%); transform: translate(-50%,-50%); pointer-events: none; }
@@ -1492,10 +1475,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   .real-operations-strip { grid-template-columns: 1fr; margin-top: 34px; }
   .real-operations-strip h3 { grid-column: auto; }
   .real-operations-strip article,.real-operations-strip article:nth-of-type(4) { border-top: 1px solid #e2e0ed; border-left: 0; }
-  .integration-marquee { padding-block: 19px; }
-  .integration-list { gap: 34px; padding-right: 34px; }
-  .integration-list li { gap: 9px; font-size: .8rem; }
-  .integration-list img { width: 27px; height: 27px; }
 }
 
 /* Hero oficial GISBA OS: composición fija con prototipo animado dentro del dashboard */
@@ -1918,14 +1897,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   line-height: 1.52;
 }
 
-.integrations-status {
-  padding: 86px 0 94px;
-  border-block: 1px solid #eeecf7;
-  background: linear-gradient(180deg,#fff 0%,#faf9ff 100%);
-}
-.integrations-status-shell { display: grid; gap: 38px; }
-.integrations-status-heading { max-width: 760px; }
-.integrations-status-heading h2,
 .pulse-copy h2,
 .decision-flow-heading h2,
 .landing-faq h2 {
@@ -1937,7 +1908,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   line-height: 1.04;
   letter-spacing: -.05em;
 }
-.integrations-status-heading > p:last-child,
 .pulse-copy > p,
 .landing-faq .faq-intro > p:last-child,
 .decision-flow-heading > p:last-child {
@@ -1947,36 +1917,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
   line-height: 1.65;
 }
 .decision-flow-heading > p:last-child { margin-top: 4px; }
-.integration-status-grid {
-  display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
-  gap: 14px;
-}
-.integration-status-grid article {
-  display: grid;
-  grid-template-columns: 42px minmax(0,1fr) auto;
-  align-items: center;
-  gap: 12px;
-  min-height: 82px;
-  padding: 18px 20px;
-  border: 1px solid #e5e1f5;
-  border-radius: 18px;
-  background: rgba(255,255,255,.94);
-  box-shadow: 0 14px 32px rgba(55,40,135,.055);
-}
-.integration-status-grid img { width: 34px; height: 34px; object-fit: contain; }
-.integration-status-grid strong { color: #111432; font-size: .94rem; }
-.integration-status-grid small {
-  padding: 6px 8px;
-  border-radius: 999px;
-  font-size: .64rem;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-}
-.integration-status-grid .is-available { color: #087b48; background: #dcf8e9; }
-.integration-status-grid .is-configurable { color: #5934e9; background: #eee9ff; }
-.integration-status-grid .is-upcoming { color: #7a8097; background: #f0f1f5; }
 
 .gisba-pulse {
   overflow: hidden;
@@ -2248,7 +2188,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 }
 
 @media (max-width: 1040px) {
-  .integration-status-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .pulse-grid { grid-template-columns: 1fr; }
   .pulse-copy { max-width: 700px; }
   .decision-flow-steps { grid-template-columns: repeat(2,minmax(0,1fr)); }
@@ -2258,19 +2197,16 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 @media (max-width: 780px) {
   .nav-login { padding: 13px; color: #15162e; }
   .motion-hero-copy-overlay { display: none; }
-  .integrations-status,.gisba-pulse,.decision-flow,.whatsapp-coordination,.landing-faq,.landing-testimonials { padding: 68px 0; }
+  .gisba-pulse,.decision-flow,.whatsapp-coordination,.landing-faq,.landing-testimonials { padding: 68px 0; }
   .decision-flow { padding-bottom: 32px; }
   .client-experience.client-experience-image { padding-top: 32px; padding-bottom: 32px; }
   .landing-faq { padding-top: 36px; }
-  .integrations-status-heading h2,.pulse-copy h2,.decision-flow-heading h2,.landing-faq h2,.testimonials-heading h2 { font-size: clamp(2rem,10.2vw,2.85rem); }
+  .pulse-copy h2,.decision-flow-heading h2,.landing-faq h2,.testimonials-heading h2 { font-size: clamp(2rem,10.2vw,2.85rem); }
   .testimonials-heading { margin-bottom: 34px; }
   .testimonial-grid { grid-template-columns: 1fr; gap: 16px; }
   .testimonial-card { padding: 26px 26px 24px; }
   .testimonial-footer-row { flex-direction: column; gap: 14px; margin-top: 28px; text-align: center; }
   .testimonial-arrows { display: none; }
-  .integration-status-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
-  .integration-status-grid article { grid-template-columns: 34px minmax(0,1fr); gap: 10px; min-height: 96px; padding: 14px; }
-  .integration-status-grid article small { grid-column: 2; justify-self: start; }
   .pulse-panel { padding: 24px 20px 38px; }
   .pulse-panel-head { align-items: flex-start; }
   .pulse-priority { font-size: .64rem; }
@@ -2288,9 +2224,6 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 }
 
 @media (max-width: 480px) {
-  .integration-status-grid article { min-height: 106px; padding: 12px 10px; }
-  .integration-status-grid strong { font-size: .8rem; }
-  .integration-status-grid small { padding: 5px 6px; font-size: .58rem; }
   .pulse-actions { grid-template-columns: 1fr; }
 }
 
@@ -2405,7 +2338,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 
 /* RESTO: encabezados más ligeros que los bloques de producto */
 .section-heading.reveal, .faq-intro.reveal, .pulse-copy.reveal, .dashboard-business-heading.reveal,
-.gisba-pillars-heading.reveal, .decision-flow-heading.reveal, .integrations-status-heading.reveal { --motion-distance: 8px; --motion-reveal: .24s; }
+.gisba-pillars-heading.reveal, .decision-flow-heading.reveal { --motion-distance: 8px; --motion-reveal: .24s; }
 
 /* Microinteracciones de escritorio: 1-2 px, 160 ms; nada de hover en táctil */
 @media (hover: hover) and (pointer: fine) {
