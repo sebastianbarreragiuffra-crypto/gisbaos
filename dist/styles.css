@@ -2637,3 +2637,5 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
   .about-founders-frame { aspect-ratio: 1 / .92; }
   .about-founders-names { font-size: .78rem; }
 }
+.about-founders-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(139,92,255,.06), rgba(13,14,43,.16)); }
+.about-founders-frame img { filter: saturate(.92) contrast(1.02); }
