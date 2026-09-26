@@ -132,6 +132,8 @@ document.querySelectorAll('details').forEach((detail) => {
 const form = document.querySelector('[data-contact-form]');
 const result = document.querySelector('[data-form-result]');
 
+if (DEMO_BOOKING_URL) form?.setAttribute('novalidate', '');
+
 form?.addEventListener('submit', async (event) => {
   event.preventDefault();
   if (DEMO_BOOKING_URL) {
