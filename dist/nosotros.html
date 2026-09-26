@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nosotros | GISBA</title>
+  <title>Nosotros | GISBA OS</title>
   <meta name="description" content="Conoce GISBA: una agencia de marketing y tecnología que conecta estrategia, campañas, atención comercial y resultados.">
   <meta name="theme-color" content="#ffffff">
-  <meta property="og:title" content="Nosotros | GISBA">
+  <meta property="og:title" content="Nosotros | GISBA OS">
   <meta property="og:description" content="Construimos una forma más clara y conectada de operar el marketing.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080712'/%3E%3Cpath d='M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z' fill='%238a5cff'/%3E%3C/svg%3E">
-  <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="styles.css?v=91">
-  <script src="script.js?v=21" defer></script>
+  <script>document.documentElement.classList.add("js");window.__gisbaRevealFallback=window.setTimeout(function(){document.documentElement.classList.remove("js")},4000)</script>
+  <link rel="stylesheet" href="styles.css?v=94">
+  <script src="script.js?v=25" defer onerror="clearTimeout(window.__gisbaRevealFallback);document.documentElement.classList.remove('js')"></script>
 </head>
 <body class="inner-page about-page">
   <svg class="shape-defs" aria-hidden="true" focusable="false">
@@ -51,7 +51,7 @@
           <p class="eyebrow"><span></span> Nosotros</p>
           <h1 id="about-title">Estrategia para crecer.<br><em>Tecnología para hacerlo posible.</em></h1>
           <p class="hero-lead">Somos GISBA. Unimos marketing, desarrollo comercial y software para ayudar a las empresas a atraer clientes, simplificar procesos y convertir sus necesidades en soluciones reales.</p>
-          <a class="button button-solid" href="index.html#contacto">Conversemos <span aria-hidden="true">→</span></a>
+          <a class="button button-solid" href="index.html#contacto" data-cta="demo" data-event="demo_cta_click" data-location="hero">Conversemos <span aria-hidden="true">→</span></a>
         </div>
         <div class="about-image-placeholder reveal" role="img" aria-label="Espacio reservado para una fotografía del equipo GISBA">
           <span>Imagen</span>
@@ -111,7 +111,7 @@
           <h2>Conoce a GISBA y cuéntanos qué quieres construir.</h2>
         </div>
         <div class="cta-stack">
-          <a class="button button-solid" href="index.html#contacto">Agendar una conversación</a>
+          <a class="button button-solid" href="index.html#contacto" data-cta="demo" data-event="demo_cta_click" data-location="final">Agendar una conversación</a>
         </div>
       </div>
     </section>
@@ -125,7 +125,7 @@
           <h2 id="closing-title">Marketing que no<br><em>termina en el lead.</em></h2>
           <p>GISBA OS conecta lo que tu agencia genera con lo que ocurre después: conversaciones, oportunidades, seguimiento y resultados.</p>
           <div class="closing-actions">
-            <a class="button button-solid" href="index.html#contacto">Agenda una demo <span aria-hidden="true">→</span></a>
+            <a class="button button-solid" href="index.html#contacto" data-cta="demo" data-event="demo_cta_click" data-location="final">Agenda una demo <span aria-hidden="true">→</span></a>
             <a class="closing-demo-link" href="index.html#como-funciona"><span aria-hidden="true">▶</span> Ver cómo funciona</a>
           </div>
           <ul class="closing-proof" aria-label="Condiciones de la demostración">
@@ -165,9 +165,8 @@
         <p>El sistema operativo para agencias que quieren escalar con más control.</p>
       </div>
       <nav class="closing-links" aria-label="Enlaces del pie de página">
-        <div><strong>Producto</strong><a href="index.html#como-funciona">Cómo funciona</a><a href="servicios.html">Para agencias</a><a href="index.html#experiencia-cliente">Experiencia del cliente</a><a href="index.html#contacto">Solicitar demo</a></div>
-        <div><strong>Empresa</strong><a href="servicios.html">Servicios</a><a href="como-trabajamos.html">Cómo trabajamos</a><a href="nosotros.html">Nosotros</a><a href="index.html#contacto">Contacto</a></div>
-        <div><strong>Recursos</strong><a href="preguntas.html">Preguntas</a><a href="servicios.html">Marketing B2B</a><a href="servicios.html">CampaignOS</a><a href="index.html#contacto">Agenda una demo</a></div>
+        <div><strong>Producto</strong><a href="servicios.html">Producto</a><a href="como-trabajamos.html">Cómo funciona</a><a href="precios.html">Precios</a><a href="index.html#experiencia-cliente">Experiencia del cliente</a></div>
+        <div><strong>Empresa</strong><a href="nosotros.html">Nosotros</a><a href="preguntas.html">Preguntas frecuentes</a><a href="index.html#contacto">Contacto</a><a href="index.html#contacto" data-cta="demo" data-event="demo_cta_click" data-location="footer">Solicitar demo</a></div>
       </nav>
       <p class="closing-copyright">© <span data-year></span> GISBA OS. Todos los derechos reservados.</p>
     </div>
