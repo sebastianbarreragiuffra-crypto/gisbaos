@@ -117,8 +117,8 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
   });
 }
 
-// Solo habilita los estados ocultos cuando todos los reveals ya tienen un fallback u observer.
-document.documentElement.classList.add('reveal-ready');
+// El marcador temprano ya ocultó los reveals antes del primer paint; cancela su fail-safe.
+window.clearTimeout(window.__gisbaRevealFallback);
 
 document.querySelectorAll('details').forEach((detail) => {
   detail.addEventListener('toggle', () => {
