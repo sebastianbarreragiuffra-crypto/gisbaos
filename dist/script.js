@@ -163,27 +163,15 @@ form?.querySelectorAll('input[name="interes"]').forEach((input) => {
   input.addEventListener('change', () => form.querySelector('input[name="interes"]')?.setCustomValidity(''));
 });
 
-const productStory = document.querySelector('[data-product-story]');
+/* "Así lo ve tu cliente": navegacion manual entre las 4 vistas, sin autoplay */
+const clientStoryTabs = document.querySelector('.client-story-tabs');
+const clientStoryStage = document.querySelector('.client-story-stage[data-product-story]');
 
-if (productStory) {
-  const tabs = [...productStory.querySelectorAll('[data-story-tab]')];
-  const panels = [...productStory.querySelectorAll('[data-story-panel]')];
-  const progress = productStory.querySelector('.client-story-progress span');
-  const storyStage = productStory.querySelector('.client-story-stage');
-  const interval = 6000;
-  let activeIndex = 0;
-  let timer;
-  let paused = reducedMotion;
+if (clientStoryTabs && clientStoryStage) {
+  const tabs = [...clientStoryTabs.querySelectorAll('[data-story-tab]')];
+  const panels = [...clientStoryStage.querySelectorAll('[data-story-panel]')];
 
-  const restartProgress = () => {
-    if (!progress || reducedMotion) return;
-    progress.style.animation = 'none';
-    progress.offsetHeight;
-    progress.style.animation = `client-story-progress ${interval}ms linear both`;
-  };
-
-  const showStory = (index, restartTimer = true) => {
-    activeIndex = index;
+  const showStory = (index) => {
     tabs.forEach((tab, tabIndex) => {
       const isActive = tabIndex === index;
       tab.classList.toggle('active', isActive);
@@ -192,36 +180,27 @@ if (productStory) {
     });
     panels.forEach((panel, panelIndex) => {
       const isActive = panelIndex === index;
-      panel.classList.toggle('active', isActive);
-      panel.setAttribute('aria-hidden', String(!isActive));
+      if (isActive) {
+        panel.hidden = false;
+        panel.classList.add('active');
+        if (!reducedMotion) {
+          panel.classList.remove('entering');
+          void panel.offsetWidth;
+          panel.classList.add('entering');
+        }
+      } else {
+        panel.hidden = true;
+        panel.classList.remove('active', 'entering');
+      }
     });
-    storyStage?.classList.toggle('is-wide', index === 2);
-    restartProgress();
-    if (restartTimer && !paused) scheduleNext();
-  };
-
-  const scheduleNext = () => {
-    window.clearTimeout(timer);
-    if (paused) return;
-    timer = window.setTimeout(() => {
-      showStory((activeIndex + 1) % panels.length, false);
-      scheduleNext();
-    }, interval);
-  };
-
-  const setPaused = (value) => {
-    paused = reducedMotion || value;
-    productStory.classList.toggle('paused', paused);
-    if (paused) window.clearTimeout(timer);
-    else scheduleNext();
   };
 
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => showStory(index));
     tab.addEventListener('keydown', (event) => {
       let nextIndex = index;
-      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
-      else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + tabs.length) % tabs.length;
       else if (event.key === 'Home') nextIndex = 0;
       else if (event.key === 'End') nextIndex = tabs.length - 1;
       else return;
@@ -230,14 +209,6 @@ if (productStory) {
       tabs[nextIndex].focus();
     });
   });
-  productStory.addEventListener('mouseenter', () => setPaused(true));
-  productStory.addEventListener('mouseleave', () => setPaused(false));
-  productStory.addEventListener('focusin', () => setPaused(true));
-  productStory.addEventListener('focusout', (event) => {
-    if (!productStory.contains(event.relatedTarget)) setPaused(false);
-  });
-  document.addEventListener('visibilitychange', () => setPaused(document.hidden));
-  if (!reducedMotion) scheduleNext();
 }
 
 const dashboardSwitcher = document.querySelector('[data-dashboard-switcher]');
