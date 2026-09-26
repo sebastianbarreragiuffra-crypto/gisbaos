@@ -729,7 +729,9 @@ details p { max-width: 700px; padding: 0 45px 25px 0; color: var(--muted); }
 .about-team-heading-centered h2 { max-width: none; margin-bottom: 14px; color: #0B1028; font-size: clamp(2.05rem,3.2vw,2.9rem); }
 .about-team-heading-centered h2 .accent-violet { color: #5B2CFF; }
 .about-team-heading-centered > p:last-child { max-width: none; margin: 0; color: #5F687A; font-size: 1.02rem; line-height: 1.65; }
-.team-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.team-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.team-photo-spencer img { object-position: 52% 30%; }
+@media (max-width: 1180px) { .team-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .team-grid > .team-card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 12px); } }
 .team-photo-rodrigo img { object-position: 63% center; }
 .team-card h3 { margin: 0 0 8px; color: #0B1028; font-size: 1.08rem; line-height: 1.2; letter-spacing: -.02em; }
 
@@ -800,6 +802,7 @@ details p { max-width: 700px; padding: 0 45px 25px 0; color: var(--muted); }
   .about-team-heading > p:last-child { max-width: 560px; margin: 0; }
   .about-team-heading-centered { margin-bottom: 36px; }
   .team-grid { grid-template-columns: 1fr; gap: 16px; }
+  .team-grid > .team-card:last-child:nth-child(odd) { grid-column: auto; width: auto; }
   .team-card-founder { grid-template-columns: 76px 1fr; gap: 14px; padding: 15px; align-items: start; }
   .about-hero-grid, .about-purpose-grid, .about-system-shell { grid-template-columns: 1fr; gap: 46px; }
   .principles-grid { grid-template-columns: 1fr; }
