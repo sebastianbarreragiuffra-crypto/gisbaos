@@ -6,7 +6,7 @@
 const DEMO_BOOKING_URL = null; // null = conserva el href actual (#contacto). Reemplazar por la URL del proveedor de booking cuando este definido.
 const LOGIN_URL = null; // null = conserva el href actual (#). Reemplazar por la URL final de la app/login cuando este definida.
 if (DEMO_BOOKING_URL) {
-  document.querySelectorAll('[data-cta="demo"]').forEach((el) => { el.href = DEMO_BOOKING_URL; });
+  document.querySelectorAll('a[data-cta="demo"]').forEach((el) => { el.href = DEMO_BOOKING_URL; });
 }
 if (LOGIN_URL) {
   document.querySelectorAll('[data-cta="login"]').forEach((el) => { el.href = LOGIN_URL; });
@@ -134,6 +134,10 @@ const result = document.querySelector('[data-form-result]');
 
 form?.addEventListener('submit', async (event) => {
   event.preventDefault();
+  if (DEMO_BOOKING_URL) {
+    window.location.assign(DEMO_BOOKING_URL);
+    return;
+  }
   if (!form.reportValidity()) return;
 
   const data = new FormData(form);
