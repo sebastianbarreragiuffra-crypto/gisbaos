@@ -279,10 +279,10 @@
           <h2 id="client-experience-title">Así lo ve <em>tu cliente.</em></h2>
           <p>Tu cliente tiene un espacio claro para entender qué está pasando, revisar pendientes, coordinar con tu agencia y mantener todo el contexto sin perder el hilo.</p>
           <div class="client-story-tabs" role="tablist" aria-label="Vistas del portal de cliente" aria-orientation="vertical">
-            <button id="client-tab-resumen" class="active" type="button" role="tab" aria-selected="true" aria-controls="client-panel-resumen" tabindex="0" data-story-tab="0"><span>01</span><strong>Resumen</strong></button>
-            <button id="client-tab-acciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-acciones" tabindex="-1" data-story-tab="1"><span>02</span><strong>Acciones</strong></button>
-            <button id="client-tab-conversaciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-conversaciones" tabindex="-1" data-story-tab="2"><span>03</span><strong>Conversaciones</strong></button>
-            <button id="client-tab-whatsapp" type="button" role="tab" aria-selected="false" aria-controls="client-panel-whatsapp" tabindex="-1" data-story-tab="3"><span>04</span><strong>WhatsApp con contexto</strong></button>
+            <button id="client-tab-resumen" class="active" type="button" role="tab" aria-selected="true" aria-controls="client-panel-resumen" tabindex="0" data-story-tab="0"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-report"></span></span><strong>Resumen</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
+            <button id="client-tab-acciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-acciones" tabindex="-1" data-story-tab="1"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-task"></span></span><strong>Acciones</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
+            <button id="client-tab-conversaciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-conversaciones" tabindex="-1" data-story-tab="2"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-chat"></span></span><strong>Conversaciones</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
+            <button id="client-tab-whatsapp" type="button" role="tab" aria-selected="false" aria-controls="client-panel-whatsapp" tabindex="-1" data-story-tab="3"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-whatsapp"></span></span><strong>WhatsApp con contexto</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
           </div>
         </div>
 
@@ -307,21 +307,26 @@
                   <div class="capp-account-head">
                     <span class="capp-account-mark">N</span>
                     <div><strong>Nova Studio</strong><small>Portal del cliente</small></div>
-                    <span class="capp-pill">Vista del cliente</span>
                     <span class="capp-select">Últimos 30 días</span>
                   </div>
                   <div class="capp-stats">
-                    <div class="capp-stat"><span class="capp-stat-icon ci ci-chart"></span><small>Resultados</small><strong>4.2x</strong><em class="up">↑ +28% vs. mes anterior</em></div>
-                    <div class="capp-stat"><span class="capp-stat-icon ci ci-campaign"></span><small>Campañas activas</small><strong>6</strong><em class="up">↑ +2 este mes</em></div>
-                    <div class="capp-stat"><span class="capp-stat-icon ci ci-check"></span><small>Pendientes por revisar</small><strong>3</strong><em class="warn">↑ 2 urgentes</em></div>
-                    <div class="capp-stat"><span class="capp-stat-icon ci ci-calendar"></span><small>Próximas aprobaciones</small><strong>4</strong><em class="up">↑ 1 esta semana</em></div>
+                    <div class="capp-stat"><span class="capp-stat-icon ci ci-chart"></span><small>ROAS</small><strong>4.2x</strong><em class="up">↑ +28% vs. mes anterior</em><small class="capp-stat-sub">Meta Ads</small></div>
+                    <div class="capp-stat"><span class="capp-stat-icon ci ci-campaign"></span><small>Campañas activas</small><strong>6</strong><em class="up">↑ +2 este mes</em><small class="capp-stat-sub">3 en Meta · 2 en Google · 1 en TikTok</small></div>
+                    <div class="capp-stat"><span class="capp-stat-icon ci ci-check"></span><small>Pendientes por revisar</small><strong>3</strong><em class="warn">↑ 2 urgentes</em><small class="capp-stat-sub">Creatividades y presupuestos</small></div>
+                    <div class="capp-stat"><span class="capp-stat-icon ci ci-calendar"></span><small>Próximas aprobaciones</small><strong>4</strong><em class="up">↑ 1 esta semana</em><small class="capp-stat-sub">Incluye campaña Verano 2024</small></div>
                   </div>
                   <div class="capp-grid">
                     <article class="capp-card capp-reco">
-                      <header><span class="ci ci-spark"></span><strong>Recomendación de tu agencia</strong><span class="capp-tag capp-tag-new">Nuevo</span></header>
-                      <h4>Oportunidad para aumentar resultados en Campaña Verano</h4>
-                      <p>Detectamos un buen rendimiento en audiencias jóvenes. Sugerimos aumentar el presupuesto un 20% para aprovechar el momentum.</p>
-                      <a class="capp-btn capp-btn-solid" href="#contacto">Ver detalle y aprobar <span aria-hidden="true">→</span></a>
+                      <div class="capp-reco-main">
+                        <header><span class="ci ci-spark"></span><strong>Recomendación de tu agencia</strong><span class="capp-tag capp-tag-new">Nuevo</span></header>
+                        <h4>Oportunidad para mejorar el rendimiento de Campaña Verano</h4>
+                        <p>Detectamos una caída del 18% en el ROAS durante los últimos 7 días. Sugerimos revisar la configuración y el presupuesto para mejorar el rendimiento.</p>
+                        <a class="capp-btn capp-btn-solid" href="#contacto">Ver detalle y aprobar <span aria-hidden="true">→</span></a>
+                      </div>
+                      <div class="capp-reco-chart">
+                        <span class="capp-badge capp-badge-red">-18%</span>
+                        <svg class="capp-mini-bars" viewBox="0 0 60 40" aria-hidden="true"><rect x="0" y="28" width="8" height="12" rx="2" fill="#EEE9FF"/><rect x="13" y="22" width="8" height="18" rx="2" fill="#EEE9FF"/><rect x="26" y="16" width="8" height="24" rx="2" fill="#d9cfff"/><rect x="39" y="8" width="8" height="32" rx="2" fill="#8a6bff"/><rect x="52" y="0" width="8" height="40" rx="2" fill="#5B2CFF"/></svg>
+                      </div>
                     </article>
                     <article class="capp-card capp-list">
                       <header><strong>Acciones pendientes</strong><span class="capp-link">Ver todas</span></header>
@@ -329,6 +334,25 @@
                         <li><span class="ci ci-image"></span><div><strong>Aprobar nuevas creatividades</strong><small>Campaña Verano 2024</small></div><b class="capp-badge capp-badge-red">Urgente</b></li>
                         <li><span class="ci ci-file"></span><div><strong>Revisar propuesta de audiencia</strong><small>Campaña Retargeting</small></div><b class="capp-badge">Hoy</b></li>
                         <li><span class="ci ci-check"></span><div><strong>Confirmar presupuesto</strong><small>Campaña Marca</small></div><b class="capp-badge">Esta semana</b></li>
+                        <li><span class="ci ci-report"></span><div><strong>Revisar reporte mensual</strong><small>Abril 2024</small></div><b class="capp-badge">Esta semana</b></li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="capp-grid capp-grid-secondary">
+                    <article class="capp-card capp-list capp-card-compact">
+                      <header><strong>Conversaciones recientes</strong><span class="capp-link">Ver todas</span></header>
+                      <ul>
+                        <li><span class="capp-avatar capp-avatar-violet">T</span><div><strong>Tomás · Equipo Nova Studio</strong><small>Perfecto, quedamos atentos a la aprobación…</small></div><small class="capp-time">Hace 2 h</small></li>
+                        <li><span class="capp-avatar capp-avatar-ink">V</span><div><strong>Valentina · Tu agencia</strong><small>Te comparto la propuesta de audiencias…</small></div><small class="capp-time">Hace 4 h</small></li>
+                        <li><span class="capp-avatar capp-avatar-orange">S</span><div><strong>Sofía · Tu agencia</strong><small>Listo, ya quedó programada la reunión.</small></div><small class="capp-time">Hace 1 día</small></li>
+                      </ul>
+                    </article>
+                    <article class="capp-card capp-list capp-card-compact capp-whatsapp-preview">
+                      <header><span class="ci ci-whatsapp"></span><strong>WhatsApp con contexto</strong><span class="capp-link">Ver todas</span></header>
+                      <ul>
+                        <li><span class="capp-avatar capp-avatar-muted-green">M</span><div><strong>María (Nova Studio)</strong><small>¿Podemos ajustar el copy de la pieza?…</small></div><small class="capp-time">Hace 3 h</small></li>
+                        <li><span class="capp-avatar capp-avatar-muted-green">+</span><div><strong>+52 55 1234 5678</strong><small>Perfecto, aprobamos la versión final</small></div><small class="capp-time">Hace 8 h</small></li>
+                        <li><span class="capp-avatar capp-avatar-muted-green">M</span><div><strong>María (Nova Studio)</strong><small>Te comparto el reporte en PDF</small></div><small class="capp-time">Hace 1 día</small></li>
                       </ul>
                     </article>
                   </div>
@@ -355,7 +379,6 @@
                   <div class="capp-account-head">
                     <span class="capp-account-mark">N</span>
                     <div><strong>Nova Studio</strong><small>Portal del cliente</small></div>
-                    <span class="capp-pill">Vista del cliente</span>
                   </div>
                   <div class="capp-stats">
                     <div class="capp-stat"><span class="capp-stat-icon ci ci-check"></span><small>Pendientes por revisar</small><strong>3</strong><em class="warn">↑ 2 urgentes</em></div>
@@ -436,6 +459,11 @@
                         <li><small>Archivo adjunto</small><span>Propuesta_Creativa_Primavera.pdf</span></li>
                         <li><small>Fecha objetivo</small><span>15 de abril</span></li>
                         <li><small>Responsable en GISBA</small><span><span class="capp-avatar capp-avatar-sm">MF</span> María Fernández</span></li>
+                      </ul>
+                      <strong>Actividad relacionada</strong>
+                      <ul class="capp-history">
+                        <li>Se compartió el archivo<small>Hace 2 h</small></li>
+                        <li>Cliente respondió con feedback<small>Hace 1 h</small></li>
                       </ul>
                     </aside>
                   </div>
