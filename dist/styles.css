@@ -2846,3 +2846,8 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .legal-shell ul { margin: 0 0 12px; padding-left: 22px; }
 .legal-meta { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid #E4DEFA; color: #8A91A3; font-size: .9rem; }
 @media (max-width: 780px) { .legal-page-main { padding: 120px 0 72px; } }
+
+
+/* Home A+B freeze: jerarquía tipográfica consistente sin alterar otras páginas */
+.home-page .landing-faq h2 { font-size: clamp(2.1rem, 3.1vw, 2.9rem); line-height: 1.06; }
+@media (max-width: 780px) { .home-page .landing-faq h2 { font-size: clamp(2rem, 8.6vw, 2.3rem); } }
