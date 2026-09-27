@@ -2894,3 +2894,16 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 
 /* Areas tactiles comodas en mobile para enlaces sueltos */
 @media (max-width: 780px) { .pricing-how a, .pr-textlink, a[data-event="pricing_faq_contact_click"] { display: inline-flex; align-items: center; min-height: 44px; } }
+
+
+/* Vistas de "Asi lo ve tu cliente": se leen como controles clicables (borde y fondo blanco) + pista breve */
+.client-story-hint { margin: 22px 0 10px; color: #6B7597; font-size: .86rem; font-weight: 500; }
+.client-story-tabs button:not(.active) { border-color: #e4defb; background: #fff; box-shadow: 0 2px 8px rgba(80,42,255,.04); }
+.client-story-tabs button:not(.active):hover { border-color: #cfc4fb; background: #f7f5ff; }
+.client-story-tabs button:not(.active) .client-story-tab-chevron { color: #8f7bff; }
+.js .final-gisba-cta .fg-signal, .js .final-gisba-cta .fg-panel { transition-duration: .4s; }
+@media (max-width: 420px) { .client-story-tabs button { gap: 10px; padding-inline: 12px; } .client-story-tabs button strong { font-size: .78rem; } }
+@media (max-width: 380px) { .client-story-tabs button strong { font-size: .72rem; overflow-wrap: anywhere; } .client-story-tab-icon { width: 26px; height: 26px; } }
+
+/* Areas tactiles comodas en mobile para enlaces sueltos */
+@media (max-width: 780px) { .pricing-how a, .pr-textlink, a[data-event="pricing_faq_contact_click"] { display: inline-flex; align-items: center; min-height: 44px; } }
