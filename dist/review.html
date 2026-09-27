@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GISBA OS — Preview A+B</title>
+  <style>
+    :root{--ink:#0B1028;--violet:#5B2CFF;--lav:#EEE9FF;--bg:#ECEEF4;--line:#D9DDE8}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+    body{overflow:hidden}
+    .bar{height:72px;display:flex;align-items:center;gap:18px;padding:0 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 18px rgba(11,16,40,.06);position:relative;z-index:3}
+    .brand{display:flex;align-items:center;gap:10px;min-width:max-content;font-weight:750}
+    .dot{width:11px;height:11px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 6px var(--lav)}
+    .brand small{display:block;color:#697386;font-weight:550;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+    .controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    select,.vp-btn,.open-btn{height:38px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font:600 13px/1 inherit;padding:0 12px}
+    select{min-width:180px}
+    .vp-btn{cursor:pointer}
+    .vp-btn.active{border-color:#BFB2FF;background:var(--lav);color:var(--violet)}
+    .open-btn{display:inline-flex;align-items:center;text-decoration:none;background:var(--ink);color:#fff;border-color:var(--ink);margin-left:auto}
+    .stage{height:calc(100vh - 72px);overflow:auto;padding:22px}
+    .device{margin:0 auto;background:#fff;border:1px solid #C9CEDA;border-radius:14px;box-shadow:0 18px 55px rgba(11,16,40,.16);overflow:hidden;transition:width .2s ease}
+    .chrome{height:34px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid #E6E8EF;background:#F7F8FB}
+    .chrome i{width:8px;height:8px;border-radius:50%;background:#C7CBD5}
+    iframe{display:block;width:100%;height:calc(100vh - 130px);border:0;background:#fff}
+    .note{font-size:12px;color:#697386;margin-left:auto;white-space:nowrap}
+    @media(max-width:760px){
+      body{overflow:auto}
+      .bar{height:auto;min-height:72px;padding:12px;align-items:flex-start}
+      .brand{display:none}.controls{width:100%}.open-btn{margin-left:0}.note{display:none}
+      .stage{height:auto;padding:10px}.device{width:100%!important}.chrome{display:none}
+      iframe{height:calc(100vh - 90px)}
+    }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <div class="brand"><span class="dot"></span><div>GISBA OS<small>Preview A+B</small></div></div>
+    <div class="controls">
+      <select id="page" aria-label="Página">
+        <option value="index.html">Home</option>
+        <option value="servicios.html">Producto</option>
+        <option value="como-trabajamos.html">Cómo funciona</option>
+        <option value="precios.html">Precios</option>
+        <option value="nosotros.html">Nosotros</option>
+        <option value="preguntas.html">FAQ</option>
+      </select>
+      <button class="vp-btn active" data-w="1440">1440</button>
+      <button class="vp-btn" data-w="1024">1024</button>
+      <button class="vp-btn" data-w="768">768</button>
+      <button class="vp-btn" data-w="390">390</button>
+      <a id="open" class="open-btn" href="index.html" target="_blank" rel="noopener">Abrir página ↗</a>
+    </div>
+    <span class="note">Rama visual: preview-ab-20260926</span>
+  </header>
+  <main class="stage">
+    <div id="device" class="device" style="width:1440px">
+      <div class="chrome"><i></i><i></i><i></i></div>
+      <iframe id="frame" src="index.html" title="Preview GISBA OS"></iframe>
+    </div>
+  </main>
+<script>
+  const page=document.getElementById('page');
+  const frame=document.getElementById('frame');
+  const device=document.getElementById('device');
+  const open=document.getElementById('open');
+  page.addEventListener('change',()=>{
+    frame.src=page.value;
+    open.href=page.value;
+  });
+  document.querySelectorAll('.vp-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.vp-btn').forEach(x=>x.classList.remove('active'));
+      btn.classList.add('active');
+      device.style.width=btn.dataset.w+'px';
+    });
+  });
+</script>
+</body>
+</html>
