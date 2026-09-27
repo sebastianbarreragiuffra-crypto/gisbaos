@@ -698,7 +698,7 @@ details p { max-width: 700px; padding: 0 45px 25px 0; color: var(--muted); }
 .copyright { grid-column: 1 / -1; margin: 35px 0 0; padding-top: 22px; border-top: 1px solid var(--line); color: #706a78; font-size: .74rem; }
 
 .standalone-section { padding-top: 155px; min-height: 65vh; }
-.standalone-section h1 { font-size: clamp(2.35rem, 4.5vw, 4.4rem); }
+.standalone-section h1 { font-size: clamp(2.35rem, 4vw, 3.6rem); }
 
 /* Servicios */
 .inner-page { background: radial-gradient(circle at 72% 5%, rgba(103, 48, 255, .17), transparent 30rem), linear-gradient(180deg, #070610, #0a0814 58%, #080711); }
@@ -2494,7 +2494,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 
 /* Precios */
 .pricing-hero { padding: 150px 0 40px; text-align: center; }
-.pricing-hero h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); margin: 10px 0 14px; }
+.pricing-hero h1 { font-size: clamp(2.4rem, 4vw, 3.6rem); margin: 10px 0 14px; }
 .pricing-lead { max-width: 620px; margin: 0 auto 26px; color: var(--muted); }
 .pricing-badges { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 0 32px; padding: 0; }
 .pricing-badges li { padding: 8px 16px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface-strong); font-size: .85rem; font-weight: 500; }
@@ -2875,4 +2875,10 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 @media (max-width: 780px) {
   .standalone-section.faq .faq-list { gap: 26px; }
   .standalone-section.faq .faq-group h2 { padding-top: 14px; }
+}
+
+/* A+B typography: inner-page hierarchy */
+@media (max-width: 780px) {
+  .pricing-hero h1,
+  .standalone-section h1 { font-size: clamp(2.3rem, 10vw, 2.7rem); }
 }
