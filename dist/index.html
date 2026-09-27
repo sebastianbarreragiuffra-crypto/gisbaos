@@ -301,10 +301,10 @@
           <h2 id="client-experience-title">Así lo ve <em>tu cliente.</em></h2>
           <p>Tu cliente tiene un espacio claro para entender qué está pasando, revisar pendientes, coordinar con tu agencia y mantener todo el contexto sin perder el hilo.</p>
           <div class="client-story-tabs" role="tablist" aria-label="Vistas del portal de cliente" aria-orientation="vertical">
-            <button id="client-tab-resumen" class="active" type="button" role="tab" aria-selected="true" aria-controls="client-panel-resumen" tabindex="0" data-story-tab="0"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-report"></span></span><strong>Resumen</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
+            <button id="client-tab-resumen" type="button" role="tab" aria-selected="false" aria-controls="client-panel-resumen" tabindex="-1" data-story-tab="0"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-report"></span></span><strong>Resumen</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
             <button id="client-tab-acciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-acciones" tabindex="-1" data-story-tab="1"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-task"></span></span><strong>Acciones</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
             <button id="client-tab-conversaciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-conversaciones" tabindex="-1" data-story-tab="2"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-chat"></span></span><strong>Conversaciones</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
-            <button id="client-tab-whatsapp" type="button" role="tab" aria-selected="false" aria-controls="client-panel-whatsapp" tabindex="-1" data-story-tab="3"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-whatsapp"></span></span><strong>WhatsApp con contexto</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
+            <button id="client-tab-whatsapp" class="active" type="button" role="tab" aria-selected="true" aria-controls="client-panel-whatsapp" tabindex="0" data-story-tab="3"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-whatsapp"></span></span><strong>WhatsApp con contexto</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
           </div>
         </div>
 
@@ -312,7 +312,7 @@
           <div class="client-story-stage" data-product-story aria-live="polite">
 
             <!-- 01 RESUMEN -->
-            <div id="client-panel-resumen" class="capp active" role="tabpanel" aria-labelledby="client-tab-resumen" data-story-panel="0">
+            <div id="client-panel-resumen" class="capp" role="tabpanel" aria-labelledby="client-tab-resumen" data-story-panel="0" hidden>
               <div class="capp-topbar">
                 <span class="capp-logo"><svg width="20" height="20" viewBox="0 0 64 64" aria-hidden="true"><path d="M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z" fill="currentColor"/></svg>GISBA OS</span>
                 <span class="capp-topbar-right"><i class="capp-bell" aria-hidden="true"></i><span class="capp-avatar">NS</span><span class="capp-account">Nova Studio</span><i class="capp-chevron" aria-hidden="true"></i></span>
@@ -494,7 +494,7 @@
             </div>
 
             <!-- 04 WHATSAPP CON CONTEXTO -->
-            <div id="client-panel-whatsapp" class="capp" role="tabpanel" aria-labelledby="client-tab-whatsapp" data-story-panel="3" hidden>
+            <div id="client-panel-whatsapp" class="capp active" role="tabpanel" aria-labelledby="client-tab-whatsapp" data-story-panel="3">
               <div class="capp-topbar">
                 <span class="capp-logo"><svg width="20" height="20" viewBox="0 0 64 64" aria-hidden="true"><path d="M15 43 31 13c2-4 7-4 10 0l9 17c3 6-1 13-8 13H15Zm11-5h16c2 0 3-2 2-4l-7-14c-1-2-3-2-4 0Z" fill="currentColor"/></svg>GISBA OS</span>
                 <span class="capp-topbar-right"><i class="capp-bell" aria-hidden="true"></i><span class="capp-avatar">NS</span><span class="capp-account">Nova Studio</span><i class="capp-chevron" aria-hidden="true"></i></span>
