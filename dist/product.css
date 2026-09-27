@@ -1,5 +1,5 @@
 /* Producto: rediseño definitivo (hoja propia de servicios.html) */
-.pr-page { --v: #4d24ff; --v2: #8a5cff; --ink: #0b0d2b; --muted: #5d6a91; --line: #e6e1fb; --soft: #f3f0ff; overflow-x: clip; }
+.pr-page { --v: #5B2CFF; --v-active: #4D24FF; --v2: #8A5CFF; --ink: #0b0d2b; --muted: #5d6a91; --line: #e6e1fb; --soft: #f3f0ff; overflow-x: clip; }
 .pr-page section { position: relative; }
 
 /* ---------- Piezas comunes ---------- */
