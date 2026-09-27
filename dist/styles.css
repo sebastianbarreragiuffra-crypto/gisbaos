@@ -1261,7 +1261,7 @@ body.home-page::before { display: none; }
 .home-page .site-footer { border-color: #e8e7f1; color: #14162f; background: #fafafe; }
 .home-page .footer-brand p,
 .home-page .footer-grid > div:not(.footer-brand) { color: #626c88; }
-.home-page .copyright { border-color: #e4e3ec; color: #83899f; }
+.home-page .copyright { border-color: #e4e3ec; color: #6B7597; }
 
 @media (max-width: 1180px) {
   .home-page { --container: min(1040px, calc(100% - 44px)); }
@@ -1484,7 +1484,7 @@ body:not(.home-page) .contact-shell .button-ghost { color: #fff; border-color: r
 body:not(.home-page) .site-footer { border-color: #e8e7f1; color: #14162f; background: #fafafe; }
 body:not(.home-page) .footer-brand p,
 body:not(.home-page) .footer-grid > div:not(.footer-brand) { color: #626c88; }
-body:not(.home-page) .copyright { border-color: #e4e3ec; color: #83899f; }
+body:not(.home-page) .copyright { border-color: #e4e3ec; color: #6B7597; }
 
 @media (max-width: 780px) {
   body:not(.home-page) .site-header { background: rgba(255,255,255,.96); }
@@ -1599,7 +1599,7 @@ body.home-page #cierre-gisba .closing-result { margin: 16px 96px 0 0; }
 .closing-links strong { margin-bottom: 4px; color: #11132e; font-size: .82rem; }
 .closing-links a { color: #657092; font-size: .78rem; }
 .closing-links a:hover { color: #4d24ff; }
-.closing-copyright { grid-column: 1; margin: 0; color: #7c86a2; font-size: .74rem; }
+.closing-copyright { grid-column: 1; margin: 0; color: #6B7597; font-size: .74rem; }
 
 @media (max-width: 1040px) {
   .closing-cta-grid { grid-template-columns: 1fr; gap: 52px; }
@@ -2714,7 +2714,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .fg-analyzed { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
 .fg-analyzed li { padding: 5px 10px; border-radius: 8px; background: #F4F3FB; color: #0B1028; font-size: .78rem; }
 .fg-analyzed-title { margin: 14px 0 0; color: #5F687A; font-size: .76rem; font-weight: 600; }
-.fg-demo { margin: 12px 0 0; color: #8A91A3; font-size: .72rem; }
+.fg-demo { margin: 12px 0 0; color: #6B7597; font-size: .72rem; }
 @keyframes fgGlow { 0%, 100% { box-shadow: 0 0 0 8px rgba(91,44,255,.08), 0 10px 24px rgba(91,44,255,.28); } 50% { box-shadow: 0 0 0 13px rgba(91,44,255,.05), 0 10px 24px rgba(91,44,255,.28); } }
 .js .final-gisba-cta .fg-signal, .js .final-gisba-cta .fg-panel { transition: opacity .6s ease, transform .6s ease; }
 .js .final-gisba-cta:not(.visible-fg) .fg-signal, .js .final-gisba-cta:not(.visible-fg) .fg-panel { opacity: 0; transform: translateY(10px); }
@@ -2770,13 +2770,13 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .contact-form-title { margin: 0 0 4px; color: #0B1028; font: 600 1.7rem/1.15 var(--font-display, "Manrope", sans-serif); }
 .home-page .contact-final .contact-form label { gap: 8px; color: #0B1028; font-size: .9rem; font-weight: 500; }
 .contact-final .field-label { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
-.contact-final .optional-label { color: #8A91A3; font-size: .8rem; font-weight: 400; }
+.contact-final .optional-label { color: #6B7597; font-size: .8rem; font-weight: 400; }
 .home-page .contact-final .contact-form input, .home-page .contact-final .contact-form select, .home-page .contact-final .contact-form textarea { padding: 14px 16px; border: 1px solid #DAD6EA; border-radius: 10px; color: #0B1028; background: #fff; font: 400 .95rem/1.4 var(--font-primary, "Inter", sans-serif); }
-.home-page .contact-final .contact-form ::placeholder { color: #8A91A3; }
+.home-page .contact-final .contact-form ::placeholder { color: #6B7597; }
 .home-page .contact-final .contact-form input:focus, .home-page .contact-final .contact-form select:focus, .home-page .contact-final .contact-form textarea:focus { border-color: #5B2CFF; box-shadow: 0 0 0 3px rgba(91,44,255,.12); }
 .home-page .contact-final .contact-form textarea { min-height: 96px; }
 .home-page .contact-final .contact-form .button { justify-content: center; padding: 16px 24px; }
-.home-page .contact-final .form-note { margin: 0; text-align: center; color: #8A91A3; font-size: .82rem; }
+.home-page .contact-final .form-note { margin: 0; text-align: center; color: #6B7597; font-size: .82rem; }
 .home-page .contact-final .form-result { color: #5F687A; font-size: .86rem; text-align: center; }
 .home-page .contact-final .form-result a { color: #5B2CFF; }
 @media (max-width: 980px) {
@@ -2826,7 +2826,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 @media (max-width: 520px) {
   .closing-footer-cta { justify-self: stretch; }
   .closing-footer-cta .button { width: 100%; justify-content: center; }
-  .closing-links a { padding: 6px 0; }
+  .closing-links a { padding: 12px 0; }
 }
 @media (max-width: 780px) and (min-width: 521px) { .closing-links { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; } }
 @media (max-width: 520px) { .closing-links { gap: 22px; } .closing-footer-bottom { gap: 26px; } }
@@ -2844,7 +2844,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .legal-shell p, .legal-shell li { color: #5F687A; font-size: 1rem; line-height: 1.7; }
 .legal-shell p { margin: 0 0 12px; }
 .legal-shell ul { margin: 0 0 12px; padding-left: 22px; }
-.legal-meta { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid #E4DEFA; color: #8A91A3; font-size: .9rem; }
+.legal-meta { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid #E4DEFA; color: #6B7597; font-size: .9rem; }
 @media (max-width: 780px) { .legal-page-main { padding: 120px 0 72px; } }
 
 /* Vistas de "Asi lo ve tu cliente": se leen como controles clicables (borde y fondo blanco) + pista breve */
@@ -2855,3 +2855,6 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .js .final-gisba-cta .fg-signal, .js .final-gisba-cta .fg-panel { transition-duration: .4s; }
 @media (max-width: 420px) { .client-story-tabs button { gap: 10px; padding-inline: 12px; } .client-story-tabs button strong { font-size: .78rem; } }
 @media (max-width: 380px) { .client-story-tabs button strong { font-size: .72rem; overflow-wrap: anywhere; } .client-story-tab-icon { width: 26px; height: 26px; } }
+
+/* Areas tactiles comodas en mobile para enlaces sueltos */
+@media (max-width: 780px) { .pricing-how a, .pr-textlink, a[data-event="pricing_faq_contact_click"] { display: inline-flex; align-items: center; min-height: 44px; } }
