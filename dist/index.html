@@ -26,7 +26,7 @@
   <link rel="preload" href="assets/fonts/manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="styles.css?v=101">
+  <link rel="stylesheet" href="styles.css?v=102">
   <link rel="stylesheet" href="whatsapp-section.css?v=6">
   <link rel="stylesheet" href="home-hero.css?v=3">
   <link rel="stylesheet" href="home-pulse.css?v=1">
@@ -284,7 +284,8 @@
           <p class="eyebrow"><span></span> Experiencia del cliente</p>
           <h2 id="client-experience-title">Así lo ve <em>tu cliente.</em></h2>
           <p>Tu cliente tiene un espacio claro para entender qué está pasando, revisar pendientes, coordinar con tu agencia y mantener todo el contexto sin perder el hilo.</p>
-          <div class="client-story-tabs" role="tablist" aria-label="Vistas del portal de cliente" aria-orientation="vertical">
+          <p class="client-story-hint" id="client-story-hint">Elige una vista para explorarla.</p>
+          <div class="client-story-tabs" role="tablist" aria-label="Vistas del portal de cliente" aria-orientation="vertical" aria-describedby="client-story-hint">
             <button id="client-tab-resumen" class="active" type="button" role="tab" aria-selected="true" aria-controls="client-panel-resumen" tabindex="0" data-story-tab="0"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-report"></span></span><strong>Resumen</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
             <button id="client-tab-acciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-acciones" tabindex="-1" data-story-tab="1"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-task"></span></span><strong>Acciones</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
             <button id="client-tab-conversaciones" type="button" role="tab" aria-selected="false" aria-controls="client-panel-conversaciones" tabindex="-1" data-story-tab="2"><span class="client-story-tab-icon" aria-hidden="true"><span class="ci ci-chat"></span></span><strong>Conversaciones</strong><span class="client-story-tab-chevron" aria-hidden="true">›</span></button>
