@@ -2,7 +2,7 @@
   font-family: "Manrope";
   src: url("assets/fonts/manrope-variable.woff2") format("woff2");
   font-style: normal;
-  font-weight: 500 600;
+  font-weight: 200 800;
   font-display: swap;
 }
 
@@ -61,6 +61,14 @@
   --violet-light: #bca6ff;
   --cyan: #7ee7ff;
   --white: #ffffff;
+  --ink: #0B1028;
+  --violet-primary: #5B2CFF;
+  --violet-active: #4D24FF;
+  --violet-accent: #8A5CFF;
+  --lavender: #EEE9FF;
+  --canvas: #F4F3FB;
+  --text-secondary: #5F687A;
+  --text-tertiary: #6B7597;
   --radius: 24px;
   --shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
   --container: min(1340px, calc(100% - 48px));
@@ -690,7 +698,7 @@ details p { max-width: 700px; padding: 0 45px 25px 0; color: var(--muted); }
 .copyright { grid-column: 1 / -1; margin: 35px 0 0; padding-top: 22px; border-top: 1px solid var(--line); color: #706a78; font-size: .74rem; }
 
 .standalone-section { padding-top: 155px; min-height: 65vh; }
-.standalone-section h1 { font-size: clamp(2.35rem, 4.5vw, 4.4rem); }
+.standalone-section h1 { font-size: clamp(2.35rem, 4vw, 3.6rem); }
 
 /* Servicios */
 .inner-page { background: radial-gradient(circle at 72% 5%, rgba(103, 48, 255, .17), transparent 30rem), linear-gradient(180deg, #070610, #0a0814 58%, #080711); }
@@ -2486,7 +2494,7 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 
 /* Precios */
 .pricing-hero { padding: 150px 0 40px; text-align: center; }
-.pricing-hero h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); margin: 10px 0 14px; }
+.pricing-hero h1 { font-size: clamp(2.4rem, 4vw, 3.6rem); margin: 10px 0 14px; }
 .pricing-lead { max-width: 620px; margin: 0 auto 26px; color: var(--muted); }
 .pricing-badges { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 0 32px; padding: 0; }
 .pricing-badges li { padding: 8px 16px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface-strong); font-size: .85rem; font-weight: 500; }
@@ -2847,8 +2855,49 @@ details[open] > p { animation: faq-answer-in var(--motion-ui) var(--ease-gisba);
 .legal-meta { margin: 40px 0 0; padding-top: 24px; border-top: 1px solid #E4DEFA; color: #6B7597; font-size: .9rem; }
 @media (max-width: 780px) { .legal-page-main { padding: 120px 0 72px; } }
 
+
+/* Home A+B freeze: jerarquía tipográfica consistente sin alterar otras páginas */
+.home-page .landing-faq h2 { font-size: clamp(2.1rem, 3.1vw, 2.9rem); line-height: 1.06; }
+@media (max-width: 780px) { .home-page .landing-faq h2 { font-size: clamp(2rem, 8.6vw, 2.3rem); } }
+
+/* FAQ standalone A+B: grupos para escaneabilidad */
+.standalone-section.faq .faq-list { display: grid; gap: 34px; border-top: 0; }
+.standalone-section.faq .faq-group { border-top: 1px solid var(--line); }
+.standalone-section.faq .faq-group h2 {
+  margin: 0;
+  padding: 18px 0 4px;
+  color: var(--violet-light);
+  font: 600 .78rem/1.2 var(--font-primary);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.standalone-section.faq .faq-group details { border-color: var(--line); }
+@media (max-width: 780px) {
+  .standalone-section.faq .faq-list { gap: 26px; }
+  .standalone-section.faq .faq-group h2 { padding-top: 14px; }
+}
+
+/* A+B typography: inner-page hierarchy */
+@media (max-width: 780px) {
+  .pricing-hero h1,
+  .standalone-section h1 { font-size: clamp(2.3rem, 10vw, 2.7rem); }
+}
+
+/* Vistas de "Asi lo ve tu cliente": controles clicables + pista breve */
+.client-story-hint { margin: 22px 0 10px; color: #6B7597; font-size: .86rem; font-weight: 500; }
+.client-story-tabs button:not(.active) { border-color: #e4defb; background: #fff; box-shadow: 0 2px 8px rgba(80,42,255,.04); }
+.client-story-tabs button:not(.active):hover { border-color: #cfc4fb; background: #f7f5ff; }
+.client-story-tabs button:not(.active) .client-story-tab-chevron { color: #8f7bff; }
+.js .final-gisba-cta .fg-signal, .js .final-gisba-cta .fg-panel { transition-duration: .4s; }
+@media (max-width: 420px) { .client-story-tabs button { gap: 10px; padding-inline: 12px; } .client-story-tabs button strong { font-size: .78rem; } }
+@media (max-width: 380px) { .client-story-tabs button strong { font-size: .72rem; overflow-wrap: anywhere; } .client-story-tab-icon { width: 26px; height: 26px; } }
+
+/* Areas tactiles comodas en mobile para enlaces sueltos */
+@media (max-width: 780px) { .pricing-how a, .pr-textlink, a[data-event="pricing_faq_contact_click"] { display: inline-flex; align-items: center; min-height: 44px; } }
+
+
 /* Vistas de "Asi lo ve tu cliente": se leen como controles clicables (borde y fondo blanco) + pista breve */
-.client-story-hint { margin: 22px 0 10px; color: #6b7597; font-size: .86rem; font-weight: 500; }
+.client-story-hint { margin: 22px 0 10px; color: #6B7597; font-size: .86rem; font-weight: 500; }
 .client-story-tabs button:not(.active) { border-color: #e4defb; background: #fff; box-shadow: 0 2px 8px rgba(80,42,255,.04); }
 .client-story-tabs button:not(.active):hover { border-color: #cfc4fb; background: #f7f5ff; }
 .client-story-tabs button:not(.active) .client-story-tab-chevron { color: #8f7bff; }

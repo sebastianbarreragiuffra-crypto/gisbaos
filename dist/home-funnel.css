@@ -3,7 +3,7 @@
 .hf::before { display: none; }
 .hf-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); column-gap: 48px; align-items: center; }
 .hf-eyebrow { margin: 0 0 20px; color: #5B2CFF; font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.hf-copy h2 { margin: 0 0 22px; font-size: clamp(2.3rem, 3.8vw, 3.5rem); line-height: 1.05; color: #0B1028; }
+.hf-copy h2 { margin: 0 0 22px; font-size: clamp(2.2rem, 3.1vw, 2.9rem); line-height: 1.06; color: #0B1028; }
 .hf-copy h2 span { color: #5B2CFF; }
 .hf-lead { margin: 0 0 34px; max-width: 420px; color: #5F687A; font-size: 1.1rem; line-height: 1.55; }
 .hf-switch { display: grid; gap: 12px; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; max-width: 360px; }
