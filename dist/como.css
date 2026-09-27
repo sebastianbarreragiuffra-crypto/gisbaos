@@ -2,9 +2,9 @@
 .cx-section { padding: 40px 0 90px; }
 .cx-hero { padding-top: 130px; }
 .cx-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); column-gap: 64px; align-items: center; }
-.cx-kicker { margin: 0 0 22px; color: #4d24ff; font-size: .82rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+.cx-kicker { margin: 0 0 22px; color: #5B2CFF; font-size: .82rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
 .cx-copy h1 { margin: 0 0 26px; max-width: 560px; font-size: clamp(2.4rem, 4.6vw, 4.2rem); line-height: 1.02; color: #0b0d2b; }
-.cx-copy h1 em { font-style: normal; color: #4d24ff; background: none; -webkit-text-fill-color: currentColor; }
+.cx-copy h1 em { font-style: normal; color: #5B2CFF; background: none; -webkit-text-fill-color: currentColor; }
 .cx-lead { max-width: 470px; margin: 0 0 30px; color: #5d6a91; font-size: 1.2rem; line-height: 1.6; }
 .cx-rule { width: 48px; height: 2px; margin: 0 0 20px; border: 0; border-radius: 2px; background: #b9a8ff; }
 .cx-note { max-width: 340px; margin: 0; color: #6b7597; font-size: 1.02rem; line-height: 1.55; }
@@ -25,7 +25,7 @@
 /* 01 · Contexto (v2): texto sobrio y dashboard ancho */
 .cx-ctx .cx-grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
 .cx-kicker-num { display: inline-flex; align-items: center; gap: 10px; color: #0b0d2b; letter-spacing: .16em; }
-.cx-kicker-num b { color: #4d24ff; font-weight: 500; letter-spacing: 0; }
+.cx-kicker-num b { color: #5B2CFF; font-weight: 500; letter-spacing: 0; }
 .cx-kicker-num span { width: 92px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #b9a8ff, #e8e2ff); }
 .cx-ctx .cx-copy h1 { max-width: 640px; margin: 0 0 26px; font-size: clamp(2.3rem, 3.9vw, 3.5rem); line-height: 1.04; color: #0b0d2b; }
 .cx-ctx .cx-lead { max-width: 520px; }
@@ -54,7 +54,7 @@
 
 /* 03 · Decide (v2): texto a la izquierda con lista, tarjeta a la derecha */
 .cx-kicker-big { display: inline-flex; align-items: baseline; gap: 26px; margin: 0 0 12px; letter-spacing: 0; text-transform: none; }
-.cx-kicker-big b { color: #4d24ff; font-size: clamp(2.2rem, 3.2vw, 2.9rem); font-weight: 600; line-height: 1; }
+.cx-kicker-big b { color: #5B2CFF; font-size: clamp(2.2rem, 3.2vw, 2.9rem); font-weight: 600; line-height: 1; }
 .cx-kicker-big span { color: #6b7597; font-size: .95rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; }
 .cx-decide .cx-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .cx-decide .cx-copy h2 { max-width: 560px; margin: 0 0 24px; font-size: clamp(2.2rem, 3.2vw, 2.95rem); line-height: 1.05; color: #0b0d2b; }
