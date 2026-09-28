@@ -20,13 +20,13 @@
 .hh-bar-r > i { display: grid; color: #4b5578; font-style: normal; }
 .hh-bar-r > b { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-size: .68rem; font-weight: 600; background: var(--violet); }
 .hh-bar-r strong { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: .74rem; }
-.hh-body { display: grid; grid-template-columns: 152px minmax(0, 1fr); }
+.hh-body { display: grid; grid-template-columns: 168px minmax(0, 1fr); }
 .hh-side { display: grid; align-content: start; gap: 2px; margin: 0; padding: 14px 10px 20px 14px; list-style: none; }
 .hh-side li { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px; color: #4b5578; font-size: .74rem; font-weight: 500; }
 .hh-side li.on { color: var(--violet); background: #efeaff; font-weight: 600; }
 .hh-side li:last-child { color: var(--violet); }
 .hh-side em { margin-left: auto; min-width: 18px; padding: 1px 6px; border-radius: 999px; color: #fff; font-size: .62rem; font-style: normal; text-align: center; background: var(--violet); }
-.hh-main { min-width: 0; padding: 14px 20px 20px 8px; }
+.hh-main { min-width: 0; padding: 14px 20px 20px 14px; }
 .hh-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
 .hh-head h3 { margin: 0; font-size: 1.1rem; }
 .hh-range { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px; border: 1px solid #ece8fb; border-radius: 10px; color: #4b5578; font-size: .7rem; white-space: nowrap; }
